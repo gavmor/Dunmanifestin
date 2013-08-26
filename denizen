@@ -1,0 +1,849 @@
+|person
+[name] [family], the [description] wearing a [clothing] who [motivation], [secret], carries an [item], and is accompanied by an [animal].
+
+|denizen
+[person]
+Wasahua Eom, the chaotic evil Great White Shark-spirited adult wearing a rough, seashell ring who is running away from something, possesses powerful magic, carries an knife, and is accompanied by an Octopus.
+Tedee Hehe, a perpetually paranoid wretch with a whistle and a encyclopedic knowledge of music. He/she wants to go home, and fears heights.
+Nushase Utdakel, a heartbreakingly mopey dwarf with a broken, dark orchid amulet and a collection of hook for a hands made of black crystal.
+  
+|clothing
+[quality], [color] [article]
+
+|description
+[alignment] [animal]-spirited [ageGroup]
+[height], [attitude] [profession] 
+
+|ageGroup
+baby
+child
+5@adult
+elder
+
+|height
+tall
+short
+medium height
+
+|article
+pair of boots
+headdress
+circlet
+amulet
+ring
+
+|quality
+fine
+rough
+
+|color
+alice blue
+antique white
+aqua
+aquamarine
+azure
+beige
+bisque
+black
+blanched almond
+blue
+blue violet
+brown
+burly wood
+cadet blue
+chartreuse
+chocolate
+coral
+cornflower blue
+cornsilk
+crimson
+cyan
+dark blue
+dark cyan
+dark goldenrod
+dark gray
+dark green
+dark khaki
+dark magenta
+dark olive green
+dark orange
+dark orchid
+dark red
+dark salmon
+dark sea green
+dark slate blue
+dark slate gray
+dark turquoise
+dark violet
+deep pink
+deep sky blue
+dim gray
+dodger blue
+fire brick
+floral white
+forest green
+fuchsia
+gainsboro
+ghost white
+gold
+goldenrod
+gray
+green
+green yellow
+honeydew
+hot pink
+indian red
+indigo
+ivory
+khaki
+lavender
+lavender blush
+lawn green
+lemon chiffon
+light blue
+light coral
+light cyan
+light goldenrod yellow
+light green
+light grey
+light pink
+light salmon
+light sea green
+light sky blue
+light slate gray
+light steel blue
+light yellow
+lime
+lime green
+linen
+magenta
+maroon
+medium aquamarine
+medium blue
+medium orchid
+medium purple
+medium sea green
+medium slate blue
+medium spring green
+medium turquoise
+medium violet red
+midnight blue
+misty rose
+moccasin
+navajo white
+navy
+old lace
+olive
+olive drab
+orange
+orange red
+orchid
+pale goldenrod
+pale green
+pale turquoise
+pale violet red
+papaya whip
+peach puff
+peru
+pink
+plum
+powder blue
+purple
+red
+rosy brown
+royal blue
+saddle brown
+salmon
+sandy brown
+sea green
+seashell
+sienna
+silver
+sky blue
+slate blue
+slate gray
+snow
+spring green
+steel blue
+tan
+teal
+thistle
+tomato
+turquoise
+violet
+wheat
+white
+white smoke
+yellow
+yellow green
+
+|alignment
+lawful good
+chaotic good
+neutral good
+lawful neutral
+chaotic neutral
+true neutral
+lawful evil
+chaotic evil
+neutral evil
+
+|family
+Yrral
+Eom
+Ylruc
+
+|profession
+prospector
+priest
+miner
+thief
+scout
+merchant
+entertainer
+"professional treasure hunter"
+warrior
+ranger
+scavenger
+wretch
+slave
+
+|motivation
+is looking for a fight with [denizen]
+is looking for honest work
+is looking to steal [artefact]
+is running away from something
+just wants to be left alone
+is looking to take a life
+is searching for their birthright, [artefact]
+is returning [item] to [denizen]
+is in love with [denizen], and is determined to seduce them
+is gathering materials to build [artefact]
+
+|artefact
+[itemName], the [baseItem] [itemDescription]
+
+|item
+100@[baseItem]
+[artefact]
+
+|baseItem
+shovel
+trawl
+sword
+ax
+plough
+bowl
+knife
+hammer
+club
+spoon
+bow
+spear
+staff
+dagger
+crossbow
+wand
+mace
+polearm
+cannon
+halberd
+an orb
+lance
+power saw
+whistle
+pipe
+shield
+javelin
+claw
+
+|itemDescription
+made of black crystal
+which glows in moonlight
+made by [denizen]
+stolen by [denizen], who used it to slay [denizen]
+which glows in the presence of [family]'s children
+whose every strike produces a shockwave
+which lights aflame when its name is spoken
+whose touch is a jolt of lightning
+which contains the trapped souls of its every victim
+about-which-no-sound-travels
+that is half the average weight
+which turns into a [item] when its name is spoken
+
+
+|itemName
+shapelo
+tolochlo
+tlen
+ono
+tli
+pochlo
+niahuo
+hanmā
+tlolapo
+topōn
+yomi
+yali
+tosahuhuo
+xō
+tantlen
+ixiyomi
+huanco
+mēto
+tolō
+halopāco
+tinhō
+naquinasa
+ōpo
+lanto
+catltli
+Denquen ca misa
+huoe
+piapo
+xīloco
+xapelin
+tome
+onoc
+
+|clothingName
+betoso
+lōpoc hua
+peloso
+paxama
+coleto
+lonpāto
+tlāso
+panto
+xōsopanto
+tlolt
+llī no
+tantlo
+xato
+tzōposoppo
+tlāquican
+tēsā
+pātlā
+xippoappo
+tliamitochlo
+lequinto
+tintlolincopanto
+mixqui
+tēsāpolōpā 
+Bolaxā
+xisqui
+potlohā
+polīhuo
+tlapolipanto
+pamyochcapanto
+yocapanto
+tō~etopanto
+pochto
+hiahīlo
+tancalo
+huolippohuoloppo
+acōn oc tolippo
+polāh
+
+|secret
+1@has some object or information the PCs want
+10@looks harmless, but is dangerous
+10@is dangerous, but could be helpful
+10@seems helpful, but is not
+10@possesses powerful magic
+10@is hiding great wealth
+5@has killed hundreds
+
+|name
+Folota
+Kolohua
+Sahuaoc
+Shisātla
+Hana
+Napetlin
+Senhuolo
+Kohzhitzh
+Kotlin
+Gincahua
+Atlanape
+Matohozo
+Aohla
+Kahuahlo
+Kohzhihuolo
+Shima
+Atlā
+Otla
+Hilazatli
+Uetlie
+Atlazatli
+Molatlen
+Atli
+Wasahua
+Molahth
+Kimato
+Yotlihua
+Foquinatla
+Foquiotla
+Hanathilo
+Maliw
+Molimol
+Molatlahua
+Folomiya
+Sozo
+Shimahth
+Satlayotli
+Foquipath
+Kohzhimato
+Sahua
+Toyotlo
+Kinape
+Kahualla
+Totlohti
+Maliosatle
+Hathiquin
+Kisata
+Hathioe
+Gahuazahua
+Natlahuolo
+Itzhimaliw
+Kinthilo
+Sozohlla
+Tatlolo
+Kahuamol
+Kohualla
+Foquithilo
+Bathitlin
+Folohlo
+Kentli
+Toyo
+Kamisotlo
+Yothiquin
+Kimol
+Kotli
+Foquisatla
+Wal
+Mosotlilla
+Ithima
+Tasotlo
+Halahla
+Bathimoli
+Atlihual
+Atlatzozo
+Satliā
+Fotlohlo
+Hilayoth
+Kamilla
+Kenpath
+Mosomollo
+Kietli
+Satlisoyo
+Totlosoyo
+Hanatla
+Kieā
+Hilanatla
+Oolla
+Hothihua
+Natlahua
+Hothitlahua
+Kisahon
+Yothihuolo
+Kiethilo
+Bathiyoth
+Halosatle
+Foloe
+Fotlomaliw
+Tozatli
+Satlitzatla
+Kohzhiotla
+Kietlin
+Hothath
+Senten
+Yothimiya
+Aotlo
+Itzhath
+Itzhoth
+Natlahualla
+Kotla
+Datzh
+Totlo
+Sentlo
+Otlalla
+Atla
+Hilatzh
+Hothiyama
+Satlioc
+Shilo
+Otlanatla
+Folohzhi
+Halatla
+Atliā
+Hanahth
+Satlamoli
+Totahua
+Nithiten
+Tatlequin
+Oo
+Foquisoyo
+Sen
+Halonape
+Kolocahua
+Wasatlen
+Kolohuotlo
+Ihuamola
+Itzhitlahua
+Yothita
+Otlamoli
+Gahuasatla
+Tatlehla
+Kintla
+Kitlami
+Maliocahua
+Satlinithi
+Damoli
+Uethisa
+Yotlinithi
+Kiehuotlo
+Ohua
+Maliomoli
+Halahua
+Kisatlo
+Sahuanape
+Gahuayothi
+Honyoth
+Yotli
+Molamola
+Senhuoqui
+Sahuanatla
+Sahuamola
+Kahuatlisa
+Kahuasotlo
+Tatlahana
+Natlatzozo
+Yamamoso
+Bathila
+Ihua
+Hothitahua
+Ihuolo
+Kahuata
+Folotlohzhi
+Kisasatle
+Halā
+Halatlisa
+Foquihla
+Hothi
+Kolotlo
+Satli
+Shimāe
+Matta
+Kolohon
+Maliopath
+Itlo
+Ootlohzhi
+Totlahua
+Atlahuotlo
+Kohzhi
+Shilla
+Toyohuotlo
+Sahuatlahua
+Kamihuolo
+Yotlita
+No
+Yotlitza
+Halamoli
+Itzhitli
+Sahuano
+Honhua
+Tohuolo
+Datlo
+Itzhi
+Uehuotlo
+Sahuata
+Toyonithi
+Hothimoli
+Sozoquin
+Honthima
+Atlazen
+Miyasatle
+Folohon
+Natla
+Toyohuasa
+Halanatla
+Miyamoso
+Kotzh
+Kinithi
+Sentla
+Sentle
+Kohzhitahua
+Ao
+Sahuatlolo
+Walanape
+Koten
+Mosohuoqui
+Foquithilla
+
+|animal
+Clawed Frog
+Albatross
+Alligator
+Angelfish
+Ant
+Anteater
+Antelope
+Arctic Fox
+Arctic Hare
+Arctic Wolf
+Armadillo
+Asian Giant Hornet
+Axolotl
+Baboon
+Bactrian Camel
+Badger
+Barn Owl
+Barnacle
+Barracuda
+Basking Shark
+Bat
+Beagle
+Bear
+Bearded Dragon
+Beaver
+Beetle
+Bengal Tiger
+Bison
+Black Bear
+Black Rhinoceros
+Blue Whale
+Bobcat
+Bonobo
+Booby
+Brown Bear
+Budgerigar
+Buffalo
+Bulldog
+Bullfrog
+Bumble Bee
+Butterfly
+Camel
+Capybara
+Cassowary
+Cat
+Caterpillar
+Catfish
+Centipede
+Chameleon
+Cheetah
+Chicken
+Chihuahua
+Chimpanzee
+Chinchilla
+Chinook
+Chipmunk
+Cichlid
+Cockroach
+Common Buzzard
+Common Frog
+Common Toad
+Coral
+Cougar
+Cow
+Coyote
+Crab
+Crab-Eating Macaque
+Crane
+Crocodile
+Cuttlefish
+Deer
+Desert Tortoise
+Dodo
+Dolphin
+Donkey
+Dragonfly
+Duck
+Dugong
+Eagle
+Earwig
+Edible Frog
+Electric Eel
+Elephant
+Elephant Seal
+Emu
+Falcon
+Fennec Fox
+Ferret
+Fish
+Flamingo
+Flounder
+Fly
+Flying Squirrel
+Fox
+Frog
+Fur Seal
+Gerbil
+Giant African Land Snail
+Giant Clam
+Giant Panda Bear
+Gila Monster
+Giraffe
+Glow Worm
+Goat
+Goose
+Gopher
+Gorilla
+Grasshopper
+Great White Shark
+Greyhound
+Grizzly Bear
+Guinea Fowl
+Guinea Pig
+Guppy
+Hammerhead Shark
+Hamster
+Hare
+Hedgehog
+Hermit Crab
+Heron
+Hippopotamus
+Honey Bee
+Horned Frog
+Horse
+Horseshoe Crab
+Howler Monkey
+Human
+Hummingbird
+Hyena
+Iguana
+Indian Elephant
+Insect
+Jackal
+Jaguar
+Jellyfish
+Kangaroo
+Killer Whale
+Kingfisher
+Kiwi
+Koala
+Komodo Dragon
+Leopard
+Lion
+Lionfish
+Lizard
+Llama
+Lobster
+Lynx
+Magpie
+Manatee
+Manta Ray
+Meerkat
+Millipede
+Mole
+Mongoose
+Monkey
+Moose
+Moray Eel
+Moth
+Mountain Lion
+Mouse
+Mule
+Neanderthal
+Newt
+Ocelot
+Octopus
+Opossum
+Orang-utan
+Ostrich
+Otter
+Oyster
+Panther
+Parrot
+Peacock
+Pelican
+Penguin
+Pheasant
+Pig
+Pink Fairy Armadillo
+Piranha
+Platypus
+Poison Dart Frog
+Polar Bear
+Porcupine
+Possum
+Prawn
+Puffer Fish
+Puffin
+Pug
+Puma
+Pygmy Hippopotamus
+Quail
+Rabbit
+Raccoon
+Rat
+Rattlesnake
+Red Panda
+Reindeer
+Rhinoceros
+Sabre-Toothed Tiger
+Salamander
+Scorpion
+Sea Lion
+Sea Otter
+Sea Slug
+Sea Urchin
+Seahorse
+Seal
+Sheep
+Shrimp
+Skunk
+Sloth
+Snail
+Snake
+Snapping Turtle
+Sponge
+Squid
+Squirrel
+Starfish
+Stick Insect
+Stingray
+Stoat
+Swan
+Tapir
+Termite
+Tiger
+Tortoise
+Toucan
+Tree Frog
+Turkey
+Umbrellabird
+Vampire Bat
+Vulture
+Walrus
+Warthog
+Wasp
+Weasel
+Whale Shark
+White Rhinoceros
+White Tiger
+Wild Boar
+Wildebeest
+Wolf
+Woodpecker
+Woolly Mammoth
+Yak
+Yorkshire Terrier
+Zebra
+
+|attitude
+flirtatious 
+friendly 
+moderately condescending 
+disdainful 
+highly admiring 
+extremely wary 
+trusting 
+somewhat admiring 
+extremely disdainful 
+extremely doubtful 
+condescending 
+extremely unfriendly 
+highly antagonistic 
+neutral 
+moderately suspicious
