@@ -1,8 +1,8 @@
 |artefact
 1@[itemName], the [baseItem] [itemDescription]
 
-|item
-100@[baseItem]
+|weildable
+100@a [baseItem]
 1@[artefact]
 
 |baseItem
