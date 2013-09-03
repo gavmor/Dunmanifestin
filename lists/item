@@ -1,0 +1,70 @@
+|artefact
+1@[itemName], the [baseItem] [itemDescription]
+
+|item
+100@[baseItem]
+1@[artefact]
+
+|baseItem
+1@[nonPreciousMetal] shovel
+2@shovel
+1@[nonPreciousMetal] trawl
+2@trawl
+1@sword
+1@[nonPreciousMetal] sword
+1@ax
+1@[metal] ax
+1@plough
+1@bowl
+1@bowl made of [hardMaterial]
+1@knife
+1@[metal] knife
+1@hammer
+1@club
+1@spoon
+1@bow
+1@spear
+1@staff
+1@gun
+1@dagger
+1@crossbow
+1@wand
+1@wand made of [hardMaterial]
+1@mace
+1@polearm
+1@cannon
+1@halberd
+1@orb
+1@lance
+1@power saw
+1@whistle
+1@pipe
+1@pipe made of [hardMaterial]
+1@shield
+1@[nonPreciousMetal] shield
+1@javelin
+1@claw
+1@peg leg
+1@hook for a hand
+1@scimitar
+1@fuzzy hat
+1@flail
+1@bagpipe
+
+|itemDescription
+1@made of black crystal
+1@which glows in moonlight
+1@made by [denizen]
+1@stolen by [denizen], who used it to slay [denizen]
+1@which glows in the presence of [family]'s children
+1@whose every strike produces a shockwave
+1@which lights aflame when its name is spoken
+1@whose touch is a jolt of lightning
+1@which contains the trapped souls of its every victim
+1@about-which-no-sound-travels
+1@that is half the average weight
+1@which turns into a [item] when its name is spoken
+
+|itemName
+[name]
+

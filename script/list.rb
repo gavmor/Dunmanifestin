@@ -4,15 +4,15 @@ class List
   def initialize opts={}
     @name = opts.fetch(:name, 'default')
     @members = opts.fetch(:members, [])
-    @generator = opts.fetch(:world)
-    @generator.lists[name] = self
+    @universe = opts.fetch(:universe)
+    @universe.lists[name] = self
   end
 
   
   def << rough_member
     pieces = rough_member.split('@')
     
-    attrs = {body: pieces.pop, list: self}
+    attrs = {body: pieces.pop, list: self, universe: universe}
     attrs.merge!(frequency: pieces.pop) if pieces.any?
     member = Member.new(attrs)
 
@@ -20,11 +20,9 @@ class List
   end
   
   def sample
-    p name
-    p members
     members.sample
   end
 
   private 
-  attr_accessor :members
+  attr_accessor :members, :universe
 end

@@ -4,6 +4,5 @@ require_relative './generator.rb'
 require_relative './string.rb'
 
 
-gen = Generator.from_file 'root'
-# p List.with_name('|root').members.first.print
+gen = Generator.from_file 'root.list'
 p gen.generate('root')

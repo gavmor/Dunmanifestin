@@ -3,15 +3,15 @@ class String
     self[0] == '|'
   end
 
-  def listerpolate
-    # self.gsub('[', '#{').gsub(']', '}')
+  def listerpolate universe
+    body = self
     
-    while self.match(/\[\w+\]/) do
-      slug = self.match(/\[\w+\]/).to_s
-      slug = slug.gsub('[', '').gsub(']', '')
-      self.gsub(slug, Kernel.send(slug))
+    while body.match(/\[\w+\]/) do
+      slug = body.match(/\[\w+\]/).to_s
+      phrase = universe.send(slug.gsub('[', '').gsub(']', ''))
+      body = body.sub(slug, phrase)
     end
 
-    self
+    body
   end
 end

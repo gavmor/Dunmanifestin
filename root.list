@@ -1,3 +1,365 @@
+|adverb
+7@[negativeAdverb]
+4@[positiveAdverb]
+1@obviously
+1@slightly
+1@occasionally
+1@hilariously
+1@transparently
+1@perpetually
+1@frequently
+1@unnecessarily
+|ageGroup
+1@baby
+1@child
+5@adult
+1@elder
+|alignment
+1@lawful good
+1@chaotic good
+1@neutral good
+1@lawful neutral
+1@chaotic neutral
+1@true neutral
+1@lawful evil
+1@chaotic evil
+1@neutral evil
+|animal
+1@wolf
+1@werewolf
+1@fox
+1@chicken
+1@cow
+1@cat
+1@rat
+1@bat
+1@dove
+1@lion
+1@tiger
+1@bear
+1@frog
+1@horse
+1@gryphon
+1@bull
+1@ox
+1@sheep
+1@pig
+1@owl
+1@turkey
+|appearance
+attractive
+hook-nosed
+long-faced
+square-jawed
+smiling
+ugly
+lopsided
+long-haired
+bearded
+rugged
+pudgy
+plump
+muscly
+fat
+tall
+skinny
+short
+frowning
+oily
+pimply
+red-faced
+begrimed
+bald
+stooped
+2@old
+2@young
+middle-aged
+ancient
+sweet-faced
+pretty
+pale
+mustaschioed
+|attitude
+flirtatious 
+friendly 
+moderately condescending 
+disdainful 
+highly admiring 
+extremely wary 
+trusting 
+somewhat admiring 
+extremely disdainful 
+extremely doubtful 
+condescending 
+extremely unfriendly 
+highly antagonistic 
+neutral 
+moderately suspicious
+helpful
+|bag
+1@[wearable]
+1@[item]
+|baggage
+1@hatred of [facetOfCulture]
+1@longing for [object]
+1@fondness for [object]
+1@great love of [object]
+1@distaste for [facetOfCulture]
+2@crush on [person]
+2@obsession with [topicOfConversation]
+1@willful ignorance of [topicOfConversation]
+2@encyclopedic knowledge of [topicOfConversation]
+2@ability to talk endlessly about [topicOfConversation]
+2@dark secret concerning [topicOfConversation]
+2@criminal history concerning [topicOfConversation]
+2@contract to kill [person]
+2@great story about [topicOfConversation]
+1@degree in [facetOfCulture]
+1@bunch of superstitions about [topicOfConversation]
+1@conspiracy theory about [topicOfConversation]
+1@bunch of inside jokes about [topicOfConversation]
+1@collection of [baseItem]s [itemDescription]
+1@speech impediment
+1@blacklist of [raceOrProfession]s
+1@[animal] disease
+1@[race] disease
+1@large entourage of [race]s
+1@[container] of [baseItem]s
+1@price set on his/her head by [person]
+1@vendetta against [person]
+2@[disability] [animal]
+|buildingType
+1@wall
+1@temple
+1@church
+1@mausoleum
+1@catacomb
+1@dungeon
+1@tower
+1@mine
+1@hovel
+1@garden
+|clothing
+10@pair of boots
+2@pair of sandals
+2@pair of leggings
+2@headdress
+5@hat
+2@helmet
+|color
+1@blue
+1@turquoise
+1@teal
+1@sea-green
+1@green
+1@lapis
+1@grey
+1@gray
+1@black
+1@white
+1@ivory
+1@ebony
+1@red
+1@vermillion
+1@orange
+1@ice-blue
+1@fiery red
+1@yellow
+1@ochre
+1@amber
+1@brown
+1@hazel
+1@violet
+1@purple
+1@indigo
+1@pink
+|container
+4@box
+4@bag
+cart
+barrel
+[softMaterial] bag
+[hardMaterial] box
+|denizen
+1@[person] with a [bag] and a [baggage]
+|denizenDetail
+2@He/she wants [desire], and fears [fear].
+1@He/she wants [desire], or [desire], or both.
+1@He/she is [attitude] toward the party [reason].
+1@He/she wants [desire], and is [attitude] toward the party.
+1@He/she fears [fear], and is [attitude] toward the party.
+|description
+1@[alignment] [animal]-spirited [ageGroup]
+1@[height], [attitude] [profession]
+|desire
+1@to travel to [placeName]
+1@a meal and a drink
+1@a mug of [drink]
+1@a place to sleep
+1@a hot bath
+1@a job
+1@a job as a [profession]
+1@to cure his/her [animal] [disease]
+1@to cure his/her [grossBodyPart] [disease]
+1@sex with a [appearance] [race]
+1@to go home
+1@to be left alone
+1@to have a good time
+1@to kill everybody
+1@to kill [person]
+1@everyone to just go away
+1@to travel the world
+1@an adventure
+1@a new life as a [profession]
+1@to drown his/her sorrows
+1@to find [artefact]
+1@to return a [baseItem] to [person]
+1@to loan a [baseItem] to [person]
+1@to find [person]
+1@to seduce [person]
+|disability
+blind
+deaf
+lame
+toothless
+consumptive
+obese
+senile
+|disease
+disease
+parasites
+infection
+inflammation
+sores
+fungus
+rash
+warts
+rot
+|economy
+the extraction of [mineral]
+the production of [hardMaterial]
+the production of [softMaterial]
+the manufacture of [hardMaterial] wares
+the manufacture of [softMaterial] wares
+[animal] breeding
+[animal]-related products
+exporting [facetOfCulture]
+[facetOfCulture] and [facetOfCulture]
+organized crime
+|epithet
+the Bold
+the Anxious
+the Quiet
+the Wild
+the Unfortunate
+the Fortunate
+the Wicked
+the Dastardly
+the Vanquisher
+the Meek
+the Bebloodied
+the Mellifluous
+|facet
+1@economics
+1@history
+1@cuisine
+1@porn
+1@art
+1@music
+1@drugs
+1@politics
+1@weapons
+1@literature
+1@poetry
+1@philosophy
+1@parties
+1@crime
+1@military tradition
+1@religion
+|facetOfCulture
+[race] [facet]
+[facet]
+|family
+1@[word]
+2@of [placeName]
+3@[namePrefix][nameSuffix]
+2@[word][nameSuffix]
+|fear
+1@[color] things
+10@death
+9@public speaking
+8@heights
+7@fire
+1@the dark
+6@mummies
+5@zombies
+6@dismemberment
+4@rejection
+2@pointy things
+4@the plague
+1@fruit
+4@torture
+4@strangers
+4@[race]s
+3@water
+4@being impaled
+5@being trampled by [animal]s
+3@being eaten by a [animal]
+2@doctors
+2@[raceOrProfession]s
+|foodOrDrink
+[food]
+[drink]
+
+|food
+porridge
+fried fish
+sandwiches
+buttered bread
+salad
+pork
+
+|drink
+wine
+beer
+mead
+cider
+ale
+apple juice
+|geologicalFormation
+1@outcropping
+1@beach
+1@mountain
+1@cliff
+1@canyon
+1@land bridge
+1@isthmus
+1@peninsula
+1@river bend
+|grossBodyPart
+scalp
+armpit
+tongue
+genital
+toenail
+gum
+butt
+|group
+army
+raiding party
+pair
+host
+band
+|hardMaterial
+5@[mineral]
+bone
+pearl
+horn
+wood
+|height
+1@tall
+1@short
+1@medium height
 |hooks
 651@[townHook]
 112@[woodHook]
@@ -2400,3 +2762,513 @@ A body of an evil wizard tied to a stake, body still smoking
 A chatty bard walks alongside the party
 A chess match
 A person passed out from too much drink, looted, with writing on forehead
+|artefact
+1@[itemName], the [baseItem] [itemDescription]
+
+|item
+100@[baseItem]
+1@[artefact]
+
+|baseItem
+1@[nonPreciousMetal] shovel
+2@shovel
+1@[nonPreciousMetal] trawl
+2@trawl
+1@sword
+1@[nonPreciousMetal] sword
+1@ax
+1@[metal] ax
+1@plough
+1@bowl
+1@bowl made of [hardMaterial]
+1@knife
+1@[metal] knife
+1@hammer
+1@club
+1@spoon
+1@bow
+1@spear
+1@staff
+1@gun
+1@dagger
+1@crossbow
+1@wand
+1@wand made of [hardMaterial]
+1@mace
+1@polearm
+1@cannon
+1@halberd
+1@orb
+1@lance
+1@power saw
+1@whistle
+1@pipe
+1@pipe made of [hardMaterial]
+1@shield
+1@[nonPreciousMetal] shield
+1@javelin
+1@claw
+1@peg leg
+1@hook for a hand
+1@scimitar
+1@fuzzy hat
+1@flail
+1@bagpipe
+
+|itemDescription
+1@made of black crystal
+1@which glows in moonlight
+1@made by [denizen]
+1@stolen by [denizen], who used it to slay [denizen]
+1@which glows in the presence of [family]'s children
+1@whose every strike produces a shockwave
+1@which lights aflame when its name is spoken
+1@whose touch is a jolt of lightning
+1@which contains the trapped souls of its every victim
+1@about-which-no-sound-travels
+1@that is half the average weight
+1@which turns into a [item] when its name is spoken
+
+|itemName
+[name]
+
+|jewelery
+1@circlet
+1@headband
+1@tiara
+1@crown
+2@amulet
+2@necklace
+2@earring
+3@ring
+1@nose ring
+2@bracelet
+1@bangle
+1@anklet
+|metal
+[nonPreciousMetal]
+[preciousMetal]
+|mineral
+6@[metal]
+1@[preciousStone]
+|name
+1@[word]
+
+|word
+1@[ssCap]
+30@[ssCap][ss]
+10@[ssCap][ss][ss]
+2@[word][ss]
+
+|ss
+15@[cc][vv]
+3@[cc][vv][cc]
+2@[vv][cc]
+1@[vv]
+
+|ssCap
+15@[ccCap][vv]
+3@[ccCap][vv][cc]
+2@[vvCap][cc]
+1@[vvCap]
+
+|cc
+50@t
+50@n
+25@k
+25@c
+40@l
+20@r
+15@s
+15@d
+5@b
+5@g
+25@h
+15@th
+10@sh
+10@ch
+5@kh
+5@ph
+1@z
+1@j
+
+|vv
+10@e
+6@a
+4@i
+3@o
+2@u
+
+|ccCap
+50@T
+50@N
+25@K
+25@C
+40@L
+20@R
+15@S
+15@D
+5@B
+5@G
+25@H
+5@Qu
+15@Th
+10@Sh
+10@Ch
+5@Kh
+5@Ph
+1@Z
+3@J
+
+|vvCap
+10@E
+6@A
+4@I
+3@O
+2@U
+
+|namePrefix
+1@Winter
+1@Summer
+1@Spring
+1@Riven
+1@Grey
+1@Owl
+1@Green
+1@Gren
+1@Fen
+1@Raven
+1@Blood
+1@Witch
+1@Wood
+1@Red
+1@Black
+1@White
+1@War
+1@Arrow
+1@Shield
+1@Shel
+1@Shore
+1@Ridge
+1@Bats
+1@Hounds
+1@Fox
+1@Kine
+1@Fire
+
+|nameSuffix
+1@hand
+1@eye
+1@swift
+1@bury
+1@eld
+1@red
+1@wald
+1@dar
+1@den
+1@foot
+1@ton
+1@don
+1@son
+1@ell
+1@brand
+1@iel
+1@ec
+|negativeAdverb
+1@heartbreakingly
+1@upsettingly
+1@disturbingly
+1@frighteningly
+1@infuriatingly
+|negativeQuality
+1@stupid
+1@boring
+1@lazy
+1@poor
+1@violent
+1@deceitful
+1@truculent
+1@mopey
+1@selfish
+1@obnoxious
+1@indecisive
+1@unreliable
+1@insolent
+1@two-faced
+1@paranoid
+1@greedy
+1@forgetful
+1@narrow-minded
+|neutralQuality
+1@wealthy
+1@misunderstood
+1@underfed
+1@unfortunate
+1@ill
+1@lucky
+1@horny
+1@pensive
+1@ethereal
+1@spiritual
+1@insane
+1@religious
+1@curmudgeonly
+|nonPreciousMetal
+iron
+bronze
+copper
+mithril
+steel
+|object
+[race] [resource]
+[resource]
+[food]
+[mineral]
+|person
+1@[personName], a [qualityWithAdverb] [raceOrProfession]
+1@[personName], a [quality] [raceOrProfession]
+3@[personName], a [appearance], [personality] [raceOrProfession]
+|personality
+boistrous
+introverted
+manic-depressive
+analytical
+quiet
+fussy
+talkative
+gregarious
+affectionate
+amiable
+perceptive
+calm
+excitable
+stubborn
+serious
+pedantic
+domineering
+dramatic
+effusive
+emotional
+logical
+creative
+ambitious
+wandering
+rambling
+scatter-brained
+gay
+bisexual
+impulsive
+eccentric
+dumb
+stupid
+
+|personName
+10@[name] [family]
+1@[name] [epithet]
+|placeDescription
+[placeName] is a [settlementType] built on a [geologicalFormation] in [province]. [settlementDetail]
+[placeName] is a [structureType] built on a [geologicalFormation] in [province]. [structureDetail]
+
+|placeName
+[namePrefix][placeSuffix]
+[word][placeSuffix]
+|placeSuffix
+1@fell
+1@dale
+1@holm
+1@burg
+1@vale
+1@dell
+1@fall
+1@pale
+1@ham
+1@wich
+1@shire
+1@helm
+1@fast
+1@brook
+1@mount
+1@loft
+1@home
+1@keep
+1@watch
+1@march
+1@church
+1@tor
+1@wood
+1@hall
+1@peak
+1@rift
+1@shore
+1@wald
+1@walk
+1@ton
+1@town
+1@rest
+1@eyre
+1@deep
+|positiveAdverb
+1@bewilderingly
+1@confusingly
+1@enticingly
+1@adorably
+|positiveQuality
+1@attractive
+1@clever
+1@magnanimous
+1@honest
+1@helpful
+1@intelligent
+1@affectionate
+1@industrious
+1@generous
+1@reliable
+1@trustworthy
+|preciousMetal
+2@gold
+2@silver
+platinum
+|preciousStone
+opal
+diamond
+amethyst
+ruby
+topaz
+|profession
+1@prospector
+1@priest
+1@miner
+1@thief
+1@scout
+1@merchant
+1@entertainer
+1@"professional treasure hunter"
+1@warrior
+1@ranger
+1@scavenger
+1@slave
+1@musician
+1@bartender
+1@farmer
+1@prostitute
+1@warrior
+1@adventurer
+
+|province
+3@[word]
+1@[word]-[word]
+|quality
+[positiveQuality]
+[negativeQuality]
+[neutralQuality]
+|qualityWithAdverb
+[negativeAdverb] [negativeQuality]
+[adverb] [neutralQuality]
+[positiveAdverb] [positiveQuality]
+|race
+5@human
+3@dwarf
+3@elf
+3@orc
+2@hobgoblin
+1@dragon
+2@kobold
+2@goblin
+
+|raceOrProfession
+3@[race]
+3@[profession]
+1@[race] [profession]
+
+|reason
+1@because he/she is drunk
+1@because of stereotypes prevalent in his/her culture
+1@because of something he/she sees
+1@because of their appearance
+1@because he/she mistakes them for someone else
+1@because they're all so [quality]
+1@because of what he/she has heard about them
+1@because of a misleading coincidence
+1@because of the stuff they're carrying
+1@because of the way they talk
+1@because that's the sort of day he/she is having
+1@but has more important things to think about
+1@but it's because he/she is hypnotized
+1@but it's all an act
+|resource
+1@money
+1@food
+1@meat
+1@sex
+1@art
+1@music
+1@drugs
+1@weapons
+|root
+10@[denizen]. [denizenDetail]
+1@[placeDescription]
+
+|secret
+1@has some object or information the PCs want
+10@looks harmless, but is dangerous
+10@is dangerous, but could be helpful
+10@seems helpful, but is not
+10@possesses powerful magic
+10@is hiding great wealth
+5@has killed hundreds
+|settlementDetail
+20@Its economy is based on [economy].
+10@It is known for its many [buildingType]s and [quality] populace.
+4@It is known for being the home of [denizen].
+|settlementType
+4@town
+3@city
+6@village
+3@hamlet
+2@[race] encampment
+|softMaterial
+3@leather
+5@linen
+3@cotton
+1@silk
+6@wool
+1@velvet
+|structureDetail
+2@It is said to contain many priceless artifacts made of [hardMaterial].
+1@It was once attacked by [personName] and a [group] of [raceOrProfession]s with [item]s.
+1@It was once attacked by [denizen].
+|structureType
+2@castle
+1@fortification
+2@mead hall
+1@feasting hall
+1@palace
+1@harbor
+1@dungeon
+1@keep
+1@watchtower
+1@tomb
+|topicOfConversation
+20@[facetOfCulture]
+[race] trafficking
+3@[person]
+
+|wearable
+1@[itemQuality], [color] [clothing]
+1@[itemQuality] [softMaterial] [clothing]
+1@[itemQuality] [jewelery] of [hardMaterial]
+|itemQuality
+1@fine
+1@rough
+1@glorious
+1@beautiful
+1@unusual
+1@tattered
+1@new
+1@old
+1@broken
+1@dirty
+1@pleasant
+1@intricately crafted
+1@homemade
+1@careworn

@@ -1,0 +1,4 @@
+|person
+1@[personName], a [qualityWithAdverb] [raceOrProfession]
+1@[personName], a [quality] [raceOrProfession]
+3@[personName], a [appearance], [personality] [raceOrProfession]

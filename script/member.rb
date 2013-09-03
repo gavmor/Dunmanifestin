@@ -5,9 +5,14 @@ class Member
     @list = opts.fetch(:list)
     @freq = opts.fetch(:frequency, 1)
     @body = opts.fetch(:body)
+    @universe = opts.fetch(:universe)
   end
 
   def to_s
-    body.listerpolate.unescape
+    body.listerpolate(universe).to_s
   end
+
+  private
+  
+  attr_reader :universe
 end

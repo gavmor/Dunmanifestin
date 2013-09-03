@@ -5,7 +5,7 @@ class Generator
 
   def initialize lines 
     lines.inject do |list, line|
-      list = lists[line] || List.new(name: line, world: self) if line.is_name?
+      list = lists[line] || List.new(name: line, universe: self) if line.is_name?
       list << line unless line.is_name?
       list
     end
@@ -16,7 +16,19 @@ class Generator
   end
 
   def generate kind
+    kind = kind.to_s
     list = lists[kind] || lists['|' + kind]
-    list.sample
+    raise NoSuchList.new(kind) unless list
+    list.sample.to_s
+  end
+
+  def method_missing slug
+    generate slug
+  end
+end
+
+class NoSuchList < StandardError
+  def initialize(kind)
+    p "No such list: #{kind}"
   end
 end
