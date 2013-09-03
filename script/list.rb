@@ -11,12 +11,14 @@ class List
   
   def << rough_member
     pieces = rough_member.split('@')
-    
+
+    weight = pieces.length > 1 ? pieces.shift.to_i : 1
+
     attrs = {body: pieces.pop, list: self, universe: universe}
     attrs.merge!(frequency: pieces.pop) if pieces.any?
     member = Member.new(attrs)
 
-    members << member
+    weight.times { members << member }
   end
   
   def sample
