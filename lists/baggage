@@ -1,29 +1,29 @@
 |baggage
-1@hatred of [facetOfCulture]
-1@longing for [object]
-1@fondness for [object]
-1@great love of [object]
-1@distaste for [facetOfCulture]
-2@crush on [person]
-2@obsession with [topicOfConversation]
-1@willful ignorance of [topicOfConversation]
-2@encyclopedic knowledge of [topicOfConversation]
-2@ability to talk endlessly about [topicOfConversation]
-2@dark secret concerning [topicOfConversation]
-2@criminal history concerning [topicOfConversation]
-2@contract to kill [person]
-2@great story about [topicOfConversation]
-1@degree in [facetOfCulture]
-1@bunch of superstitions about [topicOfConversation]
-1@conspiracy theory about [topicOfConversation]
-1@bunch of inside jokes about [topicOfConversation]
-1@collection of [baseItem]s [itemDescription]
-1@speech impediment
-1@blacklist of [raceOrProfession]s
-1@[animal] disease
-1@[race] disease
-1@large entourage of [race]s
-1@[container] of [baseItem]s
-1@price set on his/her head by [person]
-1@vendetta against [person]
-2@[disability] [animal]
+1@a hatred of [facetOfCulture]
+1@a longing for [object]
+1@a fondness for [object]
+1@a great love of [object]
+1@a distaste for [facetOfCulture]
+2@a crush on [person]
+2@an obsession with [topicOfConversation]
+1@a willful ignorance of [topicOfConversation]
+2@an encyclopedic knowledge of [topicOfConversation]
+2@an ability to talk endlessly about [topicOfConversation]
+2@a dark secret concerning [topicOfConversation]
+2@a criminal history concerning [topicOfConversation]
+2@a contract to kill [person]
+2@a great story about [topicOfConversation]
+1@a degree in [facetOfCulture]
+1@a bunch of superstitions about [topicOfConversation]
+1@a conspiracy theory about [topicOfConversation]
+1@a bunch of inside jokes about [topicOfConversation]
+1@a collection of [baseItem]s [itemDescription]
+1@a speech impediment
+1@a blacklist of [raceOrProfession]s
+1@a case of [animal] [disease]
+1@a [race] [disease]
+1@a large entourage of [race]s
+1@a [container] of [baseItem]s
+1@a price set on his/her head by [person]
+1@a vendetta against [person]
+2@a [disability] [animal]
