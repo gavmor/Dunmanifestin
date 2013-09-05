@@ -1,15 +1,12 @@
 class Manifestation
-  attr_accessor :opts
+  attr_accessor :text
 
   def initialize opts
-    genre = opts[:genre]
     
+    genre = opts[:genre]
     root_list = "#{genre}.list"
-
     concatenate_lists_in(genre, root_list)
-
-    avatar = manifestation of: opts[:phrase], from: root_list
-    puts avatar
+    @text = manifestation of: opts[:phrase], from: root_list
   end
 
   private
@@ -23,11 +20,11 @@ class Manifestation
   end
 
   def manifestation zrm
-    gen = Generator.from_file zrm[:from]
+    world = Generator.from_file zrm[:from]
 
-    text = gen.manifest zrm[:of]
+    text = world.manifest zrm[:of]
     while text.length > 500
-      text = gen.manifest zrm[:of]
+      text = world.manifest zrm[:of]
     end
 
     text

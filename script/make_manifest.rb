@@ -12,7 +12,8 @@ opts = Trollop::options do
 end
 
 begin
-  Manifestation.new opts
+  text = Manifestation.new(opts).text
+  puts text
 rescue => e
   raise e if opts[:debug]
   `rm #{opts[:genre]}.list 2>&1` unless opts[:debug]
