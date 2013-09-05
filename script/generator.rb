@@ -16,7 +16,7 @@ class Generator
   def generate kind
     kind = kind.to_s
     list = lists[kind] || lists['|' + kind]
-    raise NoSuchList.new("No such list: #{kind}") unless list
+    return "{#{kind}?}" unless list
     list.sample.to_s
   end
 
