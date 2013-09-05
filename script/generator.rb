@@ -16,8 +16,12 @@ class Generator
   def generate kind
     kind = kind.to_s
     list = lists[kind] || lists['|' + kind]
-    raise NoSuchList.new(kind) unless list
+    raise NoSuchList.new("No such list: #{kind}") unless list
     list.sample.to_s
+  end
+
+  def manifest phrase
+    phrase.listerpolate(self)
   end
 
   def method_missing slug
@@ -38,7 +42,4 @@ class Generator
 end
 
 class NoSuchList < StandardError
-  def initialize(kind)
-    p "No such list: #{kind}"
-  end
 end
