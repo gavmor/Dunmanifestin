@@ -7,6 +7,7 @@ require_relative './manifestation.rb'
 
 opts = Trollop::options do
   opt :debug, "Display errors and logging", short: '-d'
+  opt :copy, "Copies manifestation into your clipboard", short: '-c'
   opt :genre, "Specify a genre, e.g. '-g scifi'", type: :string, short: '-g', default: 'default'
   opt :phrase, "Specify a phrase or list, e.g. 'The [animal] sat on the [article]' or '[weapon]'", type: :string, short: '-p', default: '[root]'
 end
@@ -14,6 +15,7 @@ end
 begin
   text = Manifestation.new(opts).text
   puts text
+  `echo #{text} | pbcopy $1` if opts[:copy]
 rescue => e
   raise e if opts[:debug]
   `rm #{opts[:genre]}.list 2>&1` unless opts[:debug]
