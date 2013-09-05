@@ -5,9 +5,7 @@ class Generator
 
   def initialize lines 
     lines.inject do |list, line|
-      list = lists[line] || List.new(name: line, universe: self) if line.is_name?
-      list << line unless line.is_name?
-      list
+       create_or_append_list(list, line)
     end
   end
 
@@ -24,6 +22,18 @@ class Generator
 
   def method_missing slug
     generate slug
+  end
+
+  private 
+
+  def create_or_append_list list, line
+    if line.is_name?
+      list = List.new(name: line, universe: self)
+    else
+      list << line
+    end
+
+    list
   end
 end
 

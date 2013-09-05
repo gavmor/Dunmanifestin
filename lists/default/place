@@ -1,0 +1,10 @@
+|place
+3@[settlement]
+10@[structure]
+
+|settlement
+[placeName], a [settlementType] built on a [geologicalFormation] in [province]. [settlementDetail]
+
+|structure
+[placeName], a [structureType] built on a [geologicalFormation] in [province]. [structureDetail]
+

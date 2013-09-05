@@ -1,16 +1,19 @@
-|hooks
+|encounter
 651@[townHook]
 112@[woodHook]
 A lush garden beckons with ripe vegetables.
-A demon marches atop a sand dune only a half dozen paces from you.
+A demon marches atop a [geologicalFormation] only a half dozen paces from you.
 A King's Sheriff holds a colorful wanted poster. He carefully studies the party as they pass by.
+[person] holds a [weildable]. He/She carefully studies the party as they pass by.
 One of the PCs spots a key. What's it for?
-A young man and woman riding a horse bareback, ill-equipped for travel, make to pass by you in haste. If questioned, they tell you they are lovers, fleeing a feud between their families who live in the village ahead of you.
+A young man and woman riding a horse bareback, ill-equipped for travel, make to pass by you in haste. If questioned, they tell you they are lovers, fleeing a feud between their families who live in [settlement] the village ahead of you.
 A smiling roadside merchant roasts rats, frogs and squirrels on sticks.
+A smiling roadside merchant roasts [animal]s, [animal]s and [animal]s on sticks.
 The road goes through a canyon bog filled with toxic, flammable gas.
+The road goes through a [geologicalFormation] filled with toxic, flammable gas.
 A lone child blocks the bridge ahead, unless each traveler can guess her riddle.
 A local noble stumbles out of woods and falls flat on face with a knife in his back. His guards round the bend and exclaim, "You, halt!"
-A chatty bard walks alongside the party.
+A chatty [profession] walks alongside the party.
 A strange smell comes from the bushes.
 The side of the road is lined with mausoleums to long dead mercantile families. Some of them appear to have been broken into and doors hang free on rusted hinges.
 The PCs come across the scene of a massacre. A party of bullywugs lies slaughtered. The party hears crying and can find a young bullywug child. "My parents, dead," she croaks. "Killed by human soldiers. Help me get back to my tribe," she begs.
