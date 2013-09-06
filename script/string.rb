@@ -14,4 +14,8 @@ class String
 
     body
   end
+  
+  def split_on_newlines_and_strip
+    split(/\s*\n\s*/).reject(&:empty?)
+  end
 end
