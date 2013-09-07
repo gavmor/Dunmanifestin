@@ -16,4 +16,5 @@ To generate a phrase from the root -- currently an NPC or location description:
 * FIT ~ put newlines in between concatenated lists in root.list
 * FIT ~ turn script into utility
 
-
+* interactive command prompt
+* add a CLI option to set the number of lines generated
