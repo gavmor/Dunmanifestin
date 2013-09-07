@@ -1,30 +1,27 @@
 class Manifestation
   attr_accessor :text
 
-  def initialize opts
-    
-    genre = opts[:genre]
-    root_list = "#{genre}.list"
-    concatenate_lists_in(genre, root_list)
-    @text = manifestation of: opts[:phrase], from: root_list
+  def initialize desired
+    @text = manifestation of: desired[:phrase], from: desired[:genre]
   end
 
   private
 
-  def concatenate_lists_in genre, destination_file
-    path = "./lists/#{genre}"
-
-    unless system("find #{path}/* -exec cat {} > #{destination_file} + 2>&1")
+  def concatenate_lists_in genre
+    unless system("find ./lists/#{genre}/* -exec cat {} > #{genre}.list + 2>&1")
        puts "There is no lists/#{genre} directory in which to find lists."
+       raise StandardError
     end
   end
 
-  def manifestation zrm
-    world = Generator.from_file zrm[:from]
+  def manifestation desire
+    concatenate_lists_in(desire[:from])
 
-    text = world.manifest zrm[:of]
+    world = Generator.from_file "#{desire[:from]}.list"
+
+    text = world.manifest desire[:of]
     while text.length > 500
-      text = world.manifest zrm[:of]
+      text = world.manifest desire[:of]
     end
 
     text

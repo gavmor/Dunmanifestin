@@ -1,13 +1,14 @@
 require 'active_support/inflector'
 
 class Phrase
-  def self.list new_list = @list
-    @list = new_list
-  end
-  
   def initialize
     compile parse self.class.list.sample
   end
+  
+  def self.list new_list
+    @list ||= new_list
+  end
+  
   
   def compile parsed_dsl
     template = parsed_dsl[:template]
