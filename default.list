@@ -1,51 +1,54 @@
 |adverb
 7@[negativeAdverb]
 4@[positiveAdverb]
-1@obviously
-1@slightly
-1@occasionally
-1@hilariously
-1@transparently
-1@perpetually
-1@frequently
-1@unnecessarily
+obviously
+slightly
+occasionally
+hilariously
+transparently
+perpetually
+temporarily
+frequently
+infrequently
+unnecessarily
+nnecessarily
 |ageGroup
-1@baby
-1@child
+baby
+child
 5@adult
-1@elder
+elder
 |alignment
-1@lawful good
-1@chaotic good
-1@neutral good
-1@lawful neutral
-1@chaotic neutral
-1@true neutral
-1@lawful evil
-1@chaotic evil
-1@neutral evil
+lawful good
+chaotic good
+neutral good
+lawful neutral
+chaotic neutral
+true neutral
+lawful evil
+chaotic evil
+neutral evil
 |animal
-1@wolf
-1@werewolf
-1@fox
-1@chicken
-1@cow
-1@cat
-1@rat
-1@bat
-1@dove
-1@lion
-1@tiger
-1@bear
-1@frog
-1@horse
-1@gryphon
-1@bull
-1@ox
-1@sheep
-1@pig
-1@owl
-1@turkey
+wolf
+werewolf
+fox
+chicken
+cow
+cat
+rat
+bat
+dove
+lion
+tiger
+bear
+frog
+horse
+gryphon
+bull
+ox
+sheep
+pig
+owl
+turkey
 |appearance
 attractive
 hook-nosed
@@ -97,48 +100,48 @@ neutral
 moderately suspicious
 helpful
 |bag
-1@[wearable]
-1@[weildable]
+[wearable]
+[weildable]
 |baggage
-1@a hatred of [facetOfCulture]
-1@a longing for [object]
-1@a fondness for [object]
-1@a great love of [object]
-1@a distaste for [facetOfCulture]
+a hatred of [facetOfCulture]
+a longing for [object]
+a fondness for [object]
+a great love of [object]
+a distaste for [facetOfCulture]
 2@a crush on [person]
 2@an obsession with [topicOfConversation]
-1@a willful ignorance of [topicOfConversation]
+a willful ignorance of [topicOfConversation]
 2@an encyclopedic knowledge of [topicOfConversation]
 2@an ability to talk endlessly about [topicOfConversation]
 2@a dark secret concerning [topicOfConversation]
 2@a criminal history concerning [topicOfConversation]
 2@a contract to kill [person]
 2@a great story about [topicOfConversation]
-1@a degree in [facetOfCulture]
-1@a bunch of superstitions about [topicOfConversation]
-1@a conspiracy theory about [topicOfConversation]
-1@a bunch of inside jokes about [topicOfConversation]
-1@a collection of [baseItem]s [itemDescription]
-1@a speech impediment
-1@a blacklist of [raceOrProfession]s
-1@a case of [animal] [disease]
-1@a [race] [disease]
-1@a large entourage of [race]s
-1@a [container] of [baseItem]s
-1@a price set on his/her head by [person]
-1@a vendetta against [person]
+a degree in [facetOfCulture]
+a bunch of superstitions about [topicOfConversation]
+a conspiracy theory about [topicOfConversation]
+a bunch of inside jokes about [topicOfConversation]
+a collection of [baseItem]s [itemDescription]
+a speech impediment
+a blacklist of [raceOrProfession]s
+a case of [animal] [disease]
+a [race] [disease]
+a large entourage of [race]s
+a [container] of [baseItem]s
+a price set on his/her head by [person]
+a vendetta against [person]
 2@a [disability] [animal]
 |buildingType
-1@wall
-1@temple
-1@church
-1@mausoleum
-1@catacomb
-1@dungeon
-1@tower
-1@mine
-1@hovel
-1@garden
+wall
+temple
+church
+mausoleum
+catacomb
+dungeon
+tower
+mine
+hovel
+garden
 |clothing
 10@pair of boots
 2@pair of sandals
@@ -147,32 +150,32 @@ helpful
 5@hat
 2@helmet
 |color
-1@blue
-1@turquoise
-1@teal
-1@sea-green
-1@green
-1@lapis
-1@grey
-1@gray
-1@black
-1@white
-1@ivory
-1@ebony
-1@red
-1@vermillion
-1@orange
-1@ice-blue
-1@fiery red
-1@yellow
-1@ochre
-1@amber
-1@brown
-1@hazel
-1@violet
-1@purple
-1@indigo
-1@pink
+blue
+turquoise
+teal
+sea-green
+green
+lapis
+grey
+gray
+black
+white
+ivory
+ebony
+red
+vermillion
+orange
+ice-blue
+fiery red
+yellow
+ochre
+amber
+brown
+hazel
+violet
+purple
+indigo
+pink
 |container
 4@box
 4@bag
@@ -181,42 +184,42 @@ barrel
 [softMaterial] bag
 [hardMaterial] box
 |denizen
-1@[person] with [bag] and [baggage]
+[person] with [bag] and [baggage]
 |denizenDetail
 2@He/she wants [desire], and fears [fear].
-1@He/she wants [desire], or [desire], or both.
-1@He/she is [attitude] toward the party [reason].
-1@He/she wants [desire], and is [attitude] toward the party.
-1@He/she fears [fear], and is [attitude] toward the party.
+He/she wants [desire], or [desire], or both.
+He/she is [attitude] toward the party [reason].
+He/she wants [desire], and is [attitude] toward the party.
+He/she fears [fear], and is [attitude] toward the party.
 |description
-1@[alignment] [animal]-spirited [ageGroup]
-1@[height], [attitude] [profession]
+[alignment] [animal]-spirited [ageGroup]
+[height], [attitude] [profession]
 |desire
-1@to travel to [placeName]
-1@a meal and a drink
-1@a mug of [drink]
-1@a place to sleep
-1@a hot bath
-1@a job
-1@a job as a [profession]
-1@to cure his/her [animal] [disease]
-1@to cure his/her [grossBodyPart] [disease]
-1@sex with a [appearance] [race]
-1@to go home
-1@to be left alone
-1@to have a good time
-1@to kill everybody
-1@to kill [person]
-1@everyone to just go away
-1@to travel the world
-1@an adventure
-1@a new life as a [profession]
-1@to drown his/her sorrows
-1@to find [artefact]
-1@to return a [baseItem] to [person]
-1@to loan a [baseItem] to [person]
-1@to find [person]
-1@to seduce [person]
+to travel to [placeName]
+a meal and a drink
+a mug of [drink]
+a place to sleep
+a hot bath
+a job
+a job as a [profession]
+to cure his/her [animal] [disease]
+to cure his/her [grossBodyPart] [disease]
+sex with a [appearance] [race]
+to go home
+to be left alone
+to have a good time
+to kill everybody
+to kill [person]
+everyone to just go away
+to travel the world
+an adventure
+a new life as a [profession]
+to drown his/her sorrows
+to find [artefact]
+to return a [baseItem] to [person]
+to loan a [baseItem] to [person]
+to find [person]
+to seduce [person]
 |disability
 blind
 deaf
@@ -247,8 +250,11 @@ exporting [facetOfCulture]
 [facetOfCulture] and [facetOfCulture]
 organized crime
 |encounter
-651@[townHook]
-112@[woodHook]
+[townHook]
+[woodHook]
+[preparedEncounters]
+
+|preparedEncounters
 A lush garden beckons with ripe vegetables.
 A demon marches atop a [geologicalFormation] only a half dozen paces from you.
 A King's Sheriff holds a colorful wanted poster. He carefully studies the party as they pass by.
@@ -307,7 +313,7 @@ Heard before it is seen, a crying child sits alone in the middle of the road.
 A glowing fog engulfs the road.
 A lone foreign knight rides by.
 An earthquake drops the group and a large section of road into a sinkhole or chasm.
-A strange dog or other animal follow you at a distance.
+A strange [animal] follows you at a distance.
 The road is riddled with pockets of quicksand.
 After one of the group treads in something sticky, animals start following the character with curious interest.
 Two groups of pilgrims from rival faiths block the road as they engage in aggressive debate. Each side appeals to the heroes for help.
@@ -2486,22 +2492,22 @@ Citizens turn up inexplicably dead in their homes, each of which featured the sa
 Brutal murders of the poor and homeless wrack the city. A wealthy nobleman hires the PCs to watch his wandering daughter, worried about where she goes when she sneaks out at night. Whilst she is always connected to the victims in some way and initially seems to be the killer, she is in fact trying to help the disadvantaged to bring some meaning to her jaded life. The real killer is an obsessed stalker, who follows her at night and erases the unworthy scum who are the recipients of her attention.
 A hauntingly fragile song echoes through the streets at dusk. The PCs trace the origin to a church’s bell tower, from which a jilted young lover threw herself in despair to her death. Now her spirit sings her lament to the setting sun. Does she recount her story and ask the party to deliver her by avenging her wronging? Or will she bitterly pitch any male characters from the tower to the cobbles below?
 A PC gains a secret admirer who leaves letters declaring her admiration. The notes become increasingly urgent and are accompanied by sinister gifts of sacrificed small animals and occult fetishes. Soon the PC receives fresh body parts and accusations of abandonment (the admirer will never directly confront the PC, but will wreak havoc on his property and relations in the PC’s ab- sence).
-A mischievous fairy decides to have some fun with a PC, comically disrupting him at delicate moments by making flowers grow out of his ears, turning his helm into a bedpan, etc. With an im- portant meeting on the horizon, what can the PC do to rid himself of this cheeky nuisance?
-A diviner hires the PCs to fetch him some rare mushroom. Unfortunately, they only grow amongst the haunted graves of the abandoned Old Cemetery, and must be harvested on a moon- less night or be rendered useless. Trapped in the mushrooms are the restless souls of those whose grave-earth nourished them. From these, the diviner wrings out ancient family secrets and scandals with which to blackmail the living.
+A mischievous fairy decides to have some fun with a PC, comically disrupting him at delicate moments by making flowers grow out of his ears, turning his helm into a bedpan, etc. With an important meeting on the horizon, what can the PC do to rid himself of this cheeky nuisance?
+A diviner hires the PCs to fetch him some rare mushroom. Unfortunately, they only grow amongst the haunted graves of the abandoned Old Cemetery, and must be harvested on a moonless night or be rendered useless. Trapped in the mushrooms are the restless souls of those whose grave-earth nourished them. From these, the diviner wrings out ancient family secrets and scandals with which to blackmail the living.
 A group of goblins, fresh from their foray from the sewers beneath an alchemist’s shop, climb out of the sewer grate and then begin throwing alchemist fire on many of the surrounding buildings and then commence breaking into store-fronts and stealing. Do the PCs fight the fires or stop the goblin looting problem?
 A noble is mortally offended by a PC’s behavior and challenges the PC to a duel a l’outrance (to the death). There is no way to back out without violating social mores and ruining the PC’s reputation. Careful investigation will reveal that the noble and PCs were subtly maneuvered into it by a third party trying to get the noble killed. And if the wandering adventurer gets killed instead, who cares?
 A child asks the PCs to help him find his pet dog. This simple task might lead them someplace where they are viewed with greatest suspicion.
 A grocer in the market motions the players behind his cart. In a low voice, he advises that a rival purveyor of vegetables has somehow sabotaged the farms that the grocer relies upon, and as a result he is forced to sell stale, imported wares at inflated prices. Would the players be interested in investigating, or perhaps taking more direct action against the accused party, for a reward?
-The party notices a hooded character attempting to sneak around in shadows doing his best to not be observed. The hooded man is trying to meet with the wife (or daughter) of a local noble- man for a romantic encounter. The party could get in the nobleman’s good graces by protecting his honor and preventing this meeting, or will they allow love to run its course?
-A leper has dropped his coin pouch. Should the PCs get his attention, he will gladly share valu- able information as reward. However, should the PCs take the pouch, all who touch it are suscep- tible to his disease
+The party notices a hooded character attempting to sneak around in shadows doing his best to not be observed. The hooded man is trying to meet with the wife (or daughter) of a local nobleman for a romantic encounter. The party could get in the nobleman’s good graces by protecting his honor and preventing this meeting, or will they allow love to run its course?
+A leper has dropped his coin pouch. Should the PCs get his attention, he will gladly share valuable information as reward. However, should the PCs take the pouch, all who touch it are susceptible to his disease
 A young girl terrified of the local orphanage turns up ill with an incoherent story about the other children biting everyone.
 A group of kids plays on a gallows. One has put a rope around his neck, pantomiming being strangled, and it looks like another is sneaking up to kick him into the hole.
 A beautiful NPC falls in love with one of the PCs and thus starts several encounters involving her suitors. Some try to kill the PCs while others simply want to run them out of town. The girl is theirs and they don’t need any more competition.
-The PCs get embroiled in a local election scandal and are asked to help find the culprit be- hind fraudulent votes. Perhaps one of the candidates is glamoring the populace into voting for the “right” person using magic, alchemy, or other tricks.
+The PCs get embroiled in a local election scandal and are asked to help find the culprit behind fraudulent votes. Perhaps one of the candidates is glamoring the populace into voting for the “right” person using magic, alchemy, or other tricks.
 An eccentric and wealthy businesswoman in the city sponsors a contest and offers a large prize of something mysterious and cryptic: “the source of life and energy!” She creates a list of items that contestants must secure and bring back to the businesswoman to claim their reward, which will be a container of water in a fancy jug.
 
 |benignTownHook
-Chamber pot emptied near/on
+a chamber pot is emptied near or on the party
 Cats chasing each other dart past
 "Please watch this cart for me, just for a minute."
 Birds of prey circling overhead
@@ -2586,7 +2592,7 @@ Howling gust of wind
 Approaching lightning storm
 Crow squawks repeatedly at approach
 Rubbery mass stuck to your boot (gum)
-Step in crap - dog, dire rat, etc.
+Step in crap dog, dire rat, etc.
 Someone stomps in nearby puddle--splash!
 Street cleaner sweeps by
 Unconscious stranger on side of road
@@ -2651,6 +2657,7 @@ A body of an evil wizard tied to a stake, body still smoking
 A chatty bard walks alongside the party
 A chess match
 A person passed out from too much drink, looted, with writing on forehead
+
 |epithet
 the Bold
 the Anxious
@@ -2665,44 +2672,44 @@ the Meek
 the Bebloodied
 the Mellifluous
 |facet
-1@economics
-1@history
-1@cuisine
-1@porn
-1@art
-1@music
-1@drugs
-1@politics
-1@weapons
-1@literature
-1@poetry
-1@philosophy
-1@parties
-1@crime
-1@military tradition
-1@religion
+economics
+history
+cuisine
+porn
+art
+music
+drugs
+politics
+weapons
+literature
+poetry
+philosophy
+parties
+crime
+military tradition
+religion
 |facetOfCulture
 [race] [facet]
 [facet]
 |family
-1@[word]
+[word]
 2@of [placeName]
 3@[namePrefix][nameSuffix]
 2@[word][nameSuffix]
 |fear
-1@[color] things
+[color] things
 10@death
 9@public speaking
 8@heights
 7@fire
-1@the dark
+the dark
 6@mummies
 5@zombies
 6@dismemberment
 4@rejection
 2@pointy things
 4@the plague
-1@fruit
+fruit
 4@torture
 4@strangers
 4@[race]s
@@ -2712,6 +2719,26 @@ the Mellifluous
 3@being eaten by a [animal]
 2@doctors
 2@[raceOrProfession]s
+|shape
+square
+round
+pentagonal
+
+|decor
+[bag]s
+
+|verb
+cry
+scream
+howl
+whin
+purr
+eat
+sleep
+fuck
+sew
+read
+
 |foodOrDrink
 [food]
 [drink]
@@ -2732,18 +2759,19 @@ cider
 ale
 apple juice
 |geologicalFormation
-1@[geologicalFormation] [geologicalFormation]
-1@outcropping
-1@beach
-1@mountain
-1@cliff
-1@canyon
-1@land bridge
-1@isthmus
-1@peninsula
-1@river bend
-1@canyon
-1@bog
+outcropping
+beach
+mountain
+cliff
+canyon
+land bridge
+isthmus
+peninsula
+river bend
+canyon
+bog
+island
+
 |grossBodyPart
 scalp
 armpit
@@ -2765,33 +2793,33 @@ pearl
 horn
 wood
 |height
-1@tall
-1@short
-1@medium height
+tall
+short
+medium height
 |jewelery
-1@circlet
-1@headband
-1@tiara
-1@crown
+circlet
+headband
+tiara
+crown
 2@amulet
 2@necklace
 2@earring
 3@ring
-1@nose ring
+nose ring
 2@bracelet
-1@bangle
-1@anklet
+bangle
+anklet
 |metal
 [nonPreciousMetal]
 [preciousMetal]
 |mineral
 6@[metal]
-1@[preciousStone]
+[preciousStone]
 |name
-1@[word]
+[word]
 
 |word
-1@[ssCap]
+[ssCap]
 30@[ssCap][ss]
 10@[ssCap][ss][ss]
 2@[word][ss]
@@ -2800,13 +2828,13 @@ wood
 15@[cc][vv]
 3@[cc][vv][cc]
 2@[vv][cc]
-1@[vv]
+[vv]
 
 |ssCap
 15@[ccCap][vv]
 3@[ccCap][vv][cc]
 2@[vvCap][cc]
-1@[vvCap]
+[vvCap]
 
 |cc
 50@t
@@ -2825,8 +2853,8 @@ wood
 10@ch
 5@kh
 5@ph
-1@z
-1@j
+z
+j
 
 |vv
 10@e
@@ -2853,7 +2881,7 @@ wood
 10@Ch
 5@Kh
 5@Ph
-1@Z
+Z
 3@J
 
 |vvCap
@@ -2864,91 +2892,91 @@ wood
 2@U
 
 |namePrefix
-1@Winter
-1@Summer
-1@Spring
-1@Riven
-1@Grey
-1@Owl
-1@Green
-1@Gren
-1@Fen
-1@Raven
-1@Blood
-1@Witch
-1@Wood
-1@Red
-1@Black
-1@White
-1@War
-1@Arrow
-1@Shield
-1@Shel
-1@Shore
-1@Ridge
-1@Bats
-1@Hounds
-1@Fox
-1@Kine
-1@Fire
+Winter
+Summer
+Spring
+Riven
+Grey
+Owl
+Green
+Gren
+Fen
+Raven
+Blood
+Witch
+Wood
+Red
+Black
+White
+War
+Arrow
+Shield
+Shel
+Shore
+Ridge
+Bats
+Hounds
+Fox
+Kine
+Fire
 
 |nameSuffix
-1@hand
-1@eye
-1@swift
-1@bury
-1@eld
-1@red
-1@wald
-1@dar
-1@den
-1@foot
-1@ton
-1@don
-1@son
-1@ell
-1@brand
-1@iel
-1@ec
+hand
+eye
+swift
+bury
+eld
+red
+wald
+dar
+den
+foot
+ton
+don
+son
+ell
+brand
+iel
+ec
 |negativeAdverb
-1@heartbreakingly
-1@upsettingly
-1@disturbingly
-1@frighteningly
-1@infuriatingly
+heartbreakingly
+upsettingly
+disturbingly
+frighteningly
+infuriatingly
 |negativeQuality
-1@stupid
-1@boring
-1@lazy
-1@poor
-1@violent
-1@deceitful
-1@truculent
-1@mopey
-1@selfish
-1@obnoxious
-1@indecisive
-1@unreliable
-1@insolent
-1@two-faced
-1@paranoid
-1@greedy
-1@forgetful
-1@narrow-minded
+stupid
+boring
+lazy
+poor
+violent
+deceitful
+truculent
+mopey
+selfish
+obnoxious
+indecisive
+unreliable
+insolent
+two-faced
+paranoid
+greedy
+forgetful
+narrow-minded
 |neutralQuality
-1@wealthy
-1@misunderstood
-1@underfed
-1@unfortunate
-1@ill
-1@lucky
-1@horny
-1@pensive
-1@ethereal
-1@spiritual
-1@insane
-1@religious
-1@curmudgeonly
+wealthy
+misunderstood
+underfed
+unfortunate
+ill
+lucky
+horny
+pensive
+ethereal
+spiritual
+insane
+religious
+curmudgeonly
 |nonPreciousMetal
 iron
 bronze
@@ -2961,12 +2989,12 @@ steel
 [food]
 [mineral]
 |person
-1@[personName], a [qualityWithAdverb] [raceOrProfession]
-1@[personName], a [quality] [raceOrProfession]
+[personName], a [qualityWithAdverb] [raceOrProfession]
+[personName], a [quality] [raceOrProfession]
 3@[personName], a [appearance], [personality] [raceOrProfession]
 |personName
 10@[name] [family]
-1@[name] [epithet]
+[name] [epithet]
 |personality
 boistrous
 introverted
@@ -3016,57 +3044,57 @@ stupid
 [word][placeSuffix]
 
 |placeSuffix
-1@fell
-1@dale
-1@holm
-1@burg
-1@vale
-1@dell
-1@fall
-1@pale
-1@ham
-1@wich
-1@shire
-1@helm
-1@fast
-1@brook
-1@mount
-1@loft
-1@home
-1@keep
-1@watch
-1@march
-1@church
-1@tor
-1@wood
-1@hall
-1@peak
-1@rift
-1@shore
-1@wald
-1@walk
-1@ton
-1@town
-1@rest
-1@eyre
-1@deep
+fell
+dale
+holm
+burg
+vale
+dell
+fall
+pale
+ham
+wich
+shire
+helm
+fast
+brook
+mount
+loft
+home
+keep
+watch
+march
+church
+tor
+wood
+hall
+peak
+rift
+shore
+wald
+walk
+ton
+town
+rest
+eyre
+deep
 |positiveAdverb
-1@bewilderingly
-1@confusingly
-1@enticingly
-1@adorably
+bewilderingly
+confusingly
+enticingly
+adorably
 |positiveQuality
-1@attractive
-1@clever
-1@magnanimous
-1@honest
-1@helpful
-1@intelligent
-1@affectionate
-1@industrious
-1@generous
-1@reliable
-1@trustworthy
+attractive
+clever
+magnanimous
+honest
+helpful
+intelligent
+affectionate
+industrious
+generous
+reliable
+trustworthy
 |preciousMetal
 2@gold
 2@silver
@@ -3078,29 +3106,29 @@ amethyst
 ruby
 topaz
 |profession
-1@prospector
-1@priest
-1@miner
-1@thief
-1@scout
-1@merchant
-1@entertainer
-1@"professional treasure hunter"
-1@warrior
-1@ranger
-1@scavenger
-1@slave
-1@musician
-1@bartender
-1@farmer
-1@prostitute
-1@warrior
-1@adventurer
-1@bard
+prospector
+priest
+miner
+thief
+scout
+merchant
+entertainer
+"professional treasure hunter"
+warrior
+ranger
+scavenger
+slave
+musician
+bartender
+farmer
+prostitute
+warrior
+adventurer
+bard
 
 |province
 3@[word]
-1@[word]-[word]
+[word]-[word]
 |quality
 [positiveQuality]
 [negativeQuality]
@@ -3110,51 +3138,52 @@ topaz
 [adverb] [neutralQuality]
 [positiveAdverb] [positiveQuality]
 |race
+[race]-[race] hybrid
 5@human
 3@dwarf
 3@elf
 3@orc
 2@hobgoblin
-1@dragon
+dragon
 2@kobold
 2@goblin
 
 |raceOrProfession
 3@[race]
 3@[profession]
-1@[race] [profession]
+[race] [profession]
 
 |reason
-1@because he/she is drunk
-1@because of stereotypes prevalent in his/her culture
-1@because of something he/she sees
-1@because of their appearance
-1@because he/she mistakes them for someone else
-1@because they're all so [quality]
-1@because of what he/she has heard about them
-1@because of a misleading coincidence
-1@because of the stuff they're carrying
-1@because of the way they talk
-1@because that's the sort of day he/she is having
-1@but has more important things to think about
-1@but it's because he/she is hypnotized
-1@but it's all an act
+because he/she is drunk
+because of stereotypes prevalent in his/her culture
+because of something he/she sees
+because of their appearance
+because he/she mistakes them for someone else
+because they're all so [quality]
+because of what he/she has heard about them
+because of a misleading coincidence
+because of the stuff they're carrying
+because of the way they talk
+because that's the sort of day he/she is having
+but has more important things to think about
+but it's because he/she is hypnotized
+but it's all an act
 |resource
-1@money
-1@food
-1@meat
-1@sex
-1@art
-1@music
-1@drugs
-1@weapons
+money
+food
+meat
+sex
+art
+music
+drugs
+weapons
 |root
-10@[denizen]. [denizenDetail]
-1@[place]
-1@[encounter]
+[denizen]. [denizenDetail]
+[place]
+[encounter]
 
 |secret
-1@has some object or information the PCs want
+has some object or information the PCs want
 10@looks harmless, but is dangerous
 10@is dangerous, but could be helpful
 10@seems helpful, but is not
@@ -3166,6 +3195,7 @@ topaz
 20@Its economy is based on [economy].
 10@It is known for its many [buildingType]s and [quality] populace.
 4@It is known for being the home of [denizen].
+It was once a thriving hub of [facetOfCulture].
 
 |settlementType
 4@town
@@ -3178,31 +3208,39 @@ topaz
 3@leather
 5@linen
 3@cotton
-1@silk
+silk
 6@wool
-1@velvet
+velvet
 |structureDetail
+It was once attacked by [personName] and a [group] of [raceOrProfession]s with [baseItem]s.
+It was once attacked by [denizen].
+It is rumored that beneath its foundations, lies the treasure of [personName]: [artefact].
+It is rumored to be haunted by the ghost of [person]
 2@It is said to contain many priceless artifacts made of [hardMaterial].
-1@It was once attacked by [personName] and a [group] of [raceOrProfession]s with [baseItem]s.
-1@It was once attacked by [denizen].
 
 |structureType
-2@castle
-1@fortification
-2@mead hall
-1@feasting hall
-1@palace
-1@harbor
-1@dungeon
-1@keep
-1@watchtower
-1@tomb
+castle
+fortification
+mead hall
+feasting hall
+palace
+harbor
+dungeon
+keep
+watchtower
+tomb
 colliseum
 root cellar
 temple
 shrine
 boat house
 glass blowery
+catacomb
+bridge
+station
+park
+tower
+museum
 
 |topicOfConversation
 20@[facetOfCulture]
@@ -3210,92 +3248,123 @@ glass blowery
 3@[person]
 
 |wearable
-1@a [itemQuality], [color] [clothing]
-1@a [itemQuality] [softMaterial] [clothing]
-1@a [itemQuality] [jewelery] of [hardMaterial]
+a [itemQuality], [color] [clothing]
+a [itemQuality] [softMaterial] [clothing]
+a [itemQuality] [jewelery] of [hardMaterial]
 |itemQuality
-1@fine
-1@rough
-1@glorious
-1@beautiful
-1@unusual
-1@tattered
-1@new
-1@old
-1@broken
-1@dirty
-1@pleasant
-1@intricately crafted
-1@homemade
-1@careworn
+fine
+rough
+glorious
+beautiful
+unusual
+tattered
+new
+old
+broken
+dirty
+pleasant
+intricately crafted
+homemade
+careworn
 |artefact
-1@[itemName], the [baseItem] [itemDescription]
+[itemName], the [baseItem] [magicItemDescription]
 
 |weildable
 100@a [baseItem]
-1@[artefact]
+[artefact]
 
 |baseItem
-1@[nonPreciousMetal] shovel
+[nonPreciousMetal] shovel
 2@shovel
-1@[nonPreciousMetal] trawl
+[nonPreciousMetal] trawl
 2@trawl
-1@sword
-1@[nonPreciousMetal] sword
-1@ax
-1@[metal] ax
-1@plough
-1@bowl
-1@bowl made of [hardMaterial]
-1@knife
-1@[metal] knife
-1@hammer
-1@club
-1@spoon
-1@bow
-1@spear
-1@staff
-1@gun
-1@dagger
-1@crossbow
-1@wand
-1@wand made of [hardMaterial]
-1@mace
-1@polearm
-1@cannon
-1@halberd
-1@orb
-1@lance
-1@power saw
-1@whistle
-1@pipe
-1@pipe made of [hardMaterial]
-1@shield
-1@[nonPreciousMetal] shield
-1@javelin
-1@claw
-1@peg leg
-1@hook for a hand
-1@scimitar
-1@fuzzy hat
-1@flail
-1@bagpipe
+sword
+[nonPreciousMetal] sword
+axe
+[metal] axe
+plough
+bowl
+bowl made of [hardMaterial]
+knife
+[metal] knife
+hammer
+club
+spoon
+bow
+spear
+staff
+gun
+dagger
+crossbow
+wand
+wand made of [hardMaterial]
+mace
+polearm
+cannon
+halberd
+orb
+lance
+power saw
+whistle
+pipe
+pipe made of [hardMaterial]
+shield
+[nonPreciousMetal] shield
+javelin
+claw
+peg leg
+hook for a hand
+scimitar
+fuzzy hat
+flail
+bagpipe
 book
 
-|itemDescription
-1@made of black crystal
-1@which glows in moonlight
-1@made by [denizen]
-1@stolen by [denizen], who used it to slay [denizen]
-1@which glows in the presence of [family]'s children
-1@whose every strike produces a shockwave
-1@which lights aflame when its name is spoken
-1@whose touch is a jolt of lightning
-1@which contains the trapped souls of its every victim
-1@about-which-no-sound-travels
-1@that is half the average weight
-1@which turns into [weildable] when its name is spoken
-
+|magicItemDescription
+which glows when [activated]
+made by [personName]
+made in [placeName]
+stolen by [personName], who used it to slay [personName]
+which glows in the presence of [family]'s children
+whose every strike produces a shockwave
+which lights aflame when [activated]
+whose touch is a jolt of lightning
+which contains the trapped souls of its every victim
+about-which-no-sound-travels
+that is half the average weight
+which turns into [weildable] when [activated]
+which never loses its edge
+which fights of its own accord
+which is the bane of all [race]s
+which cannot be moved once [activated]
+which cannot harm a [race]
+which thirsts for blood and screams when wet
+which turns into a [animal] when [activated]
+whose wielders are cursed [curse]
 |itemName
 [name]
+
+|curse
+to never know sleep
+to fall in love with the next [race] they see
+to transform into a [animal] by the waning moon
+with the desire to slay [person]
+with an irrational lust for [grossBodyPart]s
+to become suddenly and irreversibly [attitude]
+to hunger for the flesh of [race]
+to fear [geologicalFormation]s
+to hear the voice of long-dead [person]
+
+|activated
+its name is spoken
+the switch is throne
+[race]s are near
+thrown
+it tastes blood
+held aloft
+sung to
+stolen
+gifted
+in moonlight
+touched
 

@@ -1,6 +1,6 @@
 |denizenDetail
 2@He/she wants [desire], and fears [fear].
-1@He/she wants [desire], or [desire], or both.
-1@He/she is [attitude] toward the party [reason].
-1@He/she wants [desire], and is [attitude] toward the party.
-1@He/she fears [fear], and is [attitude] toward the party.
+He/she wants [desire], or [desire], or both.
+He/she is [attitude] toward the party [reason].
+He/she wants [desire], and is [attitude] toward the party.
+He/she fears [fear], and is [attitude] toward the party.
