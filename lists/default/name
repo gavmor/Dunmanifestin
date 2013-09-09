@@ -1,8 +1,8 @@
 |name
-1@[word]
+[word]
 
 |word
-1@[ssCap]
+[ssCap]
 30@[ssCap][ss]
 10@[ssCap][ss][ss]
 2@[word][ss]
@@ -11,13 +11,13 @@
 15@[cc][vv]
 3@[cc][vv][cc]
 2@[vv][cc]
-1@[vv]
+[vv]
 
 |ssCap
 15@[ccCap][vv]
 3@[ccCap][vv][cc]
 2@[vvCap][cc]
-1@[vvCap]
+[vvCap]
 
 |cc
 50@t
@@ -36,8 +36,8 @@
 10@ch
 5@kh
 5@ph
-1@z
-1@j
+z
+j
 
 |vv
 10@e
@@ -64,7 +64,7 @@
 10@Ch
 5@Kh
 5@Ph
-1@Z
+Z
 3@J
 
 |vvCap

@@ -7,7 +7,7 @@ require_relative './phrase.rb'
 require_relative './manifestation.rb'
 require_relative './list_loader.rb'
 
-opts = Trollop::options do
+user_demands = Trollop::options do
   opt :debug, "Display errors and logging", short: '-d'
   opt :copy, "Copies manifestation into your clipboard", short: '-c'
   opt :genre, "Specify a genre, e.g. '-g scifi'", type: :string, short: '-g', default: 'default'
@@ -15,18 +15,13 @@ opts = Trollop::options do
 end
 
 begin
-  #text = Manifestation.new(opts).text
-  root_phrase_class = Class.new(Phrase) do
-    list opts[:phrase]
-  end
-  
-  ListLoader.new(opts[:genre]).load
-
+  root_phrase_class = Class.new(Phrase) { list user_demands[:phrase] }
+  ListLoader.new(user_demands[:genre]).load
   text = root_phrase_class.new
-  
+
   puts text.inspect
-  `echo #{text} | pbcopy $1` if opts[:copy]
+  `echo #{text} | pbcopy $1` if user_demands[:copy]
 rescue => e
-  raise e if opts[:debug]
-  `rm #{opts[:genre]}.list 2>&1` unless opts[:debug]
+  raise e if user_demands[:debug]
+  `rm #{user_demands[:genre]}.list 2>&1` unless user_demands[:debug]
 end

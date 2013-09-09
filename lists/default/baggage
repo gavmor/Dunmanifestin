@@ -1,29 +1,29 @@
 |baggage
-1@a hatred of [facetOfCulture]
-1@a longing for [object]
-1@a fondness for [object]
-1@a great love of [object]
-1@a distaste for [facetOfCulture]
+a hatred of [facetOfCulture]
+a longing for [object]
+a fondness for [object]
+a great love of [object]
+a distaste for [facetOfCulture]
 2@a crush on [person]
 2@an obsession with [topicOfConversation]
-1@a willful ignorance of [topicOfConversation]
+a willful ignorance of [topicOfConversation]
 2@an encyclopedic knowledge of [topicOfConversation]
 2@an ability to talk endlessly about [topicOfConversation]
 2@a dark secret concerning [topicOfConversation]
 2@a criminal history concerning [topicOfConversation]
 2@a contract to kill [person]
 2@a great story about [topicOfConversation]
-1@a degree in [facetOfCulture]
-1@a bunch of superstitions about [topicOfConversation]
-1@a conspiracy theory about [topicOfConversation]
-1@a bunch of inside jokes about [topicOfConversation]
-1@a collection of [baseItem]s [itemDescription]
-1@a speech impediment
-1@a blacklist of [raceOrProfession]s
-1@a case of [animal] [disease]
-1@a [race] [disease]
-1@a large entourage of [race]s
-1@a [container] of [baseItem]s
-1@a price set on his/her head by [person]
-1@a vendetta against [person]
+a degree in [facetOfCulture]
+a bunch of superstitions about [topicOfConversation]
+a conspiracy theory about [topicOfConversation]
+a bunch of inside jokes about [topicOfConversation]
+a collection of [baseItem]s [itemDescription]
+a speech impediment
+a blacklist of [raceOrProfession]s
+a case of [animal] [disease]
+a [race] [disease]
+a large entourage of [race]s
+a [container] of [baseItem]s
+a price set on his/her head by [person]
+a vendetta against [person]
 2@a [disability] [animal]

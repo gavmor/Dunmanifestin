@@ -1,6 +1,9 @@
 |encounter
-651@[townHook]
-112@[woodHook]
+[townHook]
+[woodHook]
+[preparedEncounters]
+
+|preparedEncounters
 A lush garden beckons with ripe vegetables.
 A demon marches atop a [geologicalFormation] only a half dozen paces from you.
 A King's Sheriff holds a colorful wanted poster. He carefully studies the party as they pass by.
@@ -59,7 +62,7 @@ Heard before it is seen, a crying child sits alone in the middle of the road.
 A glowing fog engulfs the road.
 A lone foreign knight rides by.
 An earthquake drops the group and a large section of road into a sinkhole or chasm.
-A strange dog or other animal follow you at a distance.
+A strange [animal] follows you at a distance.
 The road is riddled with pockets of quicksand.
 After one of the group treads in something sticky, animals start following the character with curious interest.
 Two groups of pilgrims from rival faiths block the road as they engage in aggressive debate. Each side appeals to the heroes for help.
@@ -2238,22 +2241,22 @@ Citizens turn up inexplicably dead in their homes, each of which featured the sa
 Brutal murders of the poor and homeless wrack the city. A wealthy nobleman hires the PCs to watch his wandering daughter, worried about where she goes when she sneaks out at night. Whilst she is always connected to the victims in some way and initially seems to be the killer, she is in fact trying to help the disadvantaged to bring some meaning to her jaded life. The real killer is an obsessed stalker, who follows her at night and erases the unworthy scum who are the recipients of her attention.
 A hauntingly fragile song echoes through the streets at dusk. The PCs trace the origin to a church’s bell tower, from which a jilted young lover threw herself in despair to her death. Now her spirit sings her lament to the setting sun. Does she recount her story and ask the party to deliver her by avenging her wronging? Or will she bitterly pitch any male characters from the tower to the cobbles below?
 A PC gains a secret admirer who leaves letters declaring her admiration. The notes become increasingly urgent and are accompanied by sinister gifts of sacrificed small animals and occult fetishes. Soon the PC receives fresh body parts and accusations of abandonment (the admirer will never directly confront the PC, but will wreak havoc on his property and relations in the PC’s ab- sence).
-A mischievous fairy decides to have some fun with a PC, comically disrupting him at delicate moments by making flowers grow out of his ears, turning his helm into a bedpan, etc. With an im- portant meeting on the horizon, what can the PC do to rid himself of this cheeky nuisance?
-A diviner hires the PCs to fetch him some rare mushroom. Unfortunately, they only grow amongst the haunted graves of the abandoned Old Cemetery, and must be harvested on a moon- less night or be rendered useless. Trapped in the mushrooms are the restless souls of those whose grave-earth nourished them. From these, the diviner wrings out ancient family secrets and scandals with which to blackmail the living.
+A mischievous fairy decides to have some fun with a PC, comically disrupting him at delicate moments by making flowers grow out of his ears, turning his helm into a bedpan, etc. With an important meeting on the horizon, what can the PC do to rid himself of this cheeky nuisance?
+A diviner hires the PCs to fetch him some rare mushroom. Unfortunately, they only grow amongst the haunted graves of the abandoned Old Cemetery, and must be harvested on a moonless night or be rendered useless. Trapped in the mushrooms are the restless souls of those whose grave-earth nourished them. From these, the diviner wrings out ancient family secrets and scandals with which to blackmail the living.
 A group of goblins, fresh from their foray from the sewers beneath an alchemist’s shop, climb out of the sewer grate and then begin throwing alchemist fire on many of the surrounding buildings and then commence breaking into store-fronts and stealing. Do the PCs fight the fires or stop the goblin looting problem?
 A noble is mortally offended by a PC’s behavior and challenges the PC to a duel a l’outrance (to the death). There is no way to back out without violating social mores and ruining the PC’s reputation. Careful investigation will reveal that the noble and PCs were subtly maneuvered into it by a third party trying to get the noble killed. And if the wandering adventurer gets killed instead, who cares?
 A child asks the PCs to help him find his pet dog. This simple task might lead them someplace where they are viewed with greatest suspicion.
 A grocer in the market motions the players behind his cart. In a low voice, he advises that a rival purveyor of vegetables has somehow sabotaged the farms that the grocer relies upon, and as a result he is forced to sell stale, imported wares at inflated prices. Would the players be interested in investigating, or perhaps taking more direct action against the accused party, for a reward?
-The party notices a hooded character attempting to sneak around in shadows doing his best to not be observed. The hooded man is trying to meet with the wife (or daughter) of a local noble- man for a romantic encounter. The party could get in the nobleman’s good graces by protecting his honor and preventing this meeting, or will they allow love to run its course?
-A leper has dropped his coin pouch. Should the PCs get his attention, he will gladly share valu- able information as reward. However, should the PCs take the pouch, all who touch it are suscep- tible to his disease
+The party notices a hooded character attempting to sneak around in shadows doing his best to not be observed. The hooded man is trying to meet with the wife (or daughter) of a local nobleman for a romantic encounter. The party could get in the nobleman’s good graces by protecting his honor and preventing this meeting, or will they allow love to run its course?
+A leper has dropped his coin pouch. Should the PCs get his attention, he will gladly share valuable information as reward. However, should the PCs take the pouch, all who touch it are susceptible to his disease
 A young girl terrified of the local orphanage turns up ill with an incoherent story about the other children biting everyone.
 A group of kids plays on a gallows. One has put a rope around his neck, pantomiming being strangled, and it looks like another is sneaking up to kick him into the hole.
 A beautiful NPC falls in love with one of the PCs and thus starts several encounters involving her suitors. Some try to kill the PCs while others simply want to run them out of town. The girl is theirs and they don’t need any more competition.
-The PCs get embroiled in a local election scandal and are asked to help find the culprit be- hind fraudulent votes. Perhaps one of the candidates is glamoring the populace into voting for the “right” person using magic, alchemy, or other tricks.
+The PCs get embroiled in a local election scandal and are asked to help find the culprit behind fraudulent votes. Perhaps one of the candidates is glamoring the populace into voting for the “right” person using magic, alchemy, or other tricks.
 An eccentric and wealthy businesswoman in the city sponsors a contest and offers a large prize of something mysterious and cryptic: “the source of life and energy!” She creates a list of items that contestants must secure and bring back to the businesswoman to claim their reward, which will be a container of water in a fancy jug.
 
 |benignTownHook
-Chamber pot emptied near/on
+a chamber pot is emptied near or on the party
 Cats chasing each other dart past
 "Please watch this cart for me, just for a minute."
 Birds of prey circling overhead
@@ -2338,7 +2341,7 @@ Howling gust of wind
 Approaching lightning storm
 Crow squawks repeatedly at approach
 Rubbery mass stuck to your boot (gum)
-Step in crap - dog, dire rat, etc.
+Step in crap dog, dire rat, etc.
 Someone stomps in nearby puddle--splash!
 Street cleaner sweeps by
 Unconscious stranger on side of road
@@ -2403,3 +2406,4 @@ A body of an evil wizard tied to a stake, body still smoking
 A chatty bard walks alongside the party
 A chess match
 A person passed out from too much drink, looted, with writing on forehead
+

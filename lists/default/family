@@ -1,5 +1,5 @@
 |family
-1@[word]
+[word]
 2@of [placeName]
 3@[namePrefix][nameSuffix]
 2@[word][nameSuffix]

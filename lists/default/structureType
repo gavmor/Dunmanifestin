@@ -1,18 +1,24 @@
 |structureType
-2@castle
-1@fortification
-2@mead hall
-1@feasting hall
-1@palace
-1@harbor
-1@dungeon
-1@keep
-1@watchtower
-1@tomb
+castle
+fortification
+mead hall
+feasting hall
+palace
+harbor
+dungeon
+keep
+watchtower
+tomb
 colliseum
 root cellar
 temple
 shrine
 boat house
 glass blowery
+catacomb
+bridge
+station
+park
+tower
+museum
 
