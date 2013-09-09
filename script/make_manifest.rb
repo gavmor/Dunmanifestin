@@ -3,7 +3,9 @@ require_relative './member.rb'
 require_relative './list.rb'
 require_relative './generator.rb'
 require_relative './string.rb'
+require_relative './phrase.rb'
 require_relative './manifestation.rb'
+require_relative './list_loader.rb'
 
 user_demands = Trollop::options do
   opt :debug, "Display errors and logging", short: '-d'
@@ -13,8 +15,11 @@ user_demands = Trollop::options do
 end
 
 begin
-  text = Manifestation.new(user_demands).text
-  puts text
+  root_phrase_class = Class.new(Phrase) { list user_demands[:phrase] }
+  ListLoader.new(user_demands[:genre]).load
+  text = root_phrase_class.new
+
+  puts text.inspect
   `echo #{text} | pbcopy $1` if user_demands[:copy]
 rescue => e
   raise e if user_demands[:debug]
