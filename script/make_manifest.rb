@@ -18,5 +18,6 @@ begin
   `echo #{text} | pbcopy $1` if user_demands[:copy]
 rescue => e
   raise e if user_demands[:debug]
+ensure
   `rm #{user_demands[:genre]}.list 2>&1` unless user_demands[:debug]
 end
