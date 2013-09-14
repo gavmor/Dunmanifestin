@@ -15,7 +15,7 @@ user_demands = Trollop::options do
 end
 
 begin
-  root_phrase_class = Class.new(Phrase) { list user_demands[:phrase] }
+  root_phrase_class = Class.new(Phrase) { list user_demands[:phrase] } 
   ListLoader.new(user_demands[:genre]).load
   text = root_phrase_class.new
 
