@@ -14,7 +14,6 @@ describe 'generate' do
       `echo "|root\nraygun" > ./lists/scifi/root.list`
       example.run
       `rm -r ./lists/scifi`
-      `rm ./scifi.list`
     end
 
     it 'overwrites default lists' do

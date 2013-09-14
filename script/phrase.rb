@@ -1,14 +1,26 @@
 require 'active_support/inflector'
 
 class Phrase
-  def initialize
-    compile parse self.class.list.sample
+  def self.list new_list = nil
+    return @list unless new_list
+    
+    if new_list.is_a? String
+      new_list = new_list.split_on_newlines_and_strip
+    end
+    
+    new_list.map! do |line|
+      multiplier_regex = /^\d+@/
+      multiplier = line.match(multiplier_regex).to_s.to_i
+      multiplier = 1 if multiplier < 1
+      [line.gsub(multiplier_regex, '')] * multiplier
+    end.flatten!.reject! { |i| i.nil? || i.empty? }
+    
+    @list = new_list
   end
   
-  def self.list new_list
-    @list ||= new_list
+  def initialize dsl_string = self.class.list.sample
+    compile parse dsl_string
   end
-  
   
   def compile parsed_dsl
     template = parsed_dsl[:template]
@@ -35,7 +47,7 @@ class Phrase
         inflections[i] << inflection.to_sym
       end
       
-      @variable_classes << rough_var_class.camelize.capitalize.constantize
+      @variable_classes << rough_var_class.camelize.constantize
     end
     
     @to_s_proc = -> {

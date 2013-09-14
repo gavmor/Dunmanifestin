@@ -21,7 +21,8 @@ class Generator
   end
 
   def manifest phrase
-    phrase.listerpolate(self)
+    phrase.to_s
+    #phrase.listerpolate(self)
   end
 
   def method_missing slug
