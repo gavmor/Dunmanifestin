@@ -1,0 +1,48 @@
+|baseItem
+[nonPreciousMetal] shield
+[nonPreciousMetal] shovel
+[nonPreciousMetal] trawl
+[nonPreciousMetal] sword
+bowl made of [hardMaterial]
+wand made of [hardMaterial]
+[metal] axe
+[metal] knife
+[weapon]
+shovel
+trawl
+sword
+axe
+plough
+bowl
+knife
+hammer
+club
+spoon
+bow
+spear
+staff
+gun
+dagger
+crossbow
+wand
+mace
+polearm
+cannon
+halberd
+orb
+lance
+power saw
+whistle
+pipe
+pipe made of [hardMaterial]
+shield
+javelin
+claw
+peg leg
+hook for a hand
+scimitar
+fuzzy hat
+flail
+bagpipe
+book
+
