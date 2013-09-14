@@ -47,7 +47,7 @@ class Phrase
         inflections[i] << inflection.to_sym
       end
       
-      @variable_classes << rough_var_class.camelize.constantize
+      @variable_classes << "Phrase::#{rough_var_class.camelize}".constantize
     end
     
     @to_s_proc = -> {
