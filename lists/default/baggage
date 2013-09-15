@@ -17,13 +17,13 @@ a degree in [facetOfCulture]
 a bunch of superstitions about [topicOfConversation]
 a conspiracy theory about [topicOfConversation]
 a bunch of inside jokes about [topicOfConversation]
-a collection of [baseItem]s [itemDescription]
+a collection of [baseItem.plural] [magicItemDescription]
 a speech impediment
-a blacklist of [raceOrProfession]s
+a blacklist of [raceOrProfession.plural]
 a case of [animal] [disease]
-a [race] [disease]
-a large entourage of [race]s
-a [container] of [baseItem]s
+[race.article] [disease]
+a large entourage of [race.plural]
+[container.article] of [baseItem.plural]
 a price set on his/her head by [person]
 a vendetta against [person]
-2@a [disability] [animal]
+2@[disability.article] [animal]

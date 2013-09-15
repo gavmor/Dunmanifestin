@@ -2,7 +2,7 @@
 [itemName], the [baseItem] [magicItemDescription]
 
 |wieldable
-100@a [baseItem]
+100@[baseItem.article]
 [artefact]
 
 

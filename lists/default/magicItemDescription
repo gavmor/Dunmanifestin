@@ -3,7 +3,7 @@ which glows when [activated]
 made by [personName]
 made in [placeName]
 stolen by [personName], who used it to slay [personName]
-which glows in the presence of [family]'s children
+which glows in the presence of [family.possessive] children
 whose every strike produces a shockwave
 which lights aflame when [activated]
 whose touch is a jolt of lightning
@@ -13,11 +13,11 @@ that is half the average weight
 which turns into [wieldable] when [activated]
 which never loses its edge
 which fights of its own accord
-which is the bane of all [race]s
+which is the bane of all [race.plural]
 which cannot be moved once [activated]
-which cannot harm a [race]
+which cannot harm [race.article]
 which thirsts for blood and screams when wet
-which turns into a [animal] when [activated]
+which turns into [animal.article] when [activated]
 whose wielders are cursed [curse]
 |itemName
 [name]

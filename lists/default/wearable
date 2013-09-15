@@ -1,4 +1,4 @@
 |wearable
-a [itemQuality], [color] [clothing]
-a [itemQuality] [softMaterial] [clothing]
-a [itemQuality] [jewelery] of [hardMaterial]
+[itemQuality.article], [color] [clothing]
+[itemQuality.article] [softMaterial] [clothing]
+[itemQuality.article] [jewelery] of [hardMaterial]
