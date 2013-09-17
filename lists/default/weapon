@@ -1,0 +1,149 @@
+|weapon
+5@[sword#plural]
+2@[bow#plural]
+[bow#plural] and [arrow.plural]
+2@[knife#plural]
+
+|sword
+[nonPreciousMetal] [swordType#plural]
+[nonPreciousMetal] [swordType#plural] with a hilt made of [hardMaterial]
+[nonPreciousMetal] [swordType#plural] inlaid with [preciousMetal]
+[nonPreciousMetal] [swordType#plural] encrusted with [preciousStone.plural]
+[swordType#plural]
+[swordType#plural] with a hilt made of [hardMaterial]
+[swordType#plural] inlaid with [preciousMetal]
+[swordType#plural] encrusted with [preciousStone.plural]
+[itemQuality] [swordType#plural]
+[itemQuality] [swordType#plural] with a hilt made of [hardMaterial]
+[itemQuality] [swordType#plural] inlaid with [preciousMetal]
+[itemQuality] [swordType#plural] encrusted with [preciousStone.plural]
+[nonPreciousMetal] [swordType#plural], [weaponName], [weaponEpithet]
+
+|swordType
+20@sword
+5@longsword
+5@broadsword
+2@rapier
+2@scimitar
+2@sabre
+
+|bow
+[bowType]
+
+|bowType
+20@bow
+4@longbow
+2@shortbow
+compound bow
+4@crossbow
+repeating crossbow
+
+|arrow
+2@[hardMaterial]-tipped [arrowType#plural]
+2@[hardMaterial] [arrowType#plural]
+poison [arrowType#plural]
+barbed [arrowType#plural]
+2@[arrowType#plural#article] with [arrowShaftType#article#plural] of [hardMaterial]
+[basicColor]-flighted [arrowType#plural]
+[basicColor]-fletched [arrowType#plural]
+[basicColor]-feathered [arrowType#plural]
+[arrowType#plural] fletched with [bird] feathers
+
+|arrowType
+arrow
+
+|arrowShaftType
+shaft
+
+|knife
+[knifeType#plural] with a handle of [hardMaterial]
+[knifeType#plural] inlaid with [preciousMetal]
+[knifeType#plural] with [preciousStone.article] on the handle
+[knifeType#plural] encrusted with [preciousStone.plural]
+[nonPreciousMetal] [knifeType#plural] with a handle of [hardMaterial]
+[nonPreciousMetal] [knifeType#plural] inlaid with [preciousMetal]
+[nonPreciousMetal] [knifeType#plural] with [preciousStone.article] on the handle
+[nonPreciousMetal] [knifeType#plural] encrusted with [preciousStone.plural]
+[itemQuality] [knifeType#plural] with a handle of [hardMaterial]
+[itemQuality] [knifeType#plural] inlaid with [preciousMetal]
+[itemQuality] [knifeType#plural] with [preciousStone.article] on the handle
+[itemQuality] [knifeType#plural] encrusted with [preciousStone.plural]
+[nonPreciousMetal] [knifeType#plural] named [weaponName] [weaponEpithet]
+
+|knifeType
+5@knife
+hunting knife
+dagger
+cleaver
+
+|weaponName
+6@[weaponNameInitial][weaponNameVowel][weaponNameConsonant][weaponNameSuffix]
+2@[weaponNameInitial][weaponNameVowel][weaponNameConsonant]
+[weaponNameInitialVowel][weaponNameConsonant][weaponNameVowel][weaponNameConsonant]
+[weaponNameInitialVowel][weaponNameConsonant][weaponNameVowel][weaponNameConsonant][weaponNameSuffix]
+[name]
+[weaponName]-[weaponName]
+
+|weaponNameInitial
+Kr
+Gr
+Gl
+K
+G
+D
+Th
+Ch
+S
+Sh
+Dr
+
+|weaponNameVowel
+3@a
+3@o
+2@au
+2@i
+u
+e
+aa
+
+|weaponNameInitialVowel
+3@A
+3@O
+2@Au
+2@I
+U
+E
+
+|weaponNameConsonant
+n
+l
+r
+sh
+th
+dh
+rh
+lh
+g
+
+|weaponNameSuffix
+or
+ex
+ic
+il
+tar
+gar
+og
+rok
+nor
+w
+rist
+anz
+az
+
+|weaponEpithet
+[race]bane
+[monster]bane
+the [monster]-slayer
+slayer of [monster.plural]
+bane of [monster.plural]
+terror of [race.plural]
