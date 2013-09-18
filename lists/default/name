@@ -1,9 +1,15 @@
 |name
 [humanName]
+[elfName]
+[koboldName]
 [word]
 
 |humanName
 [englishName]
+
+|elfName
+[welshName]
+[finnishName]
 
 |word
 [ssCap]
