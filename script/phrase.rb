@@ -29,7 +29,8 @@ class Phrase
     @inflection_delegates = {
       :plural => [],
       :possessive => [],
-      :article => []
+      :article => [],
+      :capitalize => [],
     }
     
     inflections = []
@@ -115,7 +116,8 @@ class Phrase
   
   def plural?;     !!@plural     end
   def possessive?; !!@possessive end
-  def article?;    !!@article     end
+  def article?;    !!@article    end
+  def capitalize?; !!@capitalize end
   
   def plural!
     @plural = true
@@ -140,6 +142,15 @@ class Phrase
     
     @inflection_delegates[:possessive].each do |delegate|
       variables[delegate].possessive!
+    end
+    self
+  end
+  
+  def capitalize!
+    @capitalize = true
+    
+    @inflection_delegates[:capitalize].each do |delegate|
+      variables[delegate].capitalize!
     end
     self
   end
@@ -171,6 +182,9 @@ class Phrase
         string = "#{string}'s"
       end
     end
+    
+    string = string.capitalize if capitalize?
+    
     string
   end
 end
