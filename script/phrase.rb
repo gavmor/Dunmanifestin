@@ -48,7 +48,15 @@ class Phrase
         inflections[i] << inflection.to_sym
       end
       
-      @variable_classes << "Phrase::#{rough_var_class.camelize}".constantize
+      begin
+        @variable_classes << "Phrase::#{rough_var_class.camelize}".constantize
+      rescue NameError
+        @variable_classes << eval(%Q|Class.new(Phrase) do
+          def initialize
+            @to_s_proc = -> { "{#{rough_var_class} ??}" }
+          end
+        end|)
+      end
     end
     
     @to_s_proc = -> {
