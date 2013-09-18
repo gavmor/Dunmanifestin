@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class String
   def is_name?
     self[0] == '|'
@@ -13,6 +15,21 @@ class String
     end
 
     body
+  end
+  
+  alias :original_capitalize :capitalize
+  
+  def capitalize
+    case_mapping = {
+      "ä" => "Ä",
+      "ö" => "Ö",
+    }
+    
+    s = original_capitalize
+    case_mapping.each_pair do |lower, upper|
+      s.gsub!(%r{^#{lower}}, upper)
+    end
+    s
   end
   
   def split_on_newlines_and_strip
