@@ -5,15 +5,15 @@
 
 |miscEncounters
 A lush garden beckons with ripe vegetables.
-A demon marches atop a [geologicalFormation] only a half dozen paces from you.
+A demon marches atop [geologicalFormation.article] only a half dozen paces from you.
 A King's Sheriff holds a colorful wanted poster. He carefully studies the party as they pass by.
-[person] holds a [wieldable]. He/She carefully studies the party as they pass by.
+[person] holds [wieldable.article]. He/She carefully studies the party as they pass by.
 One of the PCs spots a key. What's it for?
 A young man and woman riding a horse bareback, ill-equipped for travel, make to pass by you in haste. If questioned, they tell you they are lovers, fleeing a feud between their families who live in [settlement] the village ahead of you.
 A smiling roadside merchant roasts rats, frogs and squirrels on sticks.
-A smiling roadside merchant roasts [animal]s, [animal]s and [animal]s on sticks.
+A smiling roadside merchant roasts [animal.plural], [animal.plural] and [animal.plural] on sticks.
 The road goes through a canyon bog filled with toxic, flammable gas.
-The road goes through a [geologicalFormation] filled with toxic, flammable gas.
+The road goes through [geologicalFormation.article] filled with toxic, flammable gas.
 A lone child blocks the bridge ahead, unless each traveler can guess her riddle.
 A local noble stumbles out of woods and falls flat on face with a knife in his back. His guards round the bend and exclaim, "You, halt!"
 A chatty [profession] walks alongside the party.
@@ -1920,11 +1920,11 @@ A cart sells roasted rat on a stick on the corner. The proprietor looks surprise
 The streets are choked with onlookers, entourages, and beggars all trying to gain the recently arrived Duke’s attentions. During the chaos, one of the PC’s prized possessions is pilfered. Later, as the Duke departs, the PCs spot him carrying it.
 The PCs are completely ignored by all of the citizens in the town. Unless the PCs get physical or destructive, nothing they say or do gets a response.
 A guard officer has lost his badge of office and must find it before the end of his shift. One of the PCs spots an orphan beggar handing it discreetly to another beggar through a window of a nearby building.
-Gerard de Nancy is a trifle effeminate in appearance, but he doesn’t like to hear that from anyone other than his father, the Sieur de Moncotte. Loose lips slit noses - that’s what he plans for you, unless you can convince him and his minions otherwise, and he is six foot seven tall.
-The festival is in town. A large circus has arrived and the streets are full of fun and joy. Many acts and harmless but entertaining magic amaze the people. Once they leave, it’s discovered that some people have gone missing - homeless drunks, prostitutes and children. Following the circus, the PCs won’t find the missing townspeople. The owner lets the PCs search around and question the workers; he has nothing to hide. An important clue is that one of the missing people had an unusual tattoo of their clan or faith on their ankle. A sharp-eyed PC will spot the tattoo on the ankle of a caged lion. The circus is using some kind of magic to turn undesirables from towns into circus anmals for the show!
+[personName] is a trifle effeminate in appearance, but he doesn’t like to hear that from anyone other than his father, [personName]. Loose lips slit noses - that’s what he plans for you, unless you can convince him and his minions otherwise, and he is six foot seven tall.
+The festival is in town. A large circus has arrived and the streets are full of fun and joy. Many acts and harmless but entertaining magic amaze the people. Once they leave, it’s discovered that some people have gone missing - homeless drunks, prostitutes and children. Following the circus, the PCs won’t find the missing townspeople. The owner lets the PCs search around and question the workers; he has nothing to hide. An important clue is that one of the missing people had an unusual tattoo of their clan or faith on their ankle. A sharp-eyed PC will spot the tattoo on the ankle of a caged lion. The circus is using some kind of magic to turn undesirables from towns into circus animals for the show!
 A street fight gets someone thrown into a horse trough - a trough with a deadly water snake in it.
-A small child asks one of the party if that is a real [weapon/item] they have hidden on them.
-Mimes have infested the street and try to climb invisible ropes in front of a clearly unapprciative audience.
+A small child asks one of the party if that is a real [baseItem] they have hidden on them.
+Mimes have infested the street and try to climb invisible ropes in front of a clearly unappreciative audience.
 A trio of nuns plays jump-rope. A PC gets a glance under one’s habit and spots a pair of hairy half-orc legs.
 A salesman offers great discounts on holy water. A careful PC might spot an evil symbol tatooed on the salesman’s neck.
 A woman carrying a stack of books trips in front of the party and falls over, scattering her books everywhere. One of the books is on demonology.
@@ -2101,7 +2101,7 @@ A baby is growing 10 times faster than normal. Some folks believe it is a sign f
 Guests who stay at a dockside inn sometimes disappear forever from their rooms in the middle of the night. Rumors suggest that press gangs and murderers are active in the area, but the inkeeper is adamant he runs a safe establishment and asks the PCs to solve the mystery.
 A dark stranger approaches the party. He is a litigant with a charge of malconduct on the part of the PCs. Real, or imagined - carrying a concealed weapon, a bad magic item, an ancient curse that haunts their steps, a badly disposed of undead follows them like a diseased puppy, not greeting some town dignitary in the proper way, failure to declare certain illicit goods at the gate, trading without a permit, looking lustfully at the daughter of a dignitary - anything to get the PC to court. There, it is revealed that besides the one charge, one of the PCs is also the suspect in a famous murder case (preferably the rogue-type character). Now they have two problems on their hand.
 In a crowded bar or restaurant, the PCs manage to offend a wealthy noble by sitting at his usual table. Can they smooth things over, or does it escalate into violence?
-In a crowded market, a trio of horsemen gallop through, smashing carts and forcing people aside, even trampling those who are too slow. They shout “[NPC] is dead! Long live [New NPC]!”
+In a crowded market, a trio of horsemen gallop through, smashing carts and forcing people aside, even trampling those who are too slow. They shout “[personName] is dead! Long live [personName]!”
 In a crowded marketplace, a young woman calls for help because her necklace has been stlen by a clever pickpocket. However, this is a scheme to allow her to unobtrusively pay off a debt incurred to a mobster, and the necklace was never actually stolen.
 In a crowded square a stranger shoves a sealed package into a PC’s hands, saying, “Finally I found you, you know what to do!” The stranger disappears in the crowd leaving the PCs to wonder what to do with the package. It may contain something horrible or valuable or is just a confusing trinket.
 In a nearby alley, three thugs look to be assaulting a woman. In reality, they are a group of rogues luring would-be rescuers into their trap.

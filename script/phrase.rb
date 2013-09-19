@@ -29,7 +29,8 @@ class Phrase
     @inflection_delegates = {
       :plural => [],
       :possessive => [],
-      :article => []
+      :article => [],
+      :capitalize => [],
     }
     
     inflections = []
@@ -47,7 +48,15 @@ class Phrase
         inflections[i] << inflection.to_sym
       end
       
-      @variable_classes << rough_var_class.camelize.constantize
+      begin
+        @variable_classes << "Phrase::#{rough_var_class.camelize}".constantize
+      rescue NameError
+        @variable_classes << eval(%Q|Class.new(Phrase) do
+          def initialize
+            @to_s_proc = -> { "{#{rough_var_class} ??}" }
+          end
+        end|)
+      end
     end
     
     @to_s_proc = -> {
@@ -115,7 +124,8 @@ class Phrase
   
   def plural?;     !!@plural     end
   def possessive?; !!@possessive end
-  def article?;    !!@article     end
+  def article?;    !!@article    end
+  def capitalize?; !!@capitalize end
   
   def plural!
     @plural = true
@@ -140,6 +150,15 @@ class Phrase
     
     @inflection_delegates[:possessive].each do |delegate|
       variables[delegate].possessive!
+    end
+    self
+  end
+  
+  def capitalize!
+    @capitalize = true
+    
+    @inflection_delegates[:capitalize].each do |delegate|
+      variables[delegate].capitalize!
     end
     self
   end
@@ -171,6 +190,9 @@ class Phrase
         string = "#{string}'s"
       end
     end
+    
+    string = string.capitalize if capitalize?
+    
     string
   end
 end

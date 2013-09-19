@@ -1,4 +1,4 @@
 |person
-[personName], a [qualityWithAdverb] [raceOrProfession]
-[personName], a [quality] [raceOrProfession]
-3@[personName], a [appearance], [personality] [raceOrProfession]
+[personName], [qualityWithAdverb.article] [raceOrProfession]
+[personName], [quality.article] [raceOrProfession]
+3@[personName], [appearance.article], [personality] [raceOrProfession]

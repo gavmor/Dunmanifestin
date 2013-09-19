@@ -3,8 +3,8 @@
 10@[structure]
 
 |settlement
-[placeName], a [settlementType] built on a [geologicalFormation] in [province]. [settlementDetail]
+[placeName], [settlementType.article] built on [geologicalFormation.article] in [province]. [settlementDetail]
 
 |structure
-[placeName], a [structureType] built on a [geologicalFormation] in [province]. [structureDetail]
+[placeName], [structureType.article] built on [geologicalFormation.article] in [province]. [structureDetail]
 
