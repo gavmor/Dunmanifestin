@@ -1,6 +1,6 @@
 |settlementDetail
-20@Its economy is based on [economy].
-10@It is known for its many [buildingType]s and [quality] populace.
-4@It is known for being the home of [denizen].
+Its economy is based on [economy].
+It is known for its many [buildingType]s and [quality] populace.
+It is known for being the home of [denizen].
 It was once a thriving hub of [facetOfCulture].
-
+The inhabitants are [attitude] towards [race.plural].
