@@ -28,11 +28,8 @@ h
 6@n
 4@m
 3@th
-sg
-sb
 dr
 gl
-bl
 br
 cl
 cr
@@ -41,6 +38,7 @@ cr
 t
 5@d
 3@c
+3@ch
 2@b
 4@g
 9@l
@@ -66,7 +64,9 @@ rth
 
 |welshVowel
 9@y
-8@w
+4@w
+wy
+yw
 10@e
 5@a
 3@i
@@ -74,8 +74,6 @@ rth
 u
 
 |welshFinalVowel
-4@y
-8@w
 8@a
 3@i
 2@o
