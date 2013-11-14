@@ -1,0 +1,184 @@
+|root
+[wisdom].
+
+|wisdom
+3@[abstraction] is the [superlative] [noun]
+3@[abstraction] [verb] [nounPhrase]
+3@[abstraction] is [person.possessive] [noun]
+3@[abstraction] is the [noun] of the [personType]
+3@[abstraction] [verb] [quantifier] [noun.plural]
+3@[abstraction] [verb] [quantifier] [mass]
+3@[abstraction] is the [gerund] of [nounPhrase]
+if you [action], you will [action]
+[action], and you will [action]
+[abstraction] leads to [abstraction]
+
+|nounPhrase
+[adjective] [noun.plural]
+[adjective] [mass]
+
+|verb
+makes
+is
+takes
+can destroy
+requires
+conquers
+replaces
+is better than
+beats
+
+|abstraction
+justice
+love
+money
+time
+theory
+practice
+genius
+patience
+complexity
+adversity
+comedy
+tragedy
+Mom
+religion
+science
+perfection
+fear
+happiness
+grief
+wrath
+work
+code
+medicine
+software
+strength
+wisdom
+virtue
+fashion
+fame
+glory
+death
+
+|quantifier
+all
+no
+
+|adjective
+good
+better
+fashionable
+delicious
+perfect
+quick
+bad
+broken
+careless
+precise
+complex
+enduring
+
+|superlative
+best
+loudest
+quickest
+worst
+shortest
+longest
+slowest
+most revealing
+most complex
+simplest
+most enduring
+
+|noun
+sandwich
+towel
+computer
+tool
+instrument
+fear
+prisoner
+enemy
+friend
+ally
+currency
+usurper
+blasphemy
+messenger
+foe
+nemesis
+companion
+herald
+jury
+judge
+gatekeeper
+reward
+solution
+problem
+haven
+
+|gerund
+interpretation
+loss
+reconciliation
+putting together
+organization
+destruction
+assembly
+
+|person
+the [quality] man
+the devil
+God
+the proletariat
+the bourgeoisie
+the [personType]
+
+|quality
+wise
+foolish
+rich
+poor
+educated
+guilty
+innocent
+
+|personType
+fool
+scholar
+philosopher
+child
+mother
+father
+sophist
+king
+queen
+priest
+masses
+priesthood
+royalty
+laborer
+engineer
+
+|mass
+balm
+drugs
+opiate
+20@[abstraction]
+
+|action
+win every battle
+win the war
+prosper
+live long
+5@practice [abstraction]
+5@know [abstraction]
+5@defeat [abstraction]
+5@have [abstraction]
+5@overcome [abstraction]
+win
+lose
+succeed
+fail
