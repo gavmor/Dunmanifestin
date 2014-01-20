@@ -15,6 +15,7 @@ user_demands = Trollop::options do
   opt :copy, "Copies manifestation into your clipboard", short: '-c'
   opt :genre, "Specify a genre, e.g. '-g scifi'", type: :string, short: '-g', default: 'default'
   opt :phrase, "Specify a phrase or list, e.g. 'The [animal] sat on the [article]' or '[weapon]'", type: :string, short: '-p', default: '[root]'
+  opt :chomp, "remove the trailing newline from the output", short: '-h'
 end
 
 def get_from_prompt
@@ -38,7 +39,8 @@ begin
     (user_demands[:count] || 1).times do
       text = root_phrase_class.new.inspect
       fulltext += "\n#{text}"
-      puts text
+      text += "\n" unless user_demands[:chomp]
+      print text
     end
 
     `echo #{fulltext.inspect} | pbcopy $1` if user_demands[:copy]

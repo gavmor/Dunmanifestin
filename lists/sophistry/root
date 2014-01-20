@@ -2,20 +2,40 @@
 [wisdom].
 
 |wisdom
-3@[abstraction] is the [superlative] [noun]
-3@[abstraction] [verb] [nounPhrase]
-3@[abstraction] is [person.possessive] [noun]
-3@[abstraction] is the [noun] of the [personType]
-3@[abstraction] [verb] [quantifier] [noun.plural]
-3@[abstraction] [verb] [quantifier] [mass]
-3@[abstraction] is the [gerund] of [nounPhrase]
+2@[subject] is the [superlative] [noun]
+2@[subject] [verb] [nounPhrase]
+2@[subject] is [person.possessive] [noun]
+2@[subject] is the [noun] of the [personType]
+2@[subject] [verb] [quantifier] [noun.plural]
+2@[subject] [verb] [quantifier] [mass]
+2@[subject] is the [gerund] of [nounPhrase]
+[subject] will [action]
 if you [action], you will [action]
+if you [negaux] [action], [action]
+it is not for the [personType] to [action]
+to [action], [action]
 [action], and you will [action]
 [abstraction] leads to [abstraction]
+the [abstraction] of [abstraction] is [abstraction]
+[abstraction] makes [quantifier] [noun.plural] [adjective]
+
+|subject
+10@[abstraction]
+2@[adjective] [mass]
+[mass]
+[properNoun]
 
 |nounPhrase
 [adjective] [noun.plural]
+[noun.plural]
 [adjective] [mass]
+[mass]
+[properNoun]
+
+|properNoun
+the Force
+Mom
+God
 
 |verb
 makes
@@ -27,6 +47,11 @@ conquers
 replaces
 is better than
 beats
+overcomes
+simplifies
+complicates
+steals from
+undermines
 
 |abstraction
 justice
@@ -60,6 +85,14 @@ fashion
 fame
 glory
 death
+truth
+falsity
+life
+consciousness
+morality
+language
+friendship
+art
 
 |quantifier
 all
@@ -78,12 +111,14 @@ careless
 precise
 complex
 enduring
+true
+false
 
 |superlative
-best
+2@best
 loudest
 quickest
-worst
+2@worst
 shortest
 longest
 slowest
@@ -91,6 +126,13 @@ most revealing
 most complex
 simplest
 most enduring
+truest
+falsest
+strongest
+2@surest
+2@first
+2@last
+2@only
 
 |noun
 sandwich
@@ -118,6 +160,9 @@ reward
 solution
 problem
 haven
+emergent property
+product
+crime
 
 |gerund
 interpretation
@@ -127,6 +172,11 @@ putting together
 organization
 destruction
 assembly
+selection
+extension
+weakness
+mechanism
+creator
 
 |person
 the [quality] man
@@ -161,6 +211,10 @@ priesthood
 royalty
 laborer
 engineer
+thug
+thief
+rogue
+anarchist
 
 |mass
 balm
@@ -169,16 +223,47 @@ opiate
 20@[abstraction]
 
 |action
-win every battle
-win the war
-prosper
-live long
+13@[baseAction]
+2@[timerange] [baseAction]
+5@[baseAction] [adverb]
+try to [baseAction]
+try to [baseAction] [adverb]
+
+
+|baseAction
 5@practice [abstraction]
 5@know [abstraction]
 5@defeat [abstraction]
 5@have [abstraction]
 5@overcome [abstraction]
+2@create [abstraction]
+live
+2@die
+win every battle
+win the war
+prosper
+live long
 win
 lose
 succeed
 fail
+
+|negaux
+don't
+can't
+
+|timerange
+never
+always
+
+|adverb
+well
+today
+again
+in time
+perfectly
+now
+completely
+forever
+immediately
+fast
