@@ -7,6 +7,8 @@ Immeasurably inspired by [RandListGen](http://www.path-o-logic.com/misc/RandList
 
 ## Try It!
 
+First, install the gem
+
 To generate a phrase from the root -- a character, location or plot hook:
 `$ ./dun`
 

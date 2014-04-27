@@ -1,12 +1,6 @@
-require 'trollop'
-require_relative './member.rb'
-require_relative './list.rb'
-require_relative './generator.rb'
-require_relative './string.rb'
-require_relative './custom_inflections.rb'
-require_relative './phrase.rb'
-require_relative './manifestation.rb'
-require_relative './list_loader.rb'
+#!/usr/bin/env ruby
+
+require 'dunmanifestin'
 
 user_demands = Trollop::options do
   opt :debug, "Display errors and logging", short: '-d'
@@ -24,7 +18,7 @@ def get_from_prompt
 end
 
 begin
-  root_phrase_class = Class.new(Phrase) { list user_demands[:phrase] } 
+  root_phrase_class = Class.new(Phrase) { list user_demands[:phrase] }
   ListLoader.new(user_demands[:genre]).load
 
   if user_demands[:interactive]
@@ -32,9 +26,9 @@ begin
           "Type 'quit' to exit the prompt. Press return to generate more output.\n"+
           "---------------------------------------------------------------------\n\n"
   end
-  
+
   fulltext = ""
-  
+
   while true
     (user_demands[:count] || 1).times do
       text = root_phrase_class.new.inspect
@@ -44,10 +38,10 @@ begin
     end
 
     `echo #{fulltext.inspect} | pbcopy $1` if user_demands[:copy]
-    
+
     break if !user_demands[:interactive] || get_from_prompt == 'quit'
   end
-  
+
 rescue => e
   raise e if user_demands[:debug]
 ensure
