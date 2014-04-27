@@ -7,12 +7,11 @@ Immeasurably inspired by [RandListGen](http://www.path-o-logic.com/misc/RandList
 
 ## Try It!
 
-First, install the gem
+1. `gem install dunmanifestin`
+2. `dunmanifestin`
+3. `dunmanifestin -p 'I had a [animal], once. Its name was [name].'
 
-To generate a phrase from the root -- a character, location or plot hook:
-`$ ./dun`
-
-Try `./dun -h` for usage:
+Try `dunamnifestin -h` for usage:
 
 ```
 Options:
