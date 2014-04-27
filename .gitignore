@@ -1,2 +1,5 @@
-./default.list
-root.list
+.floo
+.flooignore
+.DS_Store
+.sublime-project
+.rspec
