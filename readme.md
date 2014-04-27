@@ -1,7 +1,9 @@
 # List-Based Generation of Plausible Phrases
-*The key elements in human thinking are not numbers but labels of fuzzy sets. -- L. Zadeh*
+*The key elements in human thinking are not numbers but labels of fuzzy sets. — L. Zadeh*
 
-*The point of Dunmanifestin [is] to inject chaos into humans' cliched ideas or, at least, let them be hunter-gatherers instead of farmers of culture. -- B. Christel*
+*The point of Dunmanifestin [is] to inject chaos into humans' cliched ideas or, at least, let them be hunter-gatherers instead of farmers of culture. — B. Christel*
+
+*Eroton, a glass blowery built on a mountain in Rake. Some say it contains priceless pipes made of pearl. — Dunmanifestin*
 
 Immeasurably inspired by [RandListGen](http://www.path-o-logic.com/misc/RandListGen_sample.html).
 
