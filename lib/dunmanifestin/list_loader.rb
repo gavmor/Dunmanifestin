@@ -9,7 +9,7 @@ class ListLoader
     Dir[default_list_dir].each { |list_path| create_list_from(list_path) }
 
     if genre != 'default'
-      Dir[File.join(*%W(#{dir_of_this_file} .. lists #{genre} ** *))].each { |list_path| create_list_from(list_path) }
+      Dir[File.join(*%W(#{dir_of_this_file} .. .. lists #{genre} ** *))].each { |list_path| create_list_from(list_path) }
     end
   end
 
