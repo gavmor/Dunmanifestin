@@ -191,7 +191,7 @@ class Phrase
       end
     end
     
-    string = string.capitalize if capitalize?
+    string = string[0].capitalize + string[1 .. -1] if capitalize?
     
     string
   end
