@@ -4,16 +4,16 @@ class ListLoader
   end
 
   def load genre=@genre
-    dir_of_this_file = File.dirname(__FILE__)
-    default_list_dir = File.join(*%W(#{dir_of_this_file} .. .. lists default ** *))
-    Dir[default_list_dir].each { |list_path| create_list_from(list_path) }
-
-    if genre != 'default'
-      Dir[File.join(*%W(#{dir_of_this_file} .. .. lists #{genre} ** *))].each { |list_path| create_list_from(list_path) }
-    end
+    Dir[list_dir('default')].each(&method(:create_list_from))
+    Dir[list_dir(genre)].each(&method(:create_list_from)) unless genre == 'default'
   end
 
   private
+
+  def list_dir(genre)
+    dir_of_this_file = File.dirname(__FILE__)
+    File.join(*%W(#{dir_of_this_file} .. .. lists #{genre} ** *))
+  end
 
   def create_list_from path
     newlines_before_a_pipe = /\n(?=\|)/
