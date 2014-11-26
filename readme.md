@@ -26,3 +26,6 @@ Options:
                        [article]' or '[weapon]' (default: [root])
          --help, -h:   Show this message
 ```
+### ToDo
+[ ] Load lists from working directory, instead of Gem source directory
+[ ] Optionally create genre if not already present
