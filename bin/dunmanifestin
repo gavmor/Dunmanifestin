@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'trollop'
-require_relative '../lib/dunmanifestin'
+require_relative '../lib/dunmanifestin/terminator'
 
 user_demands = Trollop::options do
   opt :debug, "Display errors and logging", short: '-d'
@@ -13,37 +13,8 @@ user_demands = Trollop::options do
   opt :chomp, "remove the trailing newline from the output", short: '-h'
 end
 
-def get_from_prompt
-  print "dunmanifestin > "
-  gets.chomp
-end
-
-def print_interactive_banner
-  print "---------------------------------------------------------------------\n"+
-        "Type 'quit' to exit the prompt. Press return to generate more output.\n"+
-        "---------------------------------------------------------------------\n\n"
-end
-
 begin
-  root_phrase_class = Class.new(Phrase) { list user_demands[:phrase] }
-  ListLoader.new(user_demands[:genre]).load
-
-  print_interactive_banner if user_demands[:interactive]
-
-  fulltext = ""
-
-  while true
-    (user_demands[:count] || 1).times do
-      text = root_phrase_class.new.to_s
-      fulltext += "\n#{text}"
-      text += "\n" unless user_demands[:chomp]
-      puts text
-    end
-
-    `echo #{fulltext.inspect} | pbcopy $1` if user_demands[:copy]
-
-    break if !user_demands[:interactive] || get_from_prompt == 'quit'
-  end
+  Terminator.new.address user_demands
 rescue => e
   raise e if user_demands[:debug]
 ensure
