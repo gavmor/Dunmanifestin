@@ -48,11 +48,9 @@ class Terminator
   end
 
   def interactive_banner
-<<-BNR
----------------------------------------------------------------------
-Type 'quit' to exit the prompt. Press return to generate more output.
----------------------------------------------------------------------
-BNR
+    message = "Type 'quit' to exit the prompt. Press return to generate more output."
+    bar = "-"*message.length
+    [bar, message, bar].join "\n"
   end
 
   module Shell
