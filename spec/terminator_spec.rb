@@ -1,3 +1,5 @@
+require 'tempfile'
+
 require_relative '../lib/dunmanifestin/terminator'
 
 describe Terminator do
@@ -15,6 +17,21 @@ describe Terminator do
     before do
       allow(shell).to receive(:puts)
       allow(list_loader).to receive(:load)
+    end
+
+    context 'when given a file path' do
+      let(:file) do
+        file = Tempfile.new('phrasing')
+        file.write("hello world")
+        file.close
+        file.path
+      end
+      let(:demands) { {file: file} }
+
+      it 'prints stuff' do
+        expect(shell).to receive(:puts).with("hello world\n")
+        terminator.address demands
+      end
     end
 
     it 'loads lists from the genre' do

@@ -9,8 +9,9 @@ user_demands = Trollop::options do
   opt :count, "Specify how many lines of output to generate at once", type: :integer, short: '-n'
   opt :copy, "Copies manifestation into your clipboard", short: '-c'
   opt :genre, "Specify a genre, e.g. '-g scifi'", type: :string, short: '-g', default: 'default'
-  opt :phrase, "Specify a phrase or list, e.g. 'The [animal] sat on the [article]' or '[weapon]'", type: :string, short: '-p', default: '[root]'
+  opt :phrase, "Specify a phrase or list, e.g. 'The [animal] sat on the [article]' or '[weapon]'", type: :string, short: '-p'
   opt :chomp, "remove the trailing newline from the output", short: '-h'
+  opt :file, "Read a file as the phrase", type: :string, short: '-f'
 end
 
 begin

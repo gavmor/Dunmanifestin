@@ -9,8 +9,9 @@ class Terminator
   end
 
   def address demands
-    root_phrase_class = Class.new(Phrase) { list demands.fetch(:phrase) }
-    list_loader.load demands.fetch :genre
+    phrase_string = phrasing(demands[:phrase], demands[:file])
+    root_phrase_class = Class.new(Phrase) { list phrase_string }
+    list_loader.load demands[:genre]
     print interactive_banner if demands[:interactive]
 
     construction_loop(
@@ -40,6 +41,10 @@ class Terminator
       break unless interact
       break if get_from_prompt == 'quit'
     end
+  end
+
+  def phrasing given, file
+    given || (File.read(file) if file) || '[root]'
   end
 
   def get_from_prompt
