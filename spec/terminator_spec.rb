@@ -26,5 +26,23 @@ describe Terminator do
       expect(shell).to receive(:puts)
       terminator.address demands
     end
+
+    context 'when the given phrase requests a missing item' do
+      let(:phrase) { 'I know [beelzebub] well!' }
+
+      it 'prints the word and some question marks' do
+        expect(shell).to receive(:puts).with("I know {beelzebub ??} well!\n")
+        terminator.address demands
+      end
+
+      context 'with an article' do
+        let(:phrase) { 'I know [garbage.article] well!' }
+
+        xit 'prints the words and some question marks' do
+          expect(shell).to receive(:puts).with("I know {garbage.article ??} well!")
+          terminator.address demands
+        end
+      end
+    end
   end
 end
