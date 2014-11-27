@@ -3,15 +3,14 @@ require_relative 'list_loader'
 require_relative 'string'
 
 class Terminator
-  attr_accessor :list_loader
-  def initialize(list_loader: ListLoader)
+  def initialize(list_loader: ListLoader, shell: Shell)
     @list_loader = list_loader
+    @shell = shell
   end
 
   def address demands
     root_phrase_class = Class.new(Phrase) { list demands.fetch(:phrase) }
     list_loader.load demands.fetch :genre
-
     print interactive_banner if demands[:interactive]
 
     construction_loop(
@@ -23,6 +22,9 @@ class Terminator
     )
   end
 
+  private
+  attr_accessor :list_loader, :shell
+
   def construction_loop root_phrase_class, volume, chomp, copy, interact
     fulltext = ""
     while true
@@ -30,7 +32,7 @@ class Terminator
         text = root_phrase_class.new.to_s
         fulltext += "\n#{text}"
         text += "\n" unless chomp
-        puts text
+        shell.puts text
       end
 
       `echo #{fulltext.inspect} | pbcopy $1` if copy
@@ -41,8 +43,8 @@ class Terminator
   end
 
   def get_from_prompt
-    print "dunmanifestin > "
-    gets.chomp
+    shell.print "dunmanifestin > "
+    shell.gets.chomp
   end
 
   def interactive_banner
@@ -51,5 +53,13 @@ class Terminator
 Type 'quit' to exit the prompt. Press return to generate more output.
 ---------------------------------------------------------------------
 BNR
+  end
+
+  module Shell
+    class << self
+      def method_missing method, *args
+        send method, *args
+      end
+    end
   end
 end
