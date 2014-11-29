@@ -1,10 +1,8 @@
 class ListLoader
   class << self
     def load genre=@genre
-      Dir[DEFAULT_GENRE].each(&method(:palettes))
-
-      genre_files = Dir[File.join(genre, '**' '*')]
-      genre_files.each(&method(:palettes)) unless genre == 'default'
+      Dir[DEFAULT_GENRE].each(&method(:expose_palettes))
+      load_genre(genre).each(&method(:expose_palettes)) unless genre == 'default'
     end
 
     private
@@ -12,12 +10,16 @@ class ListLoader
     GAP_BETWEEN_LISTS   = /\n(?=\|)/
     DEFAULT_GENRE       = File.join(*%W(#{File.dirname(__FILE__)} .. .. lists default ** *))
 
-
-    def palettes path
-      File.open(path).read.split(GAP_BETWEEN_LISTS).each(&method(:expose))
+    def load_genre dirname
+      Dir[File.join(dirname, '**' '*')]
     end
 
-    def expose body
+    def expose_palettes path
+      File.open(path).read.split(GAP_BETWEEN_LISTS)
+        .each &method(:expose_swatches)
+    end
+
+    def expose_swatches body
         list_name = body.match(PALETTE_TITLE)[1].to_s
 
         if list_name.empty?

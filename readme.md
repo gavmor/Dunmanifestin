@@ -1,4 +1,4 @@
-# List-Based Generation of Plausible Phrases
+# Microscope-style-palette-based Generation of Plausible Phrases
 *The key elements in human thinking are not numbers but labels of fuzzy sets. — L. Zadeh*
 
 *The point of Dunmanifestin [is] to inject chaos into humans' cliched ideas or, at least, let them be hunter-gatherers instead of farmers of culture. — B. Christel*
@@ -28,6 +28,6 @@ Options:
 ```
 ### ToDo
 [x] Load lists from arbitrary path, instead of Gem source directory
-[ ] Optionally create genre if not already present
+[ ] More tests!
 [ ] Explicitly namespace genres, palettes and swatches
 
