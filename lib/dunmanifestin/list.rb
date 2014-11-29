@@ -6,9 +6,10 @@ class List
     @members = opts.fetch(:members, [])
     @universe = opts.fetch(:universe)
     @universe.lists[name] = self
+    puts members
   end
 
-  
+
   def << rough_member
     pieces = rough_member.split('@')
 
@@ -20,11 +21,11 @@ class List
 
     weight.times { members << member }
   end
-  
+
   def sample
     members.sample
   end
 
-  private 
+  private
   attr_accessor :members, :universe
 end

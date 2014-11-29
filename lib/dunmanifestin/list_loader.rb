@@ -1,15 +1,15 @@
 class ListLoader
   class << self
     def load genre=@genre
-      Dir[list_dir('default')].each(&method(:create_list_from))
-      Dir[list_dir(genre)].each(&method(:create_list_from)) unless genre == 'default'
+      Dir[default_list_dir].each(&method(:create_list_from))
+
+      genre_files = Dir[File.join(genre, '**' '*')]
+      genre_files.each(&method(:create_list_from)) unless genre == 'default'
     end
 
     private
-
-    def list_dir(genre)
-      dir_of_this_file = File.dirname(__FILE__)
-      File.join(*%W(#{dir_of_this_file} .. .. lists #{genre} ** *))
+    def default_list_dir
+      File.join(*%W(#{File.dirname(__FILE__)} .. .. lists default ** *))
     end
 
     def create_list_from path
