@@ -1,18 +1,18 @@
 |person
-[name] [family], the [description] wearing a [clothing] who [motivation], [secret], carries an [item], and is accompanied by an [animal].
+[name] [family], the [description] wearing a [vestment] who [motivation], [secret], carries an [item], and is accompanied by an [animal].
 
 |denizen
 [person]
 Wasahua Eom, the chaotic evil Great White Shark-spirited adult wearing a rough, seashell ring who is running away from something, possesses powerful magic, carries an knife, and is accompanied by an Octopus.
 Tedee Hehe, a perpetually paranoid wretch with a whistle and a encyclopedic knowledge of music. He/she wants to go home, and fears heights.
 Nushase Utdakel, a heartbreakingly mopey dwarf with a broken, dark orchid amulet and a collection of hook for a hands made of black crystal.
-  
+
 |clothing
 [quality], [color] [article]
 
 |description
 [alignment] [animal]-spirited [ageGroup]
-[height], [attitude] [profession] 
+[height], [attitude] [profession]
 
 |ageGroup
 baby
@@ -329,7 +329,7 @@ tliamitochlo
 lequinto
 tintlolincopanto
 mixqui
-tēsāpolōpā 
+tēsāpolōpā
 Bolaxā
 xisqui
 potlohā
@@ -832,18 +832,18 @@ Yorkshire Terrier
 Zebra
 
 |attitude
-flirtatious 
-friendly 
-moderately condescending 
-disdainful 
-highly admiring 
-extremely wary 
-trusting 
-somewhat admiring 
-extremely disdainful 
-extremely doubtful 
-condescending 
-extremely unfriendly 
-highly antagonistic 
-neutral 
+flirtatious
+friendly
+moderately condescending
+disdainful
+highly admiring
+extremely wary
+trusting
+somewhat admiring
+extremely disdainful
+extremely doubtful
+condescending
+extremely unfriendly
+highly antagonistic
+neutral
 moderately suspicious
