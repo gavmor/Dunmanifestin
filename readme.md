@@ -27,5 +27,7 @@ Options:
          --help, -h:   Show this message
 ```
 ### ToDo
-[ ] Load lists from working directory, instead of Gem source directory
+[x] Load lists from arbitrary path, instead of Gem source directory
 [ ] Optionally create genre if not already present
+[ ] Explicitly namespace genres, palettes and swatches
+

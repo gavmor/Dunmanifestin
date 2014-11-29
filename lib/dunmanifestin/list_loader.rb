@@ -1,41 +1,48 @@
 class ListLoader
   class << self
     def load genre=@genre
-      Dir[default_list_dir].each(&method(:create_list_from))
+      Dir[DEFAULT_GENRE].each(&method(:palettes))
 
       genre_files = Dir[File.join(genre, '**' '*')]
-      genre_files.each(&method(:create_list_from)) unless genre == 'default'
+      genre_files.each(&method(:palettes)) unless genre == 'default'
     end
 
     private
-    LIST_HEADER = /^\|(.*?)\n/
-    GAP_BETWEEN_LISTS = /\n(?=\|)/
+    PALETTE_TITLE       = /^\|(.*?)\n/
+    GAP_BETWEEN_LISTS   = /\n(?=\|)/
+    DEFAULT_GENRE       = File.join(*%W(#{File.dirname(__FILE__)} .. .. lists default ** *))
 
-    def default_list_dir
-      File.join(*%W(#{File.dirname(__FILE__)} .. .. lists default ** *))
+
+    def palettes path
+      File.open(path).read.split(GAP_BETWEEN_LISTS).each(&method(:expose))
     end
 
-    def create_list_from path
-      lists = File.open(path).read.split(GAP_BETWEEN_LISTS)
-      lists.each_with_index do |_list, i|
-        list_name = _list.match(LIST_HEADER)[1].to_s
+    def expose body
+        list_name = body.match(PALETTE_TITLE)[1].to_s
 
         if list_name.empty?
+          # This seems to support palettes without |explicitTitles,
+          #  Taking them from the filename, instead.
           list_name = Pathname.new(path).basename
         else
-          _list.gsub!(LIST_HEADER, '')
+          # Do not include palette title as a swatch
+          # These comments should be tests.
+          body.gsub!(PALETTE_TITLE, '')
         end
 
-        phrase_class_name = list_name.underscore.camelize
-        begin
-          qlass = "Phrase::#{phrase_class_name}".constantize
-        rescue NameError
-          qlass = Class.new(Phrase)
-          Phrase.const_set phrase_class_name, qlass
-        end
+        # This metaprogramming is mysterious to me.
+        qlass = declare_phrase_class list_name
+        # Where is 'list' defined?
+        qlass.list body
+    end
 
-        qlass.list(_list)
-      end
+    def declare_phrase_class list_name
+      name = list_name.underscore.camelize
+      qlass = "Phrase::#{name}".constantize
+    rescue NameError
+      # This seems to always happen.
+      qlass = Class.new(Phrase)
+      Phrase.const_set name, qlass
     end
   end
 end
