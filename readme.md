@@ -13,7 +13,7 @@ Immeasurably inspired by [RandListGen](http://www.path-o-logic.com/misc/RandList
 2. `dunmanifestin`
 3. `dunmanifestin -p 'I had a [animal], once. Its name was [name].'
 
-Try `dunamnifestin -h` for usage:
+Try `dunamnifestin --help` for usage:
 
 ```
 Options:
@@ -21,10 +21,13 @@ Options:
   --interactive, -i:   Use an interactive command prompt
     --count, -n <i>:   Specify how many lines of output to generate at once
          --copy, -c:   Copies manifestation into your clipboard
-    --genre, -g <s>:   Specify a genre, e.g. '-g scifi' (default: default)
+    --genre, -g <s>:   Specify a genre by filepath, e.g. '-g lists/scifi/'
+                       (default: default)
    --phrase, -p <s>:   Specify a phrase or list, e.g. 'The [animal] sat on the
-                       [article]' or '[weapon]' (default: [root])
-         --help, -h:   Show this message
+                       [article]' or '[weapon]'
+        --chomp, -h:   remove the trailing newline from the output
+     --file, -f <s>:   Read a file as the phrase
+         --help, -e:   Show this message
 ```
 ### ToDo
 [x] Load lists from arbitrary path, instead of Gem source directory
