@@ -8,23 +8,22 @@ class ListLoader
     end
 
     private
+    LIST_HEADER = /^\|(.*?)\n/
+    GAP_BETWEEN_LISTS = /\n(?=\|)/
+
     def default_list_dir
       File.join(*%W(#{File.dirname(__FILE__)} .. .. lists default ** *))
     end
 
     def create_list_from path
-      newlines_before_a_pipe = /\n(?=\|)/
-      everything_up_to_the_first_newline_if_first_character_is_a_pipe = /^\|(.*?)\n/
-      everything_after_the_last_slash = /\/.+$/
-
-      lists = File.open(path).read.split(newlines_before_a_pipe)
+      lists = File.open(path).read.split(GAP_BETWEEN_LISTS)
       lists.each_with_index do |_list, i|
-        list_name = _list.match(everything_up_to_the_first_newline_if_first_character_is_a_pipe)[1].to_s
+        list_name = _list.match(LIST_HEADER)[1].to_s
 
         if list_name.empty?
-          list_name = path.match(everything_after_the_last_slash).to_s
+          list_name = Pathname.new(path).basename
         else
-          _list.gsub!(everything_up_to_the_first_newline_if_first_character_is_a_pipe, '')
+          _list.gsub!(LIST_HEADER, '')
         end
 
         phrase_class_name = list_name.underscore.camelize
