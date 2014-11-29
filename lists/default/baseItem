@@ -3,45 +3,36 @@
 [nonPreciousMetal] shovel
 [nonPreciousMetal] trawl
 [nonPreciousMetal] sword
+[utensil]
+[instrument]
+[tool]
+[weapon]
+[vestment]
+
+|utensil
+bowl
 bowl made of [hardMaterial]
 wand made of [hardMaterial]
+knife
+spoon
+wand
+orb
+
+|instrument
+whistle
+pipe
+pipe made of [hardMaterial]
+bagpipe
+
+|tool
 [metal] axe
 [metal] knife
 shovel
 trawl
-sword
-axe
 plough
-bowl
 knife
 hammer
-club
-spoon
-bow
-spear
-staff
-gun
-dagger
-crossbow
-wand
-mace
-polearm
-cannon
-halberd
-orb
-lance
 power saw
-whistle
-pipe
-pipe made of [hardMaterial]
-shield
-javelin
-claw
 peg leg
 hook for a hand
-scimitar
-fuzzy hat
-flail
-bagpipe
-book
-
+crowbar

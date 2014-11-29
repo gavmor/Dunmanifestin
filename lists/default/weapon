@@ -3,6 +3,21 @@
 2@[bow#plural]
 [bow#plural] and [arrow.plural]
 2@[knife#plural]
+axe
+club
+bow
+spear
+staff
+gun
+mace
+polearm
+cannon
+halberd
+lance
+shield
+javelin
+claw
+flail
 
 |sword
 [nonPreciousMetal] [swordType#plural]
@@ -51,6 +66,7 @@ barbed [arrowType#plural]
 
 |arrowType
 arrow
+bolt
 
 |arrowShaftType
 shaft
@@ -68,82 +84,10 @@ shaft
 [itemQuality] [knifeType#plural] inlaid with [preciousMetal]
 [itemQuality] [knifeType#plural] with [preciousStone.article] on the handle
 [itemQuality] [knifeType#plural] encrusted with [preciousStone.plural]
-[nonPreciousMetal] [knifeType#plural] named [weaponName] [weaponEpithet]
+[nonPreciousMetal] [knifeType#plural] named [weaponName]
 
 |knifeType
 5@knife
 hunting knife
 dagger
 cleaver
-
-|weaponName
-6@[weaponNameInitial][weaponNameVowel][weaponNameConsonant][weaponNameSuffix]
-2@[weaponNameInitial][weaponNameVowel][weaponNameConsonant]
-[weaponNameInitialVowel][weaponNameConsonant][weaponNameVowel][weaponNameConsonant]
-[weaponNameInitialVowel][weaponNameConsonant][weaponNameVowel][weaponNameConsonant][weaponNameSuffix]
-[name]
-[weaponName]-[weaponName]
-
-|weaponNameInitial
-Kr
-Gr
-Gl
-K
-G
-D
-Th
-Ch
-S
-Sh
-Dr
-
-|weaponNameVowel
-3@a
-3@o
-2@au
-2@i
-u
-e
-aa
-
-|weaponNameInitialVowel
-3@A
-3@O
-2@Au
-2@I
-U
-E
-
-|weaponNameConsonant
-n
-l
-r
-sh
-th
-dh
-rh
-lh
-g
-
-|weaponNameSuffix
-or
-ex
-ic
-il
-tar
-gar
-og
-rok
-nor
-w
-rist
-anz
-az
-
-|weaponEpithet
-[race]bane
-[monster]bane
-the [monster]-slayer
-slayer of [monster.plural]
-bane of [monster.plural]
-terror of [race.plural]
