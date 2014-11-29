@@ -10,6 +10,6 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://github.com/quavmo/dunmanifestin'
   s.license     = 'MIT'
 
-  s.add_dependency 'trollop'
-  s.add_development_dependency 'rspec'
+  s.add_dependency 'trollop', '~> 0'
+  s.add_development_dependency 'rspec', '~> 0'
 end
