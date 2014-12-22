@@ -3,16 +3,15 @@
 [nonPreciousMetal] shovel
 [nonPreciousMetal] trawl
 [nonPreciousMetal] sword
-[utensil]
-[instrument]
-[tool]
-[weapon]
-[vestment]
+[utensil#plural]
+[instrument#plural]
+[tool#plural]
+[weapon#plural]
+[vestment#plural]
 
 |utensil
 bowl
-bowl made of [hardMaterial]
-wand made of [hardMaterial]
+2@[hardUtensil#plural] made of [hardMaterial]
 knife
 spoon
 wand
@@ -21,10 +20,11 @@ orb
 |instrument
 whistle
 pipe
-pipe made of [hardMaterial]
+[hardInstrument#plural] made of [hardMaterial]
 bagpipe
 
 |tool
+100@ax
 [metal] axe
 [metal] knife
 shovel
@@ -34,5 +34,18 @@ knife
 hammer
 power saw
 peg leg
-hook for a hand
+[_hook#plural] for [_hand.article#plural]
 crowbar
+
+|hardUtensil
+bowl
+wand
+
+|hardInstrument
+pipe
+
+|_hook
+hook
+
+|_hand
+hand

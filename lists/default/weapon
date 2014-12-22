@@ -21,15 +21,15 @@ flail
 
 |sword
 [nonPreciousMetal] [swordType#plural]
-[nonPreciousMetal] [swordType#plural] with a hilt made of [hardMaterial]
+[nonPreciousMetal] [swordType#plural] with [_hilt.article#plural] made of [hardMaterial]
 [nonPreciousMetal] [swordType#plural] inlaid with [preciousMetal]
 [nonPreciousMetal] [swordType#plural] encrusted with [preciousStone.plural]
 [swordType#plural]
-[swordType#plural] with a hilt made of [hardMaterial]
+[swordType#plural] with [_hilt.article#plural] made of [hardMaterial]
 [swordType#plural] inlaid with [preciousMetal]
 [swordType#plural] encrusted with [preciousStone.plural]
 [itemQuality] [swordType#plural]
-[itemQuality] [swordType#plural] with a hilt made of [hardMaterial]
+[itemQuality] [swordType#plural] with [_hilt.article#plural] made of [hardMaterial]
 [itemQuality] [swordType#plural] inlaid with [preciousMetal]
 [itemQuality] [swordType#plural] encrusted with [preciousStone.plural]
 [nonPreciousMetal] [swordType#plural], [weaponName], [weaponEpithet]
@@ -58,7 +58,7 @@ repeating crossbow
 2@[hardMaterial] [arrowType#plural]
 poison [arrowType#plural]
 barbed [arrowType#plural]
-2@[arrowType#plural#article] with [arrowShaftType#article#plural] of [hardMaterial]
+2@[arrowType#plural] with [arrowShaftType.article#plural] of [hardMaterial]
 [basicColor]-flighted [arrowType#plural]
 [basicColor]-fletched [arrowType#plural]
 [basicColor]-feathered [arrowType#plural]
@@ -72,17 +72,17 @@ bolt
 shaft
 
 |knife
-[knifeType#plural] with a handle of [hardMaterial]
+[knifeType#plural] with [_handle.article#plural] of [hardMaterial]
 [knifeType#plural] inlaid with [preciousMetal]
-[knifeType#plural] with [preciousStone.article] on the handle
+[knifeType#plural] with [preciousStone.article#plural] on the [_handle#plural]
 [knifeType#plural] encrusted with [preciousStone.plural]
-[nonPreciousMetal] [knifeType#plural] with a handle of [hardMaterial]
+[nonPreciousMetal] [knifeType#plural] with [_handle.article#plural] of [hardMaterial]
 [nonPreciousMetal] [knifeType#plural] inlaid with [preciousMetal]
-[nonPreciousMetal] [knifeType#plural] with [preciousStone.article] on the handle
+[nonPreciousMetal] [knifeType#plural] with [preciousStone.article#plural] on the [_handle#plural]
 [nonPreciousMetal] [knifeType#plural] encrusted with [preciousStone.plural]
-[itemQuality] [knifeType#plural] with a handle of [hardMaterial]
+[itemQuality] [knifeType#plural] with [_handle.article#plural] of [hardMaterial]
 [itemQuality] [knifeType#plural] inlaid with [preciousMetal]
-[itemQuality] [knifeType#plural] with [preciousStone.article] on the handle
+[itemQuality] [knifeType#plural] with [preciousStone.article#plural] on the [_handle#plural]
 [itemQuality] [knifeType#plural] encrusted with [preciousStone.plural]
 [nonPreciousMetal] [knifeType#plural] named [weaponName]
 
@@ -91,3 +91,9 @@ shaft
 hunting knife
 dagger
 cleaver
+
+|_hilt
+hilt
+
+|_handle
+handle
