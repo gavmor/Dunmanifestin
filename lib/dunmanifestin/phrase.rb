@@ -1,4 +1,5 @@
 require 'active_support/inflector'
+require_relative 'custom_inflections'
 
 class Phrase
   def self.list new_list = nil
