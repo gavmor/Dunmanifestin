@@ -17,58 +17,54 @@ describe Phrase do
     end
   end
 
-  class Phrase::Animal < Phrase
+  class Phrase::TestAnimal < Phrase
     list ['frog']
   end
 
   it 'interpolates' do
-    phrase = Phrase.new('I love this [animal].')
+    phrase = Phrase.new('I love this [testAnimal].')
     expect(phrase.to_s).to eq('I love this frog.')
   end
 
   it 'pluralizes' do
-    phrase = Phrase.new 'I adore these [animal.plural]!'
+    phrase = Phrase.new 'I adore these [testAnimal.plural]!'
     expect(phrase.to_s).to eq('I adore these frogs!')
   end
 
   it 'articulates' do
-    phrase = Phrase.new 'I can get along with [animal.article].'
+    phrase = Phrase.new 'I can get along with [testAnimal.article].'
     expect(phrase.to_s).to eq('I can get along with a frog.')
   end
 
   describe 'delegating the plural inflection to consituents' do
-    class Phrase::Vestment < Phrase
+    class Phrase::TestVestment < Phrase
       list ['suit']
     end
 
-    class Phrase::WoolenVestment < Phrase
-      list ['[vestment#plural] made of wool']
+    class Phrase::TestWoolenVestment < Phrase
+      list ['[testVestment#plural] made of wool']
     end
 
-    class Phrase::DressyAnimal < Phrase
-      list ['[animal#plural] wearing [vestment.article#plural]']
+    class Phrase::TestDressyAnimal < Phrase
+      list ['[testAnimal#plural] wearing [testVestment.article#plural]']
     end
 
-    class Phrase::ItchyAnimal < Phrase
-      list ['[animal#plural] wearing [woolenVestment#plural]']
-    end
-
-    class Phrase::GroupOfAnimals < Phrase
-      list ['a posse of [itchyAnimal#plural]']
+    class Phrase::TestItchyAnimal < Phrase
+      list ['[testAnimal#plural] wearing [testWoolenVestment#plural]']
     end
 
     it 'works' do
-      phrase = Phrase.new 'OMG, there are so many [dressyAnimal.plural] at this party'
+      phrase = Phrase.new 'OMG, there are so many [testDressyAnimal.plural] at this party'
       expect(phrase.to_s).to eq('OMG, there are so many frogs wearing suits at this party')
     end
 
     it 'does not pluralize anything with no plural requested' do
-      phrase = Phrase.new 'One lonely [dressyAnimal]'
+      phrase = Phrase.new 'One lonely [testDressyAnimal]'
       expect(phrase.to_s).to eq('One lonely frog wearing a suit')
     end
 
     it 'recurses' do
-      phrase = Phrase.new 'Ten [itchyAnimal.plural]'
+      phrase = Phrase.new 'Ten [testItchyAnimal.plural]'
       expect(phrase.to_s).to eq('Ten frogs wearing suits made of wool')
     end
   end
