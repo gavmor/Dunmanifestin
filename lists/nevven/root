@@ -1,0 +1,243 @@
+|root
+3@[organization] - led by [character] - [deed]
+[inhabitant.article]
+[event]
+[trope]
+
+|organization
+The [organizationType.capitalize] of [worthyCause.capitalize]
+The [organizationType.capitalize] of the [mascot.capitalize]
+[name.possessive] [organizationType.capitalize]
+[name.possessive] [organizationType.capitalize] of [worthyCause.capitalize]
+[name.possessive] [organizationAdjective.capitalize] [organizationType.capitalize]
+
+|inhabitant
+[personAdjectiveList] [raceOrProfession]
+
+|raceOrProfession
+[race]
+[profession]
+
+|profession
+5@wizard
+5@squire
+5@musician
+inventor
+actor
+bard
+journeyman
+
+|race
+[animal]man
+elf
+orc
+troll
+gnome
+halfling
+half-[race]
+
+|personAdjectiveList
+6@[personAdjective]
+1@[personAdjective], [personAdjectiveList]
+
+|personAdjective
+well-known
+blaspheming
+vagrant
+errant
+ancient
+notorious
+dashing
+mercurial
+lazy
+grumpy
+merry
+
+|character
+3@[name], the [inhabitant]
+__________ (maybe [raceOrProfession.article]?)
+
+|organizationType
+order
+guild
+army
+militia
+fellowship
+knights
+knighthood
+followers
+priesthood
+fellows
+
+|organizationAdjective
+valiant
+holy
+enlightened
+friendly
+hedonic
+noble
+
+|worthyCause
+order
+chaos
+life
+death
+nature
+holy light
+totality
+invariance
+hospitality
+succour
+flame
+night
+blood
+neutrality
+virility
+
+|mascot
+[badassThing]
+[badassAdjective] [badassThing]
+
+|badassThing
+sword
+shield
+ring
+hand
+mane
+flail
+sickle
+eye
+crown
+star
+crescent
+
+|badassAdjective
+one
+true
+blazing
+illumined
+upraised
+red
+green
+white
+black
+silver
+golden
+
+|monster
+slime
+
+|armySize
+two
+three
+3@several
+4@dozens of
+2@scores of
+hundreds of
+a legion of
+a company of
+a host of
+an army of
+
+|vagueNumber
+40@dozens
+10@hundreds
+thousands
+
+|place
+[name.possessive] Tomb
+the [herokuAppAdjective.capitalize] [landscapeFeature.capitalize]
+[townName]
+
+|herokuAppAdjective
+windy
+fallen
+grey
+barren
+frosty
+misty
+screeching
+
+|landscapeFeature
+hills
+lakes
+mountains
+harbor
+bluffs
+dunes
+vale
+
+|townName
+[townPrefix.capitalize][townSuffix]
+[townFirstWord] [townLastWord]
+
+|townPrefix
+knights
+ravens
+kings
+arrow
+west
+east
+nor
+north
+south
+
+|townSuffix
+run
+watch
+ton
+march
+vale
+haven
+ham
+
+|townFirstWord
+King's
+Knight's
+Deer
+Troll
+Bear
+Snake
+Swan
+Wizard's
+Bard's
+
+|townLastWord
+Leap
+Watch
+Run
+Mount
+March
+Seat
+Creek
+Valley
+Sorrow
+Dell
+Hollow
+Bane
+Stone
+Bluff
+Bank
+Harbor
+Haven
+
+|goods
+leather
+gold
+cabbage
+quills
+sackcloth
+iron
+lumber
+ice cream
+
+|beverage
+ale
+mead
+beer
+wine
+water
+rum
+brandy
+whiskey
+

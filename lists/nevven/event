@@ -1,0 +1,84 @@
+|event
+[time]: [character] [deed], [consequence]
+[time]: [character] [deed] [method], [consequence]
+
+|deed
+emptied [townName.possessive] stores of [food]
+emptied [townName.possessive] stores of [beverage]
+spoiled all the [goods] in [place]
+defiled all the [raceOrProfession.plural] in [place]
+ransacked the [buildingType] of [townName]
+killed [armySize] [monster.plural]
+decimated [organization]
+razed [place]
+helped construct the [buildingType] of [townName]
+almost [deed]
+
+|method
+with his/her bare hands
+through layer upon layer of guile
+through incessant scheming
+by pure, brute force
+using his/her secret weapon
+using his/her secret superpower
+by inciting the local peasantry with a rousing speech
+
+|consequence
+provoking a rebellion
+exposing the corruption of [organization]
+leaving [vagueNumber] dead
+leaving [vagueNumber] of [raceOrProfession.plural] dead
+displacing [vagueNumber] of [raceOrProfession.plural]
+breaking an ancient curse
+bringing hopeless ruin upon [vagueNumber] of [raceOrProfession.plural]
+lifting the spirits of [vagueNumber] of [raceOrProfession.plural]
+inspiring [raceOrProfession.plural] everywhere to do the same
+becoming a folk hero among the local [raceOrProfession.plural]
+becoming a folk hero among the [raceOrProfession.plural] of [place]
+
+|time
+[timeOfYear], [yearsAgo]
+
+|yearsAgo
+6@this/last year
+6@last year
+7@one year ago
+8@two years ago
+6@three years ago
+4@four years ago
+3@five years ago
+2@six years ago
+seven years ago
+eight years ago
+almost a decade ago
+over a decade ago
+a dozen years ago
+a generation ago
+
+|timeOfYear
+[timeSlice] [season]
+
+|timeSlice
+early
+late
+mid
+
+|season
+winter
+spring
+summer
+fall
+harvest season
+planting season
+
+|hobbitMonth
+Yule
+Solmath
+Rethe
+Astron
+Thrimidge
+Lithe
+Wedmath
+Halimath
+Winterfilth
+Blotmath
