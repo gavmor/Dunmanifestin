@@ -1,8 +1,15 @@
 |event
-[time]: [character] [deed], [consequence]
-[time]: [character] [deed] [method], [consequence]
+5@[time]: [character] [deed], [consequence]
+5@[time]: [character] [experience]
+2@[time]: [character] [adverb] [deed], [consequence]
+[time]: [character] almost [deed], [butThen]
+3@[time]: [character] [deed] [method], [consequence]
 
 |deed
+4@[deed1]
+[legacy] - [deed1]
+
+|deed1
 emptied [townName.possessive] stores of [food]
 emptied [townName.possessive] stores of [beverage]
 spoiled all the [goods] in [place]
@@ -11,8 +18,54 @@ ransacked the [buildingType] of [townName]
 killed [armySize] [monster.plural]
 decimated [organization]
 razed [place]
-helped construct the [buildingType] of [townName]
-almost [deed]
+helped [buildingContribution] the [buildingType] of [townName]
+left everyone in [townName] [unfortunateCondition] after a [timeSpan] of [destructiveActivity]
+rose to power as the leader of [organization]
+
+|experience
+was gifted a [baseItem] by [character]
+teamed up with [character]
+
+|legacy
+fulfilled a prophecy
+accomplished his/her life's goal
+found recompense for his/her past
+
+|adverb
+accidentally
+angrily
+absentmindedly
+purposefully
+contemptuously
+thoughtlessly
+
+|timeSpan
+5@night
+4@day
+3@weekend
+2@week
+fortnight
+month
+
+|destructiveActivity
+rioting
+debauchery
+looting
+fighting
+thieving
+surgery practice
+boredom-induced spell-slinging
+
+|unfortunateCondition
+half-pregnant
+penniless
+blind
+deaf
+lame
+turned to stone
+unable to speak Common
+on fire
+dead
 
 |method
 with his/her bare hands
@@ -27,6 +80,7 @@ by inciting the local peasantry with a rousing speech
 provoking a rebellion
 exposing the corruption of [organization]
 leaving [vagueNumber] dead
+leaving [townName] [unfortunateCondition]
 leaving [vagueNumber] of [raceOrProfession.plural] dead
 displacing [vagueNumber] of [raceOrProfession.plural]
 breaking an ancient curse
@@ -70,6 +124,29 @@ summer
 fall
 harvest season
 planting season
+
+|buildingContribution
+construct
+build
+dismantle
+sabotage
+gather materials for
+decorate
+consecrate
+paint
+tile
+open
+inaugurate
+
+|butThen
+but then a paladin happened by and put a stop to it
+but then a plague of worms grossed everyone out too much to continue
+but then his/her head was encased in granite by a wizard
+but then he/she had an epiphany and switched alignments
+but then his/her [baseItem] broke
+but then he/she met a long-lost [relative]
+but then he/she fell in love and eloped
+
 
 |hobbitMonth
 Yule

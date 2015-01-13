@@ -1,0 +1,128 @@
+|encounterLocation
+[encounterLocation1]
+[encounterLocation1]. Upon entering, the party sees [aSightToBehold]
+
+|encounterLocation1
+3@[descriptiveBuildingType.article] full of [scenery]
+2@[descriptiveBuildingType.article] lit by [lighting]
+[descriptiveBuildingType.article] [buildingSetting]
+
+|descriptiveBuildingType
+[buildingType]
+[buildingAdjective] [buildingType]
+
+|buildingAdjective
+unfinished
+half-finished
+elaborate
+humble
+chilly
+drafty
+barely-standing
+decrepit
+grand
+
+|scenery
+2@[animatrope] statues
+2@[animatrope] plants
+2@[animatrope] skulls
+2@[animatrope] books
+ladders
+staircases leading nowhere
+cobwebs
+bones and rubble
+dancing flames
+the sound of laughter
+rotating pillars
+arcane symbols
+unused boats
+religious paintings
+uneven floors
+extremely hot pipes
+ten inches of water
+roaring furnaces
+expired milk
+scattered flowers
+dusty footprints
+muddy pawprints
+overturned benches
+unfinished meals
+long tables on which a sumptuous banquet is laid
+only the barest furnishings
+musical instruments
+
+|animatrope
+sentient
+talking
+giggling
+weeping
+dancing
+grotesque
+carnivorous
+teleporting
+oddly warm
+watchful
+evil
+malevolent
+lustful
+brooding
+
+|lighting
+a sliver of sunlight from above
+the full moon
+the light of a thousand suns
+stars
+a vault of glimmering jewels
+the eyes of [character]
+a stained glass window
+a few haphazardly-placed, dirty windows
+sunlight filtered through leaves
+a strange [color] glow from an unseen source
+a hundred furnaces
+flowing lava
+pools of lava
+hovering flames that are cold to the touch
+crude torches
+glowing [tropeObject.plural]
+a single shaft of light
+a dozen shafts of light
+
+|buildingSetting
+hewn from the face of a cliff
+built into a rock outcropping
+perched in the fork of a giant tree
+built around the trunk of a tree
+ringed by thorn bushes
+guarded by an imposing iron gate
+overgrown with vines
+overgrown with thorn bushes
+
+|tropeObject
+insect
+mushroom
+skull
+plant
+fungus
+
+|aSightToBehold
+several members of [organization]
+two midgets shitting into a bucket
+a table holding a row of bells
+a [corpseCondition] corpse, its hand outstretched toward [baseItem.article] on the floor.
+the corpse of [character]
+a severed [grossBodyPart]
+
+|corpseCondition
+dessicated
+fresh
+moldy
+partially eaten
+decayed
+charred
+bloated
+mummified
+strangely preserved
+bloody
+mangled
+partially vaporized
+headless
