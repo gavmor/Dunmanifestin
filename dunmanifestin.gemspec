@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'dunmanifestin'
-  s.version     = '0.0.5'
+  s.version     = '0.0.6'
   s.summary     = 'A verisimilitude generator.'
   s.description = "The point of Dunmanifestin [is] to inject chaos into humans' cliched ideas or, at least, let them be hunter-gatherers instead of farmers of culture. -- B. Christel"
   s.authors     = %w(quavmo benchristel AlexLerman)

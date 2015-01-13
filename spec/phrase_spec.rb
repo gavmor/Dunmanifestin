@@ -31,6 +31,17 @@ describe Phrase do
     expect(phrase.to_s).to eq('I adore these frogs!')
   end
 
+  describe '.titleize' do
+    class Phrase::Book < Phrase
+      list ['a tale of two cities']
+    end
+
+    it 'works' do
+      phrase = Phrase.new 'I just read [book.titleize].'
+      expect(phrase.to_s).to eq 'I just read A Tale Of Two Cities.'
+    end
+  end
+
   it 'articulates' do
     phrase = Phrase.new 'I can get along with [testAnimal.article].'
     expect(phrase.to_s).to eq('I can get along with a frog.')

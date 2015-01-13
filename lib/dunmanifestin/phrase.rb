@@ -128,6 +128,7 @@ class Phrase
   def possessive?; !!@possessive end
   def article?;    !!@article    end
   def capitalize?; !!@capitalize end
+  def titleize?;   !!@titleize   end
 
   def plural!
     @plural = true
@@ -165,6 +166,15 @@ class Phrase
     self
   end
 
+  def titleize!
+    @titleize = true
+
+    @inflection_delegates[:capitalize].each do |delegate|
+      variables[delegate].capitalize!
+    end
+    self
+  end
+
   def to_s
     render_inflections @to_s_proc.call
   end
@@ -194,6 +204,7 @@ class Phrase
     end
 
     string = string[0].capitalize + string[1 .. -1] if capitalize?
+    string = string.titleize if titleize?
 
     string
   end
