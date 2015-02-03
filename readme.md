@@ -1,4 +1,8 @@
-# Microscope-style-palette-based Generation of Plausible Phrases
+# Microscope-style, Palette-based Generation of Plausible Phrases
+![Rspec CI on Travis](https://travis-ci.org/quavmo/Dunmanifestin.svg)
+[![Code Climate](https://codeclimate.com/repos/54d045cbe30ba00ad8001409/badges/dd5e09d13651ecf061b9/gpa.svg)](https://codeclimate.com/repos/54d045cbe30ba00ad8001409/feed)
+[![Test Coverage](https://codeclimate.com/repos/54d045cbe30ba00ad8001409/badges/dd5e09d13651ecf061b9/coverage.svg)](https://codeclimate.com/repos/54d045cbe30ba00ad8001409/feed)
+
 *The key elements in human thinking are not numbers but labels of fuzzy sets. — L. Zadeh*
 
 *The point of Dunmanifestin [is] to inject chaos into humans' cliched ideas or, at least, let them be hunter-gatherers instead of farmers of culture. — B. Christel*
