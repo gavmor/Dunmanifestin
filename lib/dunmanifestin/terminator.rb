@@ -45,7 +45,7 @@ class Terminator
   end
 
   def phrasing given, file
-    given || File.read(file) if !!file || DEFAULT_ROOT_PHRASEAGE
+    given || (!!file && File.read(file)) || DEFAULT_ROOT_PHRASEAGE
   end
 
   def get_from_prompt
