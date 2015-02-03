@@ -52,11 +52,7 @@ class Phrase
       begin
         @variable_classes << "Phrase::#{rough_var_class.camelize}".constantize
       rescue NameError
-        @variable_classes << eval(%Q|Class.new(Phrase) do
-          def initialize
-            @to_s_proc = -> { "{#{rough_var_class} ??}" }
-          end
-        end|)
+        @variable_classes << empty_phrase_class(rough_var_class)
       end
     end
 
@@ -207,4 +203,19 @@ class Phrase
 
     string
   end
+
+  private
+
+  def empty_phrase_class name
+    class_definition = <<-RUBY
+      Class.new(Phrase) do
+        def initialize
+          @to_s_proc = -> { "{#{name} ??}" }
+        end
+      end
+    RUBY
+
+    eval(class_definition)
+  end
+
 end
