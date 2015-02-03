@@ -2,7 +2,7 @@ class ListLoader
   class << self
     def load genre=@genre
       Dir[DEFAULT_GENRE].each(&method(:expose_palettes))
-      load_genre(genre).each(&method(:expose_palettes)) unless genre == 'default'
+      load_genre(genre).each(&method(:expose_palettes))
     end
 
     private
