@@ -2,12 +2,11 @@ require 'active_support/inflector'
 require_relative 'custom_inflections'
 
 class Phrase
-  def self.list new_list = nil
+  def self.list new_list = nil, multiline_document = false
     return (@list || []) unless new_list
 
-    if new_list.is_a? String
-      new_list = new_list.split_on_newlines_and_strip
-    end
+    new_list = new_list.split_on_newlines_and_strip if new_list.is_a?(String) unless multiline_document
+    new_list = [new_list] if multiline_document
 
     new_list.map! do |line|
       multiplier_regex = /^\d+@/

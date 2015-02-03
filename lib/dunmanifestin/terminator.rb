@@ -10,7 +10,7 @@ class Terminator
 
   def address demands
     phrase_string = phrasing(demands[:phrase], demands[:file])
-    root_phrase_class = Class.new(Phrase) { list phrase_string }
+    root_phrase_class = Class.new(Phrase) { list phrase_string, !!demands[:file] }
     list_loader.load demands[:genre]
     print interactive_banner if demands[:interactive]
 
@@ -24,6 +24,7 @@ class Terminator
   end
 
   private
+  DEFAULT_ROOT_PHRASEAGE = '[root]'
   attr_accessor :list_loader, :shell
 
   def construction_loop root_phrase_class, volume, chomp, copy, interact
@@ -44,7 +45,7 @@ class Terminator
   end
 
   def phrasing given, file
-    given || (File.read(file) if file) || '[root]'
+    given || File.read(file) if !!file || DEFAULT_ROOT_PHRASEAGE
   end
 
   def get_from_prompt

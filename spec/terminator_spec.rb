@@ -8,6 +8,14 @@ describe Terminator do
     let(:demands)     { {genre: genre, phrase: phrase} }
     let(:list_loader) { double :get_yer_lists }
     let(:shell)       { double :shell }
+    let(:multiline_document) do
+<<-TXT
+Multiple
+Line
+
+Document
+TXT
+    end
 
     let(:terminator) do
       Terminator.new list_loader: list_loader, shell: shell
@@ -21,14 +29,15 @@ describe Terminator do
     context 'when given a file path' do
       let(:file) do
         file = Tempfile.new('phrasing')
-        file.write("hello world")
+        file.write(multiline_document)
         file.close
         file.path
       end
+
       let(:demands) { {file: file} }
 
       it 'prints stuff' do
-        expect(shell).to receive(:puts).with("hello world\n")
+        expect(shell).to receive(:puts).with("#{multiline_document}\n")
         terminator.address demands
       end
     end

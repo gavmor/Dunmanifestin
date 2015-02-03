@@ -2,17 +2,19 @@ require_relative '../lib/dunmanifestin/phrase'
 
 describe Phrase do
   describe '.list' do
+    let(:multiline_phrase) { "foo\nbar" }
+
+    it 'does not split a multiline phrase' do
+      expect(Phrase.list(multiline_phrase, true)).to match_array([multiline_phrase])
+    end
+
     it 'is sampleable' do
       expect(Phrase.list).to respond_to :sample
     end
 
     it 'sets the list of patterns for the phrase' do
       animal = Class.new(Phrase)
-
-      animal.list [
-        'turtle'
-      ]
-
+      animal.list [ 'turtle' ]
       expect(animal.new.to_s).to eq 'turtle'
     end
   end
