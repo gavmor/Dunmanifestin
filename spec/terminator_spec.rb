@@ -1,6 +1,5 @@
-require 'tempfile'
-
 require_relative '../lib/dunmanifestin/terminator'
+require 'tempfile'
 
 describe Terminator do
   describe '#address' do

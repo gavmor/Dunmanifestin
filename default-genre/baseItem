@@ -1,0 +1,51 @@
+|baseItem
+[nonPreciousMetal] shield
+[nonPreciousMetal] shovel
+[nonPreciousMetal] trawl
+[nonPreciousMetal] sword
+[utensil#plural]
+[instrument#plural]
+[tool#plural]
+[weapon#plural]
+[vestment#plural]
+
+|utensil
+bowl
+2@[hardUtensil#plural] made of [hardMaterial]
+knife
+spoon
+wand
+orb
+
+|instrument
+whistle
+pipe
+[hardInstrument#plural] made of [hardMaterial]
+bagpipe
+
+|tool
+100@ax
+[metal] axe
+[metal] knife
+shovel
+trawl
+plough
+knife
+hammer
+power saw
+peg leg
+[_hook#plural] for [_hand.article#plural]
+crowbar
+
+|hardUtensil
+bowl
+wand
+
+|hardInstrument
+pipe
+
+|_hook
+hook
+
+|_hand
+hand

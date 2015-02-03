@@ -8,7 +8,7 @@ class ListLoader
     private
     PALETTE_TITLE       = /^\|(.*?)\n/
     GAP_BETWEEN_LISTS   = /\n(?=\|)/
-    DEFAULT_GENRE       = File.join(*%W(#{File.dirname(__FILE__)} .. .. lists default ** *))
+    DEFAULT_GENRE       = File.join(*%W(#{File.dirname(__FILE__)} .. .. default-genre ** *))
 
     def load_genre dirname
       Dir[File.join(dirname, '**' '*')]
