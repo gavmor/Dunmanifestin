@@ -1,19 +1,22 @@
 |root
-[wisdom].
+[wisdom.capitalize].
 
 |wisdom
 2@[subject] is the [superlative] [noun]
+2@[subject] is its own [noun]
 2@[subject] [verb] [nounPhrase]
 2@[subject] is [person.possessive] [noun]
 2@[subject] is the [noun] of the [personType]
 2@[subject] [verb] [quantifier] [noun.plural]
 2@[subject] [verb] [quantifier] [mass]
 2@[subject] is the [gerund] of [nounPhrase]
+that which [verb] [subject] [verb] [subject]
 [subject] will [action]
+[action] or [action]
 if you [action], you will [action]
 if you [negaux] [action], [action]
 it is not for the [personType] to [action]
-to [action], [action]
+to [action], you must [action]
 [action], and you will [action]
 [abstraction] leads to [abstraction]
 the [abstraction] of [abstraction] is [abstraction]
@@ -34,74 +37,24 @@ the [abstraction] of [abstraction] is [abstraction]
 
 |properNoun
 the Force
-Mom
 God
-
-|verb
-makes
-is
-takes
-can destroy
-requires
-conquers
-replaces
-is better than
-beats
-overcomes
-simplifies
-complicates
-steals from
-undermines
-
-|abstraction
-justice
-love
-money
-time
-theory
-practice
-genius
-patience
-complexity
-adversity
-comedy
-tragedy
-Mom
-religion
-science
-perfection
-fear
-happiness
-grief
-wrath
-work
-code
-medicine
-software
-strength
-wisdom
-virtue
-fashion
-fame
-glory
-death
-truth
-falsity
-life
-consciousness
-morality
-language
-friendship
-art
 
 |quantifier
 all
 no
 
 |adjective
+wise
+foolish
+rich
+poor
+educated
+guilty
+innocent
 good
 better
 fashionable
+[animal]-like
 delicious
 perfect
 quick
@@ -114,29 +67,8 @@ enduring
 true
 false
 
-|superlative
-2@best
-loudest
-quickest
-2@worst
-shortest
-longest
-slowest
-most revealing
-most complex
-simplest
-most enduring
-truest
-falsest
-strongest
-2@surest
-2@first
-2@last
-2@only
-
 |noun
-sandwich
-towel
+wound
 computer
 tool
 instrument
@@ -179,21 +111,11 @@ mechanism
 creator
 
 |person
-the [quality] man
+the [adjective] man
 the devil
-God
 the proletariat
 the bourgeoisie
 the [personType]
-
-|quality
-wise
-foolish
-rich
-poor
-educated
-guilty
-innocent
 
 |personType
 fool
@@ -206,6 +128,7 @@ sophist
 king
 queen
 priest
+monk
 masses
 priesthood
 royalty
@@ -215,6 +138,10 @@ thug
 thief
 rogue
 anarchist
+hedonist
+democrat
+republican
+[doctrinist]
 
 |mass
 balm
@@ -226,6 +153,7 @@ opiate
 13@[baseAction]
 2@[timerange] [baseAction]
 5@[baseAction] [adverb]
+show that [wisdom]
 try to [baseAction]
 try to [baseAction] [adverb]
 
@@ -251,19 +179,8 @@ fail
 |negaux
 don't
 can't
+won't
 
 |timerange
 never
 always
-
-|adverb
-well
-today
-again
-in time
-perfectly
-now
-completely
-forever
-immediately
-fast
