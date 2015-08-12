@@ -3,4 +3,4 @@
 .DS_Store
 .sublime-project
 .rspec
-./*gem
+*gem
