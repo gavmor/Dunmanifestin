@@ -4,3 +4,4 @@
 .sublime-project
 .rspec
 *gem
+Gemfile.lock
