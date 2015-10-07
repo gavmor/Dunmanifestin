@@ -1,4 +1,0 @@
-|person
-[personName], [qualityWithAdverb.article] [raceOrProfession]
-[personName], [quality.article] [raceOrProfession]
-3@[personName], [appearance.article], [personality] [raceOrProfession]

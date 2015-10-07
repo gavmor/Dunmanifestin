@@ -11,5 +11,7 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
 
   s.add_dependency 'trollop', '~> 2.0'
+  s.add_dependency 'activesupport', '~> 0'
   s.add_development_dependency 'rspec', '~> 0'
+  s.add_development_dependency 'rake', '~> 0'
 end
