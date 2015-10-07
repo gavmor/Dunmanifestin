@@ -1,6 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'dunmanifestin'
-  s.version     = '0.0.8'
+  s.version     = '0.0.9'
+
   s.summary     = 'A verisimilitude generator.'
   s.description = "The point of Dunmanifestin [is] to inject chaos into humans' cliched ideas or, at least, let them be hunter-gatherers instead of farmers of culture. -- B. Christel"
   s.authors     = %w(quavmo benchristel AlexLerman)
@@ -10,8 +11,11 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://github.com/quavmo/dunmanifestin'
   s.license     = 'MIT'
 
-  s.add_dependency 'trollop', '~> 2.0'
-  s.add_dependency 'activesupport', '~> 0'
+  s.required_ruby_version = '~> 2.0'
+
+  s.add_runtime_dependency 'trollop'
+  s.add_runtime_dependency 'activesupport'
+
   s.add_development_dependency 'rspec', '~> 0'
   s.add_development_dependency 'rake', '~> 0'
 end
