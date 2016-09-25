@@ -58,9 +58,7 @@ class Phrase
 
     @to_s_proc = -> {
       self.variables.each_with_index do |variable, i|
-        inflections[i].each do |inflection|
-          variable.send "#{inflection}!"
-        end
+        inflections[i].each { |inflection| variable.inflect inflection }
       end
       template.zip(self.variables).flatten.map(&:to_s).join('')
     }
@@ -125,51 +123,22 @@ class Phrase
   def capitalize?; !!@capitalize end
   def titleize?;   !!@titleize   end
 
-  def plural!
-    @plural = true
-
-    @inflection_delegates[:plural].each do |delegate|
-      variables[delegate].plural!
-    end
-    self
-  end
-
-  def article!
-    @article = true
-
-    @inflection_delegates[:article].each do |delegate|
-      variables[delegate].article!
-    end
-    self
-  end
-
-  def possessive!
-    @possessive = true
-
-    @inflection_delegates[:possessive].each do |delegate|
-      variables[delegate].possessive!
-    end
-    self
-  end
-
-  def capitalize!
-    @capitalize = true
-
-    @inflection_delegates[:capitalize].each do |delegate|
-      variables[delegate].capitalize!
-    end
-    self
-  end
-
   def titleize!
-    @titleize = true
-
-    @inflection_delegates[:capitalize].each do |delegate|
-      variables[delegate].capitalize!
-    end
-    self
+    delegates = @inflection_delegates[:capitalize]
+    delegates.each { |delegate| variables[delegate].capitalize! }
   end
 
+  def inflect inflection
+    return self unless @inflection_delegates
+    self.instance_variable_set("@#{inflection}", true)
+    return (titleize! && self) if inflection == :titleize
+    
+    delegates = @inflection_delegates[inflection]
+    delegates.each { |delegate| variables[delegate].inflect inflection }
+    
+    self
+  end
+    
   def to_s
     render_inflections @to_s_proc.call
   end
