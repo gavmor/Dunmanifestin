@@ -144,20 +144,11 @@ class Phrase
   end
 
   def render_inflections string
-    if plural?
-      string = string.pluralize if @inflection_delegates[:plural].empty?
-      
-      if possessive? && @inflection_delegates[:possessive].empty?
-        string = (string =~ /s$/) ? "#{string}'" : "#{string}'s"
-      end
-    else
-      string = "#{string}'s" if possessive? && @inflection_delegates[:possessive].empty?
-      if article? && @inflection_delegates[:article].empty?
-        string = (string =~ /^[aeiou]/i) ? "an #{string}" : "a #{string}"
-      end
-      
-    end
-
+    # Good, now turn this into a stateless function.
+    string = string.pluralize if plural? && @inflection_delegates[:plural].empty?
+    string = (string =~ /s$/) ? "#{string}'" : "#{string}'s" if plural? && possessive? && @inflection_delegates[:possessive].empty?
+    string = "#{string}'s" if !plural? && possessive? && @inflection_delegates[:possessive].empty?
+    string = (string =~ /^[aeiou]/i) ? "an #{string}" : "a #{string}" if !plural? && article? && @inflection_delegates[:article].empty?
     string = string[0].capitalize + string[1 .. -1] if capitalize?
     string = string.titleize if titleize?
 
