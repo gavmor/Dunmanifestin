@@ -63,8 +63,8 @@ TXT
       context 'with an article' do
         let(:phrase) { 'I know [garbage.article] well!' }
 
-        xit 'prints the words and some question marks' do
-          expect(shell).to receive(:puts).with("I know {garbage.article ??} well!")
+        it 'prints the words and some question marks' do
+          expect(shell).to receive(:puts).with("I know {garbage ??} well!\n")
           terminator.address demands
         end
       end
