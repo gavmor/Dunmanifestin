@@ -146,25 +146,16 @@ class Phrase
   def render_inflections string
     if plural?
       string = string.pluralize if @inflection_delegates[:plural].empty?
+      
       if possessive? && @inflection_delegates[:possessive].empty?
-        if string =~ /s$/
-          string = "#{string}'"
-        else
-          string = "#{string}'s"
-        end
+        string = (string =~ /s$/) ? "#{string}'" : "#{string}'s"
       end
     else
-      #singular
+      string = "#{string}'s" if possessive? && @inflection_delegates[:possessive].empty?
       if article? && @inflection_delegates[:article].empty?
-        if string =~ /^[aeiou]/i
-          string = "an #{string}"
-        else
-          string = "a #{string}"
-        end
+        string = (string =~ /^[aeiou]/i) ? "an #{string}" : "a #{string}"
       end
-      if possessive? && @inflection_delegates[:possessive].empty?
-        string = "#{string}'s"
-      end
+      
     end
 
     string = string[0].capitalize + string[1 .. -1] if capitalize?

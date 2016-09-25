@@ -32,6 +32,16 @@ describe Phrase do
     phrase = Phrase.new 'I adore these [testAnimal.plural]!'
     expect(phrase.to_s).to eq('I adore these frogs!')
   end
+  
+  it 'possessivizes' do
+    phrase = Phrase.new 'I adore this [testAnimal.possessive] legs!'
+    expect(phrase.to_s).to eq("I adore this frog's legs!")
+  end
+  
+  it 'possessivizes plurals' do
+    phrase = Phrase.new 'I adore these [testAnimal.plural.possessive] legs!'
+    expect(phrase.to_s).to eq("I adore these frogs' legs!")
+  end
 
   describe '.titleize' do
     class Phrase::Book < Phrase
