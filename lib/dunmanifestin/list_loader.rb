@@ -1,3 +1,6 @@
+require_relative 'phrase'
+require_relative 'string'
+
 class ListLoader
   class << self
     def load genre=@genre
