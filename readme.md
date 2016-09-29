@@ -1,4 +1,4 @@
-# Microscope-style, Palette-based Generation of Plausible Phrases
+# Palette-based Madlib Engine
 
 [![Join the chat at https://gitter.im/quavmo/Dunmanifestin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/quavmo/Dunmanifestin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 ![Rspec CI on Travis](https://travis-ci.org/quavmo/Dunmanifestin.svg)
