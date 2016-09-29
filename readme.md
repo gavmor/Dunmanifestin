@@ -17,7 +17,7 @@ Immeasurably inspired by [RandListGen](http://www.path-o-logic.com/misc/RandList
 
 1. `gem install dunmanifestin`
 2. `dunmanifestin`
-3. `dunmanifestin -p 'I had a [animal], once. Its name was [name].'
+3. `dunmanifestin -p 'I had a [animal], once. Its name was [name].'`
 
 Try `dunamnifestin --help` for usage:
 
