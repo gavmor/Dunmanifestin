@@ -23,20 +23,13 @@ Try `dunamnifestin --help` for usage:
 
 ```
 Options:
-        --debug, -d:   Display errors and logging
-  --interactive, -i:   Use an interactive command prompt
-    --count, -n <i>:   Specify how many lines of output to generate at once
-         --copy, -c:   Copies manifestation into your clipboard
-    --genre, -g <s>:   Specify a genre by filepath, e.g. '-g lists/scifi/'
-                       (default: default)
-   --phrase, -p <s>:   Specify a phrase or list, e.g. 'The [animal] sat on the
-                       [article]' or '[weapon]'
-        --chomp, -h:   remove the trailing newline from the output
-     --file, -f <s>:   Read a file as the phrase
-         --help, -e:   Show this message
+  -d, --debug          Display errors and logging
+  -i, --interactive    Use an interactive command prompt
+  -n, --count=<i>      Specify how many lines of output to generate at once
+  -c, --copy           Copies manifestation into your clipboard
+  -g, --genre=<s>      Specify a genre or two by filepath, e.g. '-g genres/scifi/', '-g ./genres/poetry:./genres/romantics'
+  -p, --phrase=<s>     Specify a phrase or list, e.g. 'The [animal] sat on the [article]' or '[weapon]'
+  -o, --chomp          remove the trailing newline from the output
+  -f, --file=<s>       Read a file as the phrase
+  -h, --help           Show this message
 ```
-### ToDo
-[x] Load lists from arbitrary path, instead of Gem source directory
-[ ] More tests!
-[ ] Explicitly namespace genres, palettes and swatches
-
