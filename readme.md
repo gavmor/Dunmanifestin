@@ -11,7 +11,7 @@
 
 *Eroton, a glass blowery built on a mountain in Rake. Some say it contains priceless pipes made of pearl. — Dunmanifestin*
 
-Immeasurably inspired by [RandListGen](http://www.path-o-logic.com/misc/RandListGen_sample.html).
+Immeasurably inspired by [RandListGen](http://www.path-o-logic.com/misc/RandListGen_sample.html). Try it on some [palettes of other genres](https://github.com/quavmo/dunmanifestin-palettes), or write your own!
 
 ## Try It!
 
