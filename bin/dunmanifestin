@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 
-require 'trollop'
+require 'optimist'
 require_relative '../lib/dunmanifestin/terminator'
 
-user_demands = Trollop::options do
+user_demands = Optimist::options do
   opt :debug, "Display errors and logging", short: '-d'
   opt :interactive, "Use an interactive command prompt", short: '-i'
   opt :count, "Specify how many lines of output to generate at once", type: :integer, short: '-n'
