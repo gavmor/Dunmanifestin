@@ -1,14 +1,14 @@
 #!/usr/bin/env ruby
 
-require 'trollop'
+require 'optimist'
 require_relative '../lib/dunmanifestin/terminator'
 
-user_demands = Trollop::options do
+user_demands = Optimist::options do
   opt :debug, "Display errors and logging", short: '-d'
   opt :interactive, "Use an interactive command prompt", short: '-i'
   opt :count, "Specify how many lines of output to generate at once", type: :integer, short: '-n'
   opt :copy, "Copies manifestation into your clipboard", short: '-c'
-  opt :genre, "Specify a genre or two by filepath, e.g. '-g genres/scifi/', '-g ./genres/poetry:./genres/romantics'", type: :string, short: '-g'
+  opt :genre, "Specify genres by filepath, e.g. '-g genres/scifi/', '-g ./genres/poetry:./genres/romantics'", type: :string, short: '-g'
   opt :phrase, "Specify a phrase or list, e.g. 'The [animal] sat on the [article]' or '[weapon]'", type: :string, short: '-p'
   opt :chomp, "remove the trailing newline from the output", short: '-o'
   opt :file, "Read a file as the phrase", type: :string, short: '-f'
