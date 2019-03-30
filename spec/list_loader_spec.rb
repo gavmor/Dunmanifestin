@@ -2,7 +2,7 @@ require_relative '../lib/dunmanifestin/list_loader'
 require 'tmpdir'
 
 describe ListLoader do
-  let(:palette_name) { 'root.dun' }
+  let(:palette_name) { 'root.pal' }
   let(:default_palettes) do
     %w(doctrinist adverb abstraction root superlative verb)
   end
@@ -17,15 +17,21 @@ TXT
   end
 
   before do
-    open(File.join(palette_dir, palette_name+'.pal'), 'w') { |f| f.puts palette_doc }
+    open(File.join(palette_dir, palette_name), 'w') { |f| f.puts palette_doc }
+    open(File.join(palette_dir, 'extra.garbage'), 'w') { |f| f.puts "[" }
     allow(Palette).to receive(:expose)
   end
 
   describe '.load' do
+    it 'skips garbage' do
+      expect(Palette).to_not receive(:expose).with(something_including('garbage'))
+
+      ListLoader.load palette_dir
+    end
+
     it 'exposes the default genre' do
       default_palettes.each do |palette|
-        expect(Palette).to receive(:expose)
-          .with(something_including(palette))
+        expect(Palette).to receive(:expose).with(something_including(palette))
       end
 
       ListLoader.load
@@ -39,10 +45,9 @@ TXT
     end
 
     context 'when given multiple genres' do
-
       it 'exposes each in turn' do
         expect(Palette).to receive(:expose)
-          .with(something_including(palette_name)).twice
+          .with(something_including(palette_name)).exactly(3).times
 
         ListLoader.load [palette_dir,palette_dir].join(':')
       end
