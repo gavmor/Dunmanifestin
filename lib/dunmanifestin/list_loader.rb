@@ -4,7 +4,7 @@ require_relative 'palette'
 
 class ListLoader
   DEFAULT_GENRE = File.join(*%W(#{File.dirname(__FILE__)} .. .. default-genre))
-  
+
   class << self
     def load super_genre=''
       [DEFAULT_GENRE, (super_genre || '').split(":")]
@@ -14,9 +14,7 @@ class ListLoader
     private
 
     def load_genre dirname
-      Dir[File.join(dirname, '**' '*')].each(&Palette.method(:expose))
-    end    
+      Dir[File.join(dirname, '**' '*.pal')].each(&Palette.method(:expose))
+    end
   end
 end
-
-
