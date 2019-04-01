@@ -3,7 +3,7 @@ require_relative 'custom_inflections'
 
 class Phrase
   def self.list new_list = nil, multiline_document = false
-    return (@list || []) unless new_list
+    return (@list || List.new) unless new_list
 
     new_list = new_list.split_on_newlines_and_strip if new_list.is_a?(String) unless multiline_document
     new_list = [new_list] if multiline_document
@@ -132,13 +132,13 @@ class Phrase
     return self unless @inflection_delegates
     self.instance_variable_set("@#{inflection}", true)
     return (titleize! && self) if inflection == :titleize
-    
+
     delegates = @inflection_delegates[inflection]
     delegates.each { |delegate| variables[delegate].inflect inflection }
-    
+
     self
   end
-    
+
   def to_s
     render_inflections @to_s_proc.call
   end
