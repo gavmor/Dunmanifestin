@@ -136,7 +136,10 @@ class Phrase
 
     delegates = @inflection_delegates[inflection]
     delegates.each { |delegate| variables[delegate].inflect inflection }
-
+    self
+  rescue NoMethodError
+    puts "==> Failed to inflect: .#{inflection}?"
+    puts "==> Valid inflections are: plural, possessive, article, capitalize, titleize"
     self
   end
 
