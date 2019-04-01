@@ -19,7 +19,7 @@ class Phrase
     @list = new_list
   end
 
-  def initialize dsl_string = self.class.list.constrained_sample(randoms: [Random.new(1), Random.new(2)])
+  def initialize dsl_string = self.class.list.constrained_sample
     raise "Try again." unless dsl_string
     compile parse dsl_string
   end

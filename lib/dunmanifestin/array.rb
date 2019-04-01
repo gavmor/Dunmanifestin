@@ -1,10 +1,16 @@
+NUM_DEFAULT_REGIONS = 100000
+RECCURENCES = 50
+COARSE_SEED ||= rand(NUM_DEFAULT_REGIONS)
+FINE_SEED ||= nil
+
+META_RANDOM = FINE_SEED ? Random.new(FINE_SEED) : Random.new
+RANDOMS = RECCURENCES.times.map { Random.new(COARSE_SEED) }
+
 class Array
-  def constrained_sample(provider)
+  def constrained_sample(randoms: RANDOMS, meta_random: META_RANDOM)
     self.sample(
       1,
-      random: provider.fetch(:randoms).sample(
-        random: provider.fetch(:meta_random, Random.new)
-      )
+      random: randoms.sample(1, random: meta_random).pop
     ).pop
   end
 end

@@ -12,6 +12,8 @@ user_demands = Optimist::options do
   opt :phrase, "Specify a phrase or list, e.g. 'The [animal] sat on the [article]' or '[weapon]'", type: :string, short: '-p'
   opt :chomp, "remove the trailing newline from the output", short: '-o'
   opt :file, "Read a file as the phrase", type: :string, short: '-f'
+  opt :coarse_seed, "Stick to one region", type: :integer, short: "-s"
+  opt :fine_seed, "Lock all randomness", type: :integer, short: "-e"
 end
 
 begin
