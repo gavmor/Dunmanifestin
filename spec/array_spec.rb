@@ -4,7 +4,7 @@ describe Array do
   describe 'constrained_sample' do
     subject { ["foo","bar","baz"] }
 
-    it 'picks from a handful of seeds before making its selection' do
+    it 'respects the provided randoms when sampling' do
       expect(subject.constrained_sample(
         meta_random: Random.new(1),
         randoms: [Random.new(2), Random.new(2)]
