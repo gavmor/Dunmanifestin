@@ -1,5 +1,5 @@
 class Array
-  def constrained_sample(n=nil, provider)
+  def constrained_sample(provider)
     self.sample(
       1,
       random: provider.fetch(:randoms).sample(

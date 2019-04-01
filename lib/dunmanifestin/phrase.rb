@@ -1,5 +1,6 @@
 require 'active_support/inflector'
 require_relative 'custom_inflections'
+require_relative 'array'
 
 class Phrase
   def self.list new_list = nil, multiline_document = false
