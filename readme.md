@@ -33,3 +33,20 @@ Options:
   -f, --file=<s>       Read a file as the phrase
   -h, --help           Show this message
 ```
+## Tips
+
+Highlight proper nouns with: `dunmanifestin | grcat ~/.grc/dun.conf`
+
+```
+regexp=(?<!(\.\s))([A-Z])(\s[A-Z]|\w|'|\-[A-Z]|\sof\s[A-Z]|\sthe\s[A-Z]|(,(?=\s[A-Z])))+
+colours=bold magenta
+```
+
+Check word-frequency of your palettes with:
+```
+dunmanifestin | tr ' ' '\n' \
+| sed s/[,.]//  | sort | uniq -c \
+| sort -n
+```
+
+Tack on ` perl -lane 'printf "%-30s%s\n", $F[1], "=" x $F[0]'` for a histogram.

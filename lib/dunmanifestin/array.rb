@@ -1,10 +1,10 @@
 require_relative 'integer'
 
 class Array
-  RECCURENCES = 500
+
 
   class << self
-    attr_accessor :coarse_seed, :fine_seed, :diversity
+    attr_accessor :coarse_seed, :fine_seed, :diversity, :recurrences
 
     def meta_random
       @meta_random ||= @fine_seed ? Random.new(@fine_seed) : Random.new
@@ -12,7 +12,8 @@ class Array
 
     def randoms
       @coarse_seed ||= meta_random.rand(Integer::MAX)
-      @randoms ||= RECCURENCES.times.map do |i|
+      @recurrences ||= 500
+      @randoms ||= @recurrences.times.map do |i|
         Random.new(@coarse_seed + (i % (@diversity||Integer::MAX)))
       end
     end
