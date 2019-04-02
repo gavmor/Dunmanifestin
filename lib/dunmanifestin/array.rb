@@ -1,7 +1,7 @@
 require_relative 'integer'
 
 class Array
-  RECCURENCES = 100
+  RECCURENCES = 500
 
   class << self
     attr_accessor :coarse_seed, :fine_seed, :diversity

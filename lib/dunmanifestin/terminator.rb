@@ -11,7 +11,7 @@ class Terminator
   def address demands
     Array.coarse_seed = demands[:coarse_seed]
     Array.fine_seed = demands[:fine_seed]
-    Array.diversity = 3
+    Array.diversity = 5
     phrase_string = phrasing(demands[:phrase], demands[:file])
     root_phrase_class = Class.new(Phrase) { list phrase_string, !!demands[:file] }
     list_loader.load demands[:genre]
