@@ -1,22 +1,26 @@
+require_relative 'integer'
+
 class Array
-  NUM_DEFAULT_REGIONS = 100000
-  RECCURENCES = 50
+  RECCURENCES = 100
 
   class << self
-    attr_accessor :coarse_seed, :fine_seed
+    attr_accessor :coarse_seed, :fine_seed, :diversity
 
     def meta_random
       @meta_random ||= @fine_seed ? Random.new(@fine_seed) : Random.new
     end
 
     def randoms
-      @randoms ||= RECCURENCES.times.map do
-        Random.new(@coarse_seed || rand(NUM_DEFAULT_REGIONS))
+      @coarse_seed ||= meta_random.rand(Integer::MAX)
+      @randoms ||= RECCURENCES.times.map do |i|
+        Random.new(@coarse_seed + i % @diversity)
       end
     end
   end
 
   def constrained_sample(randoms: Array.randoms, meta_random: Array.meta_random)
+    # $count ||= 1
+    # p $count += 1
     self.sample(
       1,
       random: randoms.sample(1, random: meta_random).pop
