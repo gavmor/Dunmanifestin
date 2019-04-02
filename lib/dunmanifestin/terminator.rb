@@ -9,9 +9,8 @@ class Terminator
   end
 
   def address demands
-    $coarse_seed = demands[:coarse_seed] || $coarse_seed
-    $fine_seed = demands[:fine_seed] || $fine_seed
-
+    Array.coarse_seed = demands[:coarse_seed]
+    Array.fine_seed = demands[:fine_seed]
     phrase_string = phrasing(demands[:phrase], demands[:file])
     root_phrase_class = Class.new(Phrase) { list phrase_string, !!demands[:file] }
     list_loader.load demands[:genre]

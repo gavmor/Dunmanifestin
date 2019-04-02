@@ -69,5 +69,13 @@ TXT
         end
       end
     end
+
+    context 'when passed a seed' do
+      let(:demands) {{coarse_seed: 12, fine_seed: 10}}
+
+      it 'works' do
+        terminator.address demands
+      end
+    end
   end
 end
