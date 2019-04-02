@@ -13,7 +13,7 @@ class Array
     def randoms
       @coarse_seed ||= meta_random.rand(Integer::MAX)
       @randoms ||= RECCURENCES.times.map do |i|
-        Random.new(@coarse_seed + i % @diversity)
+        Random.new(@coarse_seed + (i % (@diversity||Integer::MAX)))
       end
     end
   end
