@@ -6,11 +6,11 @@ class Array
     attr_accessor :coarse_seed, :fine_seed
 
     def meta_random
-      @fine_seed ? Random.new(@fine_seed) : Random.new
+      @meta_random ||= @fine_seed ? Random.new(@fine_seed) : Random.new
     end
 
     def randoms
-      RECCURENCES.times.map do
+      @randoms ||= RECCURENCES.times.map do
         Random.new(@coarse_seed || rand(NUM_DEFAULT_REGIONS))
       end
     end
