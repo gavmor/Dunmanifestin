@@ -31,6 +31,9 @@ class Palette
   end
 
   def sample
+    # TODO this is inefficient because it results in extra
+    # phrase objects being created. Ensure Phrase is immutable,
+    # then do something about this.
     Phrase.new swatches.constrained_sample
   end
 

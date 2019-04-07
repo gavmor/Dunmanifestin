@@ -10,111 +10,41 @@ class NullPhrase
   def reify _, _
     @dsl_string
   end
-
-  def inflect _
-  end
 end
 
 class Phrase
   def initialize dsl_string
     raise "Try again." unless dsl_string
-    compile parse dsl_string
+    @dsl_string = dsl_string
   end
 
   def reify genre, requested_inflections = []
-    vals = subphrases(genre).each_with_index.map { |subphrase, i|
-      subphrase_inflections = @inflections[i] | (requested_inflections & @delegated_inflections[i])
-      subphrase.reify genre, subphrase_inflections
+    vals = variables.map { |variable|
+      variable.reify genre, requested_inflections
     }
-    render_inflections @template.zip(vals).flatten.join(''), requested_inflections
+    render_inflections constant_segments.zip(vals).flatten.join(''), requested_inflections
   end
 
   private
 
-  def compile parsed_dsl
-    @template = parsed_dsl[:template]
-
-    @variable_palette_names = []
-    @inflection_delegates = {
-      :plural => [],
-      :possessive => [],
-      :article => [],
-      :capitalize => [],
-    }
-
-    @inflections = []
-    @delegated_inflections = []
-
-    parsed_dsl[:variables].each_with_index do |variable, i|
-      rough_var_class = variable[:rough_variable_class]
-
-      @delegated_inflections[i] = variable[:inflections_to_delegate].map(&:to_sym)
-      variable[:inflections_to_delegate].each do |inflection|
-        @inflection_delegates[inflection.to_sym] << i
-      end
-
-      @inflections[i] = []
-
-      variable[:inflections_to_apply].each do |inflection|
-        @inflections[i] << inflection.to_sym
-      end
-
-      @variable_palette_names << rough_var_class
-    end
+  def variables
+    parsed_dsl[:variables]
   end
 
-  def parse dsl_string = @dsl_string
-    # A dsl string like "[adjective] [noun.possessive#plural]" will be parsed into
-    # { :variables =>
-    #   [ { :rough_variable_class => 'adjective',
-    #       :inflections_to_delegate => [],
-    #       :inflections_to_apply => []
-    #     },
-    #     { :rough_variable_class => 'noun',
-    #       :inflections_to_delegate => [:plural],
-    #       :inflections_to_apply => [:possessive]
-    #     }
-    #   ],
-    #   :template => ["", " "]
-    # }
-    #
-    tokens = dsl_string.split(/[\[\]]/)
-    template = []; variables = [];
+  def constant_segments
+    parsed_dsl[:constant_segments]
+  end
 
-    tokens.each_with_index do |token, i|
-      if i % 2 == 0
-        template << token
-      else
-        variables << token
-      end
-    end
+  def parsed_dsl
+    @parsed_dsl ||= begin
+      tokens = @dsl_string.split(/[\[\]]/)
+      constant_segments = tokens.even_elements
+      variables         = tokens.odd_elements
 
-    hash = {:variables => [], :template => template}
-
-    variables.each_with_index do |variable, i|
-      components = variable.split(/\b/)
-      rough_var_class = components.shift
-      inflections_to_delegate = []
-      inflections_to_apply = []
-
-      components.each_with_index do |v, k|
-        inflections_to_delegate << v if components[k-1] == '#'
-        inflections_to_apply << v if components[k-1] == '.'
-      end
-
-      hash[:variables] << {
-        :rough_variable_class => rough_var_class,
-        :inflections_to_delegate => inflections_to_delegate,
-        :inflections_to_apply => inflections_to_apply,
+      {
+        :variables => variables.map(&Variable.method(:new)),
+        :constant_segments => constant_segments
       }
-    end
-
-    hash
-  end
-
-  def subphrases genre
-    @subphrases ||= @variable_palette_names.map do |name|
-      genre.palette_named(name).sample
     end
   end
 
@@ -126,14 +56,50 @@ class Phrase
     titleize   = inflections.include? :titleize
 
     # Good, now turn this into a stateless function.
-    string = string.pluralize if plural && @inflection_delegates[:plural].empty?
-    string = (string =~ /s$/) ? "#{string}'" : "#{string}'s" if plural && possessive && @inflection_delegates[:possessive].empty?
-    string = "#{string}'s" if !plural && possessive && @inflection_delegates[:possessive].empty?
-    string = (string =~ /^[aeiou]/i) ? "an #{string}" : "a #{string}" if !plural && article && @inflection_delegates[:article].empty?
+    string = string.pluralize if plural && variables.none?(&:delegated_plural?)
+    string = (string =~ /s$/) ? "#{string}'" : "#{string}'s" if plural && possessive && variables.none?(&:delegated_plural?)
+    string = "#{string}'s" if !plural && possessive && variables.none?(&:delegated_possessive?)
+    string = (string =~ /^[aeiou]/i) ? "an #{string}" : "a #{string}" if !plural && article && variables.none?(&:delegated_article?)
     string = string[0].capitalize + string[1 .. -1] if capitalize
     string = string.titleize if titleize
 
     string
   end
+end
 
+class Variable
+  def initialize dsl_string
+    components = dsl_string.split(/\b/)
+    self.palette_name = components.shift
+
+    self.inflections_delegated_to_me = []
+    self.demanded_inflections        = []
+
+    components.each_with_index do |v, k|
+      inflections_delegated_to_me << v.to_sym if components[k-1] == '#'
+      demanded_inflections << v.to_sym if components[k-1] == '.'
+    end
+  end
+
+  def reify genre, inflections_of_parent_phrase
+    inherited_inflections = inflections_of_parent_phrase & inflections_delegated_to_me
+    inflections = demanded_inflections | inherited_inflections
+    genre.palette_named(palette_name).sample.reify genre, inflections
+  end
+
+  def delegated_plural?
+    inflections_delegated_to_me.include? :plural
+  end
+
+  def delegated_article?
+    inflections_delegated_to_me.include? :article
+  end
+
+  def delegated_possessive?
+    inflections_delegated_to_me.include? :possessive
+  end
+
+  private
+
+  attr_accessor :demanded_inflections, :palette_name, :inflections_delegated_to_me
 end

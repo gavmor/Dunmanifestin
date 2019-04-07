@@ -73,8 +73,8 @@ Ophelia // daughter of Polonius
 rogue whac-a-mole game terrorizing Boston
     EOF
 
-    selections = 50.times.map { palette.sample.reify nil }
-    expect(selections.select { |s| s == 'loose cannon rookie cop' }.length).to be > 35
+    selections = 100.times.map { palette.sample.reify nil }
+    expect(selections.select { |s| s == 'loose cannon rookie cop' }.length).to be > 70
     expect(selections).to include 'rogue whac-a-mole game terrorizing Boston'
   end
 end
