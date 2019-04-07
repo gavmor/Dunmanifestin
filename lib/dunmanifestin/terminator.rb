@@ -9,33 +9,28 @@ class Terminator
   end
 
   def address demands
-    Array.coarse_seed = demands[:coarse_seed]
-    Array.fine_seed = demands[:fine_seed]
-    Array.diversity = 2
-    Array.recurrences = 20
-    phrase_string = phrasing(demands[:phrase], demands[:file])
-    root_phrase_class = Class.new(Phrase) { list phrase_string, !!demands[:file] }
-    list_loader.load demands[:genre]
-    print interactive_banner if demands[:interactive]
+    self.demands = demands
 
-    construction_loop(
-      root_phrase_class,
-      (demands[:count] || 1),
-      demands[:chomp],
-      demands[:copy],
-      demands[:interactive]
-    )
+    Array.coarse_seed = coarse_seed
+    Array.fine_seed   = fine_seed
+    Array.diversity   = 2
+    Array.recurrences = 20
+
+    list_loader.load demanded_genre
+    print interactive_banner if interactive
+
+    construction_loop
   end
 
   private
-  DEFAULT_ROOT_PHRASEAGE = '[root]'
-  attr_accessor :list_loader, :shell
 
-  def construction_loop root_phrase_class, volume, chomp, copy, interact
+  attr_accessor :list_loader, :shell, :demands
+
+  def construction_loop
     fulltext = ""
     while true
       volume.times do
-        text = root_phrase_class.new.to_s
+        text = root_phrase_class.new(phrasing).to_s
         fulltext += "\n#{text}"
         text += "\n" unless chomp
         shell.puts text
@@ -43,13 +38,19 @@ class Terminator
 
       `echo #{fulltext.inspect} | pbcopy $1` if copy
 
-      break unless interact
+      break unless interactive
       break if get_from_prompt == 'quit'
     end
   end
 
-  def phrasing given, file
-    given || (!!file && File.read(file)) || DEFAULT_ROOT_PHRASEAGE
+  def root_phrase_class
+    @root_phrase_class ||= Class.new(Phrase).tap do |c|
+      c.list phrasing, demanded_file
+    end
+  end
+
+  def phrasing
+    demanded_phrase || demanded_file_contents || '[root]'
   end
 
   def get_from_prompt
@@ -61,6 +62,46 @@ class Terminator
     message = "Type 'quit' to exit the prompt. Press return to generate more output."
     bar = "-"*message.length
     [bar, message, bar].join "\n"
+  end
+
+  def chomp
+    demands[:chomp]
+  end
+
+  def copy
+    demands[:copy]
+  end
+
+  def volume
+    demands[:count] || 1
+  end
+
+  def interactive
+    demands[:interactive]
+  end
+
+  def demanded_genre
+    demands[:genre]
+  end
+
+  def demanded_file
+    demands[:file]
+  end
+
+  def demanded_file_contents
+    demanded_file && File.read(demanded_file)
+  end
+
+  def demanded_phrase
+    demands[:phrase]
+  end
+
+  def coarse_seed
+    demands[:coarse_seed]
+  end
+
+  def fine_seed
+    demands[:fine_seed]
   end
 
   module Shell
