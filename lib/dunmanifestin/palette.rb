@@ -31,10 +31,7 @@ class Palette
   end
 
   def sample
-    # TODO this is inefficient because it results in extra
-    # phrase objects being created. Ensure Phrase is immutable,
-    # then do something about this.
-    Phrase.new swatches.constrained_sample
+    phrases.constrained_sample
   end
 
   private
@@ -43,7 +40,7 @@ class Palette
     File.basename(@filename, '.pal')
   end
 
-  def swatches
+  def phrases
     @swatches ||= begin
       comment = %r{//.*$}
       lines[valid_swatch_range]
@@ -57,6 +54,7 @@ class Palette
             [line]
           end
         }
+        .map(&Phrase.method(:new))
     end
   end
 
