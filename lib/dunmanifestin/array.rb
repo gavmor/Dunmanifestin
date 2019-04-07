@@ -1,8 +1,6 @@
 require_relative 'integer'
 
 class Array
-
-
   class << self
     attr_accessor :coarse_seed, :fine_seed, :diversity, :recurrences
 

@@ -12,10 +12,9 @@ describe Phrase do
       expect(Phrase.list).to respond_to :sample
     end
 
-    it 'sets the list of patterns for the phrase' do
+    it 'echoes back a phrase with no variables' do
       animal = Class.new(Phrase)
-      animal.list [ 'turtle' ]
-      expect(animal.new.to_s).to eq 'turtle'
+      expect(animal.new('turtle').to_s).to eq 'turtle'
     end
   end
 
@@ -32,12 +31,12 @@ describe Phrase do
     phrase = Phrase.new 'I adore these [testAnimal.plural]!'
     expect(phrase.to_s).to eq('I adore these frogs!')
   end
-  
+
   it 'possessivizes' do
     phrase = Phrase.new 'I adore this [testAnimal.possessive] legs!'
     expect(phrase.to_s).to eq("I adore this frog's legs!")
   end
-  
+
   it 'possessivizes plurals' do
     phrase = Phrase.new 'I adore these [testAnimal.plural.possessive] legs!'
     expect(phrase.to_s).to eq("I adore these frogs' legs!")

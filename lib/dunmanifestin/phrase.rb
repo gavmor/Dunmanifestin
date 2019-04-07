@@ -19,13 +19,13 @@ class Phrase
     @list = new_list
   end
 
-  def initialize dsl_string = self.class.list.constrained_sample
+  def initialize dsl_string
     raise "Try again." unless dsl_string
     compile parse dsl_string
   end
 
   def compile parsed_dsl
-    template = parsed_dsl[:template]
+    @template = parsed_dsl[:template]
 
     @variable_classes = []
     @inflection_delegates = {
@@ -35,7 +35,7 @@ class Phrase
       :capitalize => [],
     }
 
-    inflections = []
+    @inflections = []
 
     parsed_dsl[:variables].each_with_index do |variable, i|
       rough_var_class = variable[:rough_variable_class]
@@ -44,10 +44,10 @@ class Phrase
         @inflection_delegates[inflection.to_sym] << i
       end
 
-      inflections[i] = []
+      @inflections[i] = []
 
       variable[:inflections_to_apply].each do |inflection|
-        inflections[i] << inflection.to_sym
+        @inflections[i] << inflection.to_sym
       end
 
       begin
@@ -56,13 +56,6 @@ class Phrase
         @variable_classes << empty_phrase_class(rough_var_class)
       end
     end
-
-    @to_s_proc = -> {
-      self.variables.each_with_index do |variable, i|
-        inflections[i].each { |inflection| variable.inflect inflection }
-      end
-      template.zip(self.variables).flatten.map(&:to_s).join('')
-    }
   end
 
   def parse dsl_string = @dsl_string
@@ -115,7 +108,12 @@ class Phrase
   end
 
   def variables
-    @variables ||= @variable_classes.map(&:new)
+    @variables ||= @variable_classes.map do |c|
+      # TODO: had to add this grossness to work around the
+      # fact that the Terminator tests are somehow calling
+      # this before c.list is set. I blame mocking.
+      c.new(c.list ? c.list.constrained_sample : '')
+    end
   end
 
   def plural?;     !!@plural     end
@@ -144,7 +142,10 @@ class Phrase
   end
 
   def to_s
-    render_inflections @to_s_proc.call
+    variables.each_with_index do |variable, i|
+      @inflections[i].each(&variable.method(:inflect))
+    end
+    render_inflections @template.zip(variables).flatten.map(&:to_s).join('')
   end
 
   def render_inflections string
@@ -164,8 +165,8 @@ class Phrase
   def empty_phrase_class name
     class_definition = <<-RUBY
       Class.new(Phrase) do
-        def initialize
-          @to_s_proc = -> { "{#{name} ??}" }
+        def to_s
+          "{#{name} ??}"
         end
       end
     RUBY
