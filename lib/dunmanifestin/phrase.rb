@@ -4,7 +4,7 @@ require_relative 'array'
 
 class Phrase
   def self.list new_list = nil, multiline_document = false
-    return (@list || List.new) unless new_list
+    return @list unless new_list
 
     new_list = new_list.split_on_newlines_and_strip if new_list.is_a?(String) unless multiline_document
     new_list = [new_list] if multiline_document
