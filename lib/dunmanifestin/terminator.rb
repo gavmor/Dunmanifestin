@@ -1,10 +1,10 @@
+require_relative 'genre'
 require_relative 'phrase'
 require_relative 'list_loader'
 require_relative 'string'
 
 class Terminator
-  def initialize(list_loader: ListLoader, shell: Shell)
-    @list_loader = list_loader
+  def initialize(shell: Shell)
     @shell = shell
   end
 
@@ -16,7 +16,6 @@ class Terminator
     Array.diversity   = 2
     Array.recurrences = 20
 
-    list_loader.load demanded_genre
     print interactive_banner if interactive
 
     construction_loop
@@ -30,7 +29,7 @@ class Terminator
     fulltext = ""
     while true
       volume.times do
-        text = root_phrase_class.new(phrasing).to_s
+        text = Phrase.new(phrasing).reify genre
         fulltext += "\n#{text}"
         text += "\n" unless chomp
         shell.puts text
@@ -43,10 +42,12 @@ class Terminator
     end
   end
 
-  def root_phrase_class
-    @root_phrase_class ||= Class.new(Phrase).tap do |c|
-      c.list phrasing, demanded_file
-    end
+  def genre
+    @genre ||= Genre.new genre_directories
+  end
+
+  def genre_directories
+    ([default_genre_path] + demanded_genres).reject(&:empty?)
   end
 
   def phrasing
@@ -80,8 +81,8 @@ class Terminator
     demands[:interactive]
   end
 
-  def demanded_genre
-    demands[:genre]
+  def demanded_genres
+    demands[:genre] ? demands[:genre].split(':') : []
   end
 
   def demanded_file
@@ -102,6 +103,10 @@ class Terminator
 
   def fine_seed
     demands[:fine_seed]
+  end
+
+  def default_genre_path
+    File.join(*%W(#{File.dirname(__FILE__)} .. .. default-genre))
   end
 
   module Shell

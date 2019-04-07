@@ -2,6 +2,19 @@ require 'active_support/inflector'
 require_relative 'custom_inflections'
 require_relative 'array'
 
+class NullPhrase
+  def initialize dsl_string
+    @dsl_string = dsl_string
+  end
+
+  def reify _, _
+    @dsl_string
+  end
+
+  def inflect _
+  end
+end
+
 class Phrase
   def self.list new_list = nil, multiline_document = false
     return @list unless new_list
@@ -28,6 +41,7 @@ class Phrase
     @template = parsed_dsl[:template]
 
     @variable_classes = []
+    @variable_palette_names = []
     @inflection_delegates = {
       :plural => [],
       :possessive => [],
@@ -36,10 +50,12 @@ class Phrase
     }
 
     @inflections = []
+    @delegated_inflections = []
 
     parsed_dsl[:variables].each_with_index do |variable, i|
       rough_var_class = variable[:rough_variable_class]
 
+      @delegated_inflections[i] = variable[:inflections_to_delegate].map(&:to_sym)
       variable[:inflections_to_delegate].each do |inflection|
         @inflection_delegates[inflection.to_sym] << i
       end
@@ -50,6 +66,7 @@ class Phrase
         @inflections[i] << inflection.to_sym
       end
 
+      @variable_palette_names << rough_var_class
       begin
         @variable_classes << "Phrase::#{rough_var_class.camelize}".constantize
       rescue NameError
@@ -116,6 +133,12 @@ class Phrase
     end
   end
 
+  def subphrases genre
+    @variables2 ||= @variable_palette_names.map do |name|
+      genre.palette_named(name).sample
+    end
+  end
+
   def plural?;     !!@plural     end
   def possessive?; !!@possessive end
   def article?;    !!@article    end
@@ -145,17 +168,36 @@ class Phrase
     variables.each_with_index do |variable, i|
       @inflections[i].each(&variable.method(:inflect))
     end
-    render_inflections @template.zip(variables).flatten.map(&:to_s).join('')
+    render_inflections @template.zip(variables).flatten.map(&:to_s).join(''), [
+      plural? && :plural,
+      article? && :article,
+      possessive? && :possessive,
+      capitalize? && :capitalize,
+      titleize? && :titleize]
   end
 
-  def render_inflections string
+  def reify genre, requested_inflections = []
+    vals = subphrases(genre).each_with_index.map { |subphrase, i|
+      subphrase_inflections = @inflections[i] | (requested_inflections & @delegated_inflections[i])
+      subphrase.reify genre, subphrase_inflections
+    }
+    render_inflections @template.zip(vals).flatten.join(''), requested_inflections
+  end
+
+  def render_inflections string, inflections
+    plural     = inflections.include? :plural
+    article    = inflections.include? :article
+    possessive = inflections.include? :possessive
+    capitalize = inflections.include? :capitalize
+    titleize   = inflections.include? :titleize
+
     # Good, now turn this into a stateless function.
-    string = string.pluralize if plural? && @inflection_delegates[:plural].empty?
-    string = (string =~ /s$/) ? "#{string}'" : "#{string}'s" if plural? && possessive? && @inflection_delegates[:possessive].empty?
-    string = "#{string}'s" if !plural? && possessive? && @inflection_delegates[:possessive].empty?
-    string = (string =~ /^[aeiou]/i) ? "an #{string}" : "a #{string}" if !plural? && article? && @inflection_delegates[:article].empty?
-    string = string[0].capitalize + string[1 .. -1] if capitalize?
-    string = string.titleize if titleize?
+    string = string.pluralize if plural && @inflection_delegates[:plural].empty?
+    string = (string =~ /s$/) ? "#{string}'" : "#{string}'s" if plural && possessive && @inflection_delegates[:possessive].empty?
+    string = "#{string}'s" if !plural && possessive && @inflection_delegates[:possessive].empty?
+    string = (string =~ /^[aeiou]/i) ? "an #{string}" : "a #{string}" if !plural && article && @inflection_delegates[:article].empty?
+    string = string[0].capitalize + string[1 .. -1] if capitalize
+    string = string.titleize if titleize
 
     string
   end
