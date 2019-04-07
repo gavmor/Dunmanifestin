@@ -1,5 +1,3 @@
-require_relative './object'
-
 class Genre
   GAP_BETWEEN_PALETTES   = /\n(?=\|)/
 

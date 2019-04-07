@@ -1,7 +1,6 @@
 require_relative 'genre'
 require_relative 'phrase'
-require_relative 'list_loader'
-require_relative 'string'
+require_relative 'palette'
 
 class Terminator
   def initialize(shell: Shell)
@@ -23,7 +22,7 @@ class Terminator
 
   private
 
-  attr_accessor :list_loader, :shell, :demands
+  attr_accessor :shell, :demands
 
   def construction_loop
     fulltext = ""

@@ -16,31 +16,24 @@ class NullPhrase
 end
 
 class Phrase
-  def self.list new_list = nil, multiline_document = false
-    return @list unless new_list
-
-    new_list = new_list.split_on_newlines_and_strip if new_list.is_a?(String) unless multiline_document
-    new_list = [new_list] if multiline_document
-
-    new_list.map! do |line|
-      multiplier_regex = /^\d+@/
-      multiplier = line.match(multiplier_regex).to_s.to_i
-      multiplier = 1 if multiplier < 1
-      [line.gsub(multiplier_regex, '')] * multiplier
-    end.flatten!.reject! { |i| i.nil? || i.empty? }
-
-    @list = new_list
-  end
-
   def initialize dsl_string
     raise "Try again." unless dsl_string
     compile parse dsl_string
   end
 
+  def reify genre, requested_inflections = []
+    vals = subphrases(genre).each_with_index.map { |subphrase, i|
+      subphrase_inflections = @inflections[i] | (requested_inflections & @delegated_inflections[i])
+      subphrase.reify genre, subphrase_inflections
+    }
+    render_inflections @template.zip(vals).flatten.join(''), requested_inflections
+  end
+
+  private
+
   def compile parsed_dsl
     @template = parsed_dsl[:template]
 
-    @variable_classes = []
     @variable_palette_names = []
     @inflection_delegates = {
       :plural => [],
@@ -67,11 +60,6 @@ class Phrase
       end
 
       @variable_palette_names << rough_var_class
-      begin
-        @variable_classes << "Phrase::#{rough_var_class.camelize}".constantize
-      rescue NameError
-        @variable_classes << empty_phrase_class(rough_var_class)
-      end
     end
   end
 
@@ -124,64 +112,10 @@ class Phrase
     hash
   end
 
-  def variables
-    @variables ||= @variable_classes.map do |c|
-      # TODO: had to add this grossness to work around the
-      # fact that the Terminator tests are somehow calling
-      # this before c.list is set. I blame mocking.
-      c.new(c.list ? c.list.constrained_sample : '')
-    end
-  end
-
   def subphrases genre
-    @variables2 ||= @variable_palette_names.map do |name|
+    @subphrases ||= @variable_palette_names.map do |name|
       genre.palette_named(name).sample
     end
-  end
-
-  def plural?;     !!@plural     end
-  def possessive?; !!@possessive end
-  def article?;    !!@article    end
-  def capitalize?; !!@capitalize end
-  def titleize?;   !!@titleize   end
-
-  def titleize!
-    delegates = @inflection_delegates[:capitalize]
-    delegates.each { |delegate| variables[delegate].capitalize! }
-  end
-
-  def inflect inflection
-    return self unless @inflection_delegates
-    self.instance_variable_set("@#{inflection}", true)
-    return (titleize! && self) if inflection == :titleize
-
-    delegates = @inflection_delegates[inflection]
-    delegates.each { |delegate| variables[delegate].inflect inflection }
-    self
-  rescue NoMethodError
-    puts "==> Failed to inflect: .#{inflection}?"
-    puts "==> Valid inflections are: plural, possessive, article, capitalize, titleize"
-    self
-  end
-
-  def to_s
-    variables.each_with_index do |variable, i|
-      @inflections[i].each(&variable.method(:inflect))
-    end
-    render_inflections @template.zip(variables).flatten.map(&:to_s).join(''), [
-      plural? && :plural,
-      article? && :article,
-      possessive? && :possessive,
-      capitalize? && :capitalize,
-      titleize? && :titleize]
-  end
-
-  def reify genre, requested_inflections = []
-    vals = subphrases(genre).each_with_index.map { |subphrase, i|
-      subphrase_inflections = @inflections[i] | (requested_inflections & @delegated_inflections[i])
-      subphrase.reify genre, subphrase_inflections
-    }
-    render_inflections @template.zip(vals).flatten.join(''), requested_inflections
   end
 
   def render_inflections string, inflections
@@ -200,20 +134,6 @@ class Phrase
     string = string.titleize if titleize
 
     string
-  end
-
-  private
-
-  def empty_phrase_class name
-    class_definition = <<-RUBY
-      Class.new(Phrase) do
-        def to_s
-          "{#{name} ??}"
-        end
-      end
-    RUBY
-
-    eval(class_definition)
   end
 
 end

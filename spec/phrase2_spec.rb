@@ -4,29 +4,30 @@ require_relative '../lib/dunmanifestin/phrase'
 
 describe Phrase do
   let(:frog_prince) do
-    animal_palette = double :animal_palette,
-      sample: Phrase.new('frog')
+    genre = double :frog_prince_genre
 
-    vestment_palette = double :vestment_palette,
-      sample: Phrase.new('suit')
+    allow(genre).to receive(:palette_named).with('animal').and_return(
+      double :animal_palette,
+        sample: Phrase.new('frog'))
 
-    classy_animal_palette = double :classy_animal_palette,
-      sample: Phrase.new('[animal#article#plural] wearing [vestment#article#plural]')
+    allow(genre).to receive(:palette_named).with('vestment').and_return(
+      double :vestment_palette,
+        sample: Phrase.new('suit'))
 
-
-    genre = 'dummy genre'
-    allow(genre).to receive(:palette_named).with('animal')      .and_return animal_palette
-    allow(genre).to receive(:palette_named).with('vestment')    .and_return vestment_palette
-    allow(genre).to receive(:palette_named).with('classyAnimal').and_return classy_animal_palette
+    allow(genre).to receive(:palette_named).with('classyAnimal').and_return(
+      double :classy_animal_palette,
+        sample: Phrase.new('[animal#article#plural] wearing [vestment.article#plural]'))
 
     genre
   end
 
   let(:dickens) do
-    genre = 'dummy genre'
-    book_palette = 'dummy palette'
-    allow(genre).to receive(:palette_named).with('book').and_return book_palette
-    allow(book_palette).to receive(:sample).and_return Phrase.new 'a tale of two cities'
+    genre = double :dickens_genre
+
+    allow(genre).to receive(:palette_named).with('book').and_return(
+      double :book_palette,
+        sample: Phrase.new('a tale of two cities'))
+
     genre
   end
 
@@ -67,6 +68,7 @@ describe Phrase do
   it 'delegates inflections' do
     expect(Phrase.new('[classyAnimal.article]').reify frog_prince).to eq 'a frog wearing a suit'
     expect(Phrase.new('[classyAnimal.plural]').reify frog_prince).to eq 'frogs wearing suits'
+    expect(Phrase.new('the [classyAnimal]').reify frog_prince).to eq 'the frog wearing a suit'
   end
 
   it 'renders a placeholder when a variable references a nonexistent palette' do
