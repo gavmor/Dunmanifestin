@@ -40,6 +40,34 @@ Ophelia
     expect(selections).to include 'Ophelia'
   end
 
+  it 'excludes the population suffix from its name' do
+    palette = Palette.new(<<-EOF, 'characters.pal')
+|person*1
+Hamlet
+    EOF
+    expect(palette.name).to eq 'person'
+  end
+
+  it 'limits the population of unique phrase renderings' do
+    syllable = Palette.new(<<-EOF, 'characters.pal')
+|syllable
+a
+thi
+ga
+i
+hi
+    EOF
+    person = Palette.new(<<-EOF, 'characters.pal')
+|person*1
+[syllable][syllable][syllable][syllable]
+    EOF
+
+    genre = Genre.new([syllable, person])
+    character = Phrase.new('[person:recur]')
+    characters = 50.times.map { character.reify genre }
+    expect(characters.uniq.length).to be < 20
+  end
+
   it 'ignores comments' do
     palette = Palette.new(<<-EOF, 'characters.pal')
 |person
