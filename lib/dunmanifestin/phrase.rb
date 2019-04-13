@@ -22,7 +22,7 @@ class Phrase
     vals = variables.map { |variable|
       variable.reify genre, requested_inflections
     }
-    render_inflections constant_segments.zip(vals).flatten.join(''), requested_inflections
+    inflect requested_inflections, constant_segments.zip(vals).flatten.join('')
   end
 
   private
@@ -48,7 +48,7 @@ class Phrase
     end
   end
 
-  def render_inflections string, inflections
+  def inflect inflections, string
     plural     = inflections.include? :plural
     article    = inflections.include? :article
     possessive = inflections.include? :possessive
