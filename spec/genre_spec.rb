@@ -10,7 +10,7 @@ describe Genre do
     expect(File).to receive(:read).with('dummy-file-1').and_return('|foo')
     expect(File).to receive(:read).with('dummy-file-2').and_return('|bar')
 
-    genre = Genre.new(['my-genre'])
+    genre = Genre.from_directories(['my-genre'])
     expect(genre.palette_named 'foo').to be_a Palette
     expect(genre.palette_named 'bar').to be_a Palette
   end
@@ -21,7 +21,7 @@ describe Genre do
     ])
     expect(File).to receive(:read).with('dummy-file-1').and_return('|foo')
 
-    genre = Genre.new(['my-genre'])
+    genre = Genre.from_directories(['my-genre'])
     expect(genre.palette_named 'baz').to be_a NullPalette
   end
 
@@ -29,7 +29,7 @@ describe Genre do
     expect(Dir).to receive(:[]).with('my-genre/**/*.pal').and_return([])
     expect(File).not_to receive(:read)
 
-    genre = Genre.new(['my-genre'])
+    genre = Genre.from_directories(['my-genre'])
     expect(genre.palette_named 'foo').to be_a NullPalette
   end
 end

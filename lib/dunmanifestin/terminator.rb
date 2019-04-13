@@ -42,7 +42,7 @@ class Terminator
   end
 
   def genre
-    @genre ||= Genre.new genre_directories
+    @genre ||= Genre.from_directories genre_directories
   end
 
   def genre_directories

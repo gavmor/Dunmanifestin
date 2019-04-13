@@ -72,12 +72,12 @@ describe Phrase do
   end
 
   it 'renders a placeholder when a variable references a nonexistent palette' do
-    genre = Genre.new ['/tmp/i-do-not-exist']
+    genre = Genre.from_directories ['/tmp/i-do-not-exist']
     expect(Phrase.new('I love this [animal]!').reify genre).to eq 'I love this {animal ??}!'
   end
 
   it 'does not inflect placeholders' do
-    genre = Genre.new ['/tmp/i-do-not-exist']
+    genre = Genre.from_directories ['/tmp/i-do-not-exist']
     expect(Phrase.new('I adore [animal.plural]!').reify genre).to eq 'I adore {animal ??}!'
   end
 end

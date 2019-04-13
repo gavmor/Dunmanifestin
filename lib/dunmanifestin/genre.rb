@@ -1,24 +1,13 @@
 class Genre
   GAP_BETWEEN_PALETTES   = /\n(?=\|)/
 
-  def initialize paths
-    @paths = paths
+  def self.from_directories paths
+    new palettes_from paths
   end
 
-  def palette_named name
-    palettes[name] || NullPalette.new(name)
-  end
-
-  private
-
-  def palettes
-    @palettes ||= {}.tap do |palettes|
-      load_data_into palettes, from: @paths
-    end
-  end
-
-  def load_data_into palette_hash, from:
-    from.each do |path|
+  def self.palettes_from paths
+    palette_hash = {}
+    paths.each do |path|
       Dir[File.join(path, '**', '*.pal')].each do |filename|
         File.read(filename)
           .split(GAP_BETWEEN_PALETTES)
@@ -28,5 +17,18 @@ class Genre
           end
       end
     end
+    palette_hash
   end
+
+  def initialize palettes
+    self.palettes = palettes
+  end
+
+  def palette_named name
+    palettes[name] || NullPalette.new(name)
+  end
+
+  private
+
+  attr_accessor :palettes
 end
