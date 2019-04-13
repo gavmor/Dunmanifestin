@@ -35,7 +35,7 @@ Hamlet
 Ophelia
     EOF
 
-    selections = 50.times.map { palette.sample.reify nil }
+    selections = 50.times.map { palette.sample nil }
     expect(selections).to include 'Hamlet'
     expect(selections).to include 'Ophelia'
   end
@@ -48,21 +48,21 @@ Hamlet
 Ophelia // daughter of Polonius
     EOF
 
-    selections = 50.times.map { palette.sample.reify nil }
+    selections = 50.times.map { palette.sample nil }
     expect(selections.uniq.sort).to eq ['Hamlet', 'Ophelia']
   end
 
   it 'ignores lines with only whitespace' do
     palette_text = "|person\n  \nErnie"
     palette = Palette.new(palette_text, 'characters.pal')
-    selections = 50.times.map { palette.sample.reify nil }
+    selections = 50.times.map { palette.sample nil }
     expect(selections.uniq.sort).to eq ['Ernie']
   end
 
   it 'ignores empty lines' do
     palette_text = "|person\n\n\nBert\n\n"
     palette = Palette.new(palette_text, 'characters.pal')
-    selections = 50.times.map { palette.sample.reify nil }
+    selections = 50.times.map { palette.sample nil }
     expect(selections.uniq.sort).to eq ['Bert']
   end
 
@@ -73,7 +73,7 @@ Ophelia // daughter of Polonius
 rogue whac-a-mole game terrorizing Boston
     EOF
 
-    selections = 100.times.map { palette.sample.reify nil }
+    selections = 100.times.map { palette.sample nil }
     expect(selections.select { |s| s == 'loose cannon rookie cop' }.length).to be > 70
     expect(selections).to include 'rogue whac-a-mole game terrorizing Boston'
   end
