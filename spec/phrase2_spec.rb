@@ -4,31 +4,31 @@ require_relative '../lib/dunmanifestin/phrase'
 
 describe Phrase do
   let(:frog_prince) do
-    genre = double :frog_prince_genre
+    animal = Palette.new(<<-EOF, nil)
+|animal
+frog
+    EOF
 
-    allow(genre).to receive(:palette_named).with('animal').and_return(
-      double :animal_palette,
-        sample: Phrase.new('frog'))
+    vestment = Palette.new(<<-EOF, nil)
+|vestment
+suit
+    EOF
 
-    allow(genre).to receive(:palette_named).with('vestment').and_return(
-      double :vestment_palette,
-        sample: Phrase.new('suit'))
+    classyAnimal = Palette.new(<<-EOF, nil)
+|classyAnimal
+[animal#article#plural] wearing [vestment.article#plural]
+    EOF
 
-    allow(genre).to receive(:palette_named).with('classyAnimal').and_return(
-      double :classy_animal_palette,
-        sample: Phrase.new('[animal#article#plural] wearing [vestment.article#plural]'))
-
-    genre
+    Genre.new([animal, vestment, classyAnimal])
   end
 
   let(:dickens) do
-    genre = double :dickens_genre
-
-    allow(genre).to receive(:palette_named).with('book').and_return(
-      double :book_palette,
-        sample: Phrase.new('a tale of two cities'))
-
-    genre
+    Genre.new([
+      Palette.new(<<-EOF, nil)
+|book
+a tale of two cities
+    EOF
+    ])
   end
 
   it 'echoes back unadorned text' do

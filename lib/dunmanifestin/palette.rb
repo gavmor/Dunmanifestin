@@ -12,6 +12,10 @@ class NullPalette
   def sample
     NullPhrase.new "{#{@name} ??}"
   end
+
+  def sample_reify _, _
+    "{#{@name} ??}"
+  end
 end
 
 class Palette
@@ -32,6 +36,10 @@ class Palette
 
   def sample
     phrases.constrained_sample
+  end
+
+  def sample_reify genre, inflections
+    sample.reify genre, inflections
   end
 
   private

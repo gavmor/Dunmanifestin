@@ -84,7 +84,7 @@ class Variable
   def reify genre, inflections_of_parent_phrase
     inherited_inflections = inflections_of_parent_phrase & inflections_delegated_to_me
     inflections = demanded_inflections | inherited_inflections
-    genre.palette_named(palette_name).sample.reify genre, inflections
+    genre.palette_named(palette_name).sample_reify genre, inflections
   end
 
   def delegated_plural?

@@ -6,22 +6,19 @@ class Genre
   end
 
   def self.palettes_from paths
-    palette_hash = {}
-    paths.each do |path|
-      Dir[File.join(path, '**', '*.pal')].each do |filename|
+    paths.flat_map do |path|
+      Dir[File.join(path, '**', '*.pal')].flat_map do |filename|
         File.read(filename)
           .split(GAP_BETWEEN_PALETTES)
-          .each do |textual_palette|
-            palette = Palette.new(textual_palette, filename)
-            palette_hash[palette.name] = palette
+          .map do |textual_palette|
+            Palette.new(textual_palette, filename)
           end
       end
     end
-    palette_hash
   end
 
-  def initialize palettes
-    self.palettes = palettes
+  def initialize palette_list
+    self.palettes = Hash[palette_list.map { |p| [p.name, p] }]
   end
 
   def palette_named name
