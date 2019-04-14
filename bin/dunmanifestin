@@ -12,8 +12,6 @@ user_demands = Optimist::options do
   opt :phrase, "Specify a phrase or list, e.g. 'The [animal] sat on the [article]' or '[weapon]'", type: :string, short: '-p'
   opt :chomp, "remove the trailing newline from the output", short: '-o'
   opt :file, "Read a file as the phrase", type: :string, short: '-f'
-  opt :coarse_seed, "Set this number to encourage phrases to resolve  somewhat predictably", type: :integer, short: "-s"
-  opt :fine_seed, "Set this number (alongside -s) to lock phrases into resolving completely predictably", type: :integer, short: "-e"
 end
 
 begin

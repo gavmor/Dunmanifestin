@@ -9,14 +9,7 @@ class Terminator
 
   def address demands
     self.demands = demands
-
-    Array.coarse_seed = coarse_seed
-    Array.fine_seed   = fine_seed
-    Array.diversity   = 2
-    Array.recurrences = 20
-
     print interactive_banner if interactive
-
     construction_loop
   end
 
