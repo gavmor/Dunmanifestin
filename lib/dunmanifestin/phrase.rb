@@ -74,17 +74,24 @@ class Variable
 
     self.inflections_delegated_to_me = []
     self.demanded_inflections        = []
+    self.constraints                 = []
 
     components.each_with_index do |v, k|
-      inflections_delegated_to_me << v.to_sym if components[k-1] == '#'
-      demanded_inflections << v.to_sym if components[k-1] == '.'
+      case components[k-1]
+      when '#'
+        inflections_delegated_to_me << v.to_sym
+      when '.'
+        demanded_inflections << v.to_sym
+      when ':'
+        constraints << v.to_sym
+      end
     end
   end
 
   def reify genre, inflections_of_parent_phrase
     inherited_inflections = inflections_of_parent_phrase & inflections_delegated_to_me
     inflections = demanded_inflections | inherited_inflections
-    genre.palette_named(palette_name).sample genre, inflections
+    genre.palette_named(palette_name).sample genre, inflections, constraints
   end
 
   def delegated_plural?
@@ -101,5 +108,9 @@ class Variable
 
   private
 
-  attr_accessor :demanded_inflections, :palette_name, :inflections_delegated_to_me
+  attr_accessor \
+    :demanded_inflections,
+    :palette_name,
+    :inflections_delegated_to_me,
+    :constraints
 end

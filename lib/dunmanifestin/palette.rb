@@ -1,4 +1,5 @@
 require_relative './phrase'
+require_relative './churn'
 
 class NullPalette
   def initialize name
@@ -9,7 +10,7 @@ class NullPalette
     @name
   end
 
-  def sample _, _
+  def sample _, _, _
     "{#{@name} ??}"
   end
 end
@@ -27,17 +28,41 @@ class Palette
 
   def name
     return file_basename if not titled?
-    lines.first[1..-1]
+    lines.first.sub(/\|(\w+).*$/, '\1')
   end
 
-  def sample genre, inflections = []
-    phrases.constrained_sample.reify(genre, inflections)
+  def sample genre, inflections = [], constraints = []
+    if inflections.any?
+      # don't use the churn if there are inflections, since
+      # they'll be cached...
+      phrases.sample.reify(genre, inflections)
+    else
+      if constraints.include? :recur
+        churn.sample {
+          phrases.sample.reify(genre)
+        }
+      else
+        churn.generate {
+          phrases.sample.reify(genre)
+        }
+      end
+    end
   end
 
   private
 
   def file_basename
     File.basename(@filename, '.pal')
+  end
+
+  def churn
+    @churn ||= Churn.new novelty: novelty do
+      phrases.sample.reify(genre, [])
+    end
+  end
+
+  def novelty
+    lines.first.sub(/^.*\*(\d+).*$/, '\1').to_i
   end
 
   def phrases
