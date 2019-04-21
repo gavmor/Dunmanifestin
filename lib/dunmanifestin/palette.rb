@@ -34,17 +34,15 @@ class Palette
   def sample genre, inflections = [], constraints = []
     if inflections.any?
       # don't use the churn if there are inflections, since
-      # they'll be cached...
-      phrases.sample.reify(genre, inflections)
+      # the inflected text would be cached by the churn and
+      # could then `recur` in places where we don't want any
+      # inflections.
+      phrases.sample.reify genre, inflections
     else
       if constraints.include? :recur
-        churn.sample {
-          phrases.sample.reify(genre)
-        }
+        churn.sample { phrases.sample.reify genre }
       else
-        churn.generate {
-          phrases.sample.reify(genre)
-        }
+        churn.generate { phrases.sample.reify genre }
       end
     end
   end
@@ -56,9 +54,7 @@ class Palette
   end
 
   def churn
-    @churn ||= Churn.new novelty: novelty do
-      phrases.sample.reify(genre, [])
-    end
+    @churn ||= Churn.new novelty: novelty
   end
 
   def novelty
