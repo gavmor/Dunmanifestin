@@ -4,11 +4,11 @@ Gem::Specification.new do |s|
 
   s.summary     = 'A verisimilitude generator.'
   s.description = "The point of Dunmanifestin [is] to inject chaos into humans' cliched ideas or, at least, let them be hunter-gatherers instead of farmers of culture. -- B. Christel"
-  s.authors     = %w(quavmo benchristel AlexLerman)
-  s.email       = 'quavmo@gmail.com'
+  s.authors     = %w(gavmor benchristel)
+  s.email       = 'morgan.gavin@gmail.com'
   s.files       = Dir['lib/**/*'] + Dir['default-genre/**/*']
   s.executables = ['dunmanifestin']
-  s.homepage    = 'http://github.com/quavmo/dunmanifestin'
+  s.homepage    = 'http://github.com/gavmor/dunmanifestin'
   s.license     = 'MIT'
 
   s.required_ruby_version = '>= 2.1.2'
