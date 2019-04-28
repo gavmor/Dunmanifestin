@@ -25,7 +25,7 @@ class Genre
     palettes[name] || NullPalette.new(name)
   end
 
-  private
+
 
   attr_accessor :palettes
 end

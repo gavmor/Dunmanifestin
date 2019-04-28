@@ -1,4 +1,5 @@
 require_relative '../lib/dunmanifestin/palette'
+require_relative '../lib/dunmanifestin/genre'
 
 describe Palette do
   it 'has a name, which is the string after the pipe' do
@@ -85,6 +86,34 @@ Ophelia // daughter of Polonius
     palette = Palette.new(palette_text, 'characters.pal')
     selections = 50.times.map { palette.sample nil }
     expect(selections.uniq.sort).to eq ['Ernie']
+  end
+
+  it 'preserves blockquotes' do
+    palette = Palette.new(<<-EOF, 'characters.pal')
+|person
+>>
+# Hamlet
+
+Prince of Denmark
+<<
+>>
+# Ophelia
+
+Daughter of Polonius
+<<
+Zack
+Zed
+
+    EOF
+
+    selections = 50.times.map { palette.sample nil }
+    expect(selections.uniq.sort).to eq [
+      "# Hamlet\n\nPrince of Denmark",
+      "# Ophelia\n\nDaughter of Polonius",
+      "Zack",
+      "Zed"
+    ]
+
   end
 
   it 'ignores empty lines' do

@@ -45,9 +45,11 @@ class Palette
         churn.generate { phrases.sample.reify genre }
       end
     end
+  rescue NoMethodError
+    "{#{name} ??}"
   end
 
-  private
+
 
   def file_basename
     File.basename(@filename, '.pal')
@@ -83,7 +85,7 @@ class Palette
   end
 
   def lines
-    @lines ||= text.split("\n")
+    @lines ||= text.gsub(/>>(.+?)<</m, '').split("\n") | text.scan(/>>(.+?)<</m).flatten
   end
 
   def text
