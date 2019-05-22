@@ -1,0 +1,201 @@
+grammar ListSet
+  rule list_set
+    line_end? lists:(list)*
+    {
+      def lists
+        super.elements
+      end
+    }
+  end
+
+  rule list
+    '|' name:identifier sections:(list_section)* line_end?
+    {
+      def sections
+        super.elements
+      end
+    
+      def items
+        sections.map { |b| b.items }.flatten
+      end
+
+      def name
+        super.text_value
+      end
+    }
+  end
+
+  rule identifier
+    bound_identifier / free_identifier
+  end
+
+  rule bound_identifier
+    '$' free_identifier
+  end
+
+  rule free_identifier
+    [A-Za-z_] [A-Za-z0-9_]*
+  end
+  
+  rule list_section
+    b:(conditional_list_section / unconditional_list_section)
+    {
+      def items
+        b.items
+      end
+      
+      def condition
+        b.condition
+      end
+    }
+  end
+  
+  rule conditional_list_section
+    condition:list_section_condition items:(list_item)*
+    {
+      def items
+        super.elements
+      end
+    }
+  end
+  
+  rule unconditional_list_section
+    items:(list_item)+
+    {
+      def items
+        super.elements
+      end
+      
+      def condition
+        nil
+      end
+    }
+  end
+
+  rule list_item
+    line_end multiplier:multiplier? list_item_text 
+    {
+      def multiplier
+        if not super.empty?
+          super.to_i
+        else
+          1
+        end
+      end
+      
+      def text_segments
+        components.select { |c| c.is_a? String }
+      end
+      
+      def variables
+        components.reject { |c| c.is_a? String }
+      end
+      
+      def raw_content
+        list_item_text.text_value
+      end
+      
+      private
+      def components
+        list_item_text.components
+      end
+    }
+  end
+  
+  rule list_item_text
+    t:(text_with_interpolated_variables / nonempty_literal_text)
+    {
+      def components
+        t.components
+      end
+    }
+  end
+  
+  rule text_with_interpolated_variables
+    pairs:(literal_text interpolated_variable)+ epilogue:nonempty_literal_text?
+    {
+      def components
+        c = []
+        pairs.elements.each do |p|
+          c << p.literal_text.to_s
+          c << p.interpolated_variable
+        end
+        c += epilogue.components unless epilogue.empty?
+        c
+      end
+    }
+  end
+  
+  rule interpolated_variable
+    "[" identifier directives:(directive)* "]"
+    {
+      def name
+        identifier.text_value
+      end
+      
+      def directives
+        super.elements.map(&:text_value)
+      end
+      
+      def to_s
+        "#{name}#{directives.join('')}"
+      end
+    }
+  end
+  
+  rule list_section_condition
+    line_end bound_identifier sp '=' sp free_identifier
+    {
+      def to_s
+        text_value.strip
+      end
+    }
+  end
+
+  rule multiplier
+    natural_number '@'
+    {
+      def to_i
+        natural_number.text_value.to_i
+      end
+    }
+  end
+
+  rule literal_text
+    (!('[' / "\n" / '|' / '$') .)*
+    {
+      def to_s
+        text_value
+      end
+    }
+  end
+  
+  rule nonempty_literal_text
+    (!('[' / "\n" / '|' / '$') .)+
+    {
+      def to_s
+        text_value
+      end
+      
+      def components
+        [to_s]
+      end
+    }
+  end
+  
+  rule directive
+    ("#" / ".") free_identifier
+  end
+  
+  rule natural_number
+    [1-9] [0-9]*
+  end
+
+  rule line_end
+    (sp "\n")+ sp
+  end
+  
+  rule sp
+    [ \t]*
+  end
+end
